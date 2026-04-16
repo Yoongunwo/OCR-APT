@@ -1,0 +1,6 @@
+{
+  "repository_url_tc3": "http://graphdb-service:7200/repositories/darpa-tc3",
+  "repository_url_optc": "http://graphdb-service:7200/repositories/darpa-optc-1day",
+  "repository_url_nodlink": "http://graphdb-service:7200/repositories/simulated-nodlink",
+  "openai_api_key": "key"
+}
