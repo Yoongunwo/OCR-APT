@@ -1,0 +1,132 @@
+# =============================================================================
+# OCR-APT GraphDB K8s Configuration (on-premise / 베어메탈)
+# =============================================================================
+# 사전 작업 (노드에서):
+#   mkdir -p /home/s3lab/ygw/graphdb_ocr-apt/data/repositories
+#   cp -r /workspace/fourth_research/Data/Darpa/ocr-apt/repositories/. \
+#         /home/s3lab/ygw/graphdb_ocr-apt/data/repositories/
+#
+# 배포:
+#   kubectl apply -f graphdb.yaml
+#   kubectl wait --for=condition=ready pod -l app=graphdb --timeout=120s
+# =============================================================================
+
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: graphdb-local-storage
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Retain
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: graphdb-data-pv
+spec:
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: graphdb-local-storage
+  hostPath:
+    path: /home/s3lab/ygw/graphdb_ocr-apt
+    type: DirectoryOrCreate
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - s3lab-gpu-cluster
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: graphdb-data-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: graphdb-local-storage
+  resources:
+    requests:
+      storage: 20Gi
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ygw-graphdb
+  labels:
+    app: graphdb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: graphdb
+  template:
+    metadata:
+      labels:
+        app: graphdb
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: s3lab-gpu-cluster
+      containers:
+        - name: graphdb
+          image: ontotext/graphdb:11.0.0
+          ports:
+            - containerPort: 7200
+          env:
+            - name: GDB_HEAP_SIZE
+              value: "4g"
+            - name: GDB_MIN_MEM
+              value: "2g"
+          resources:
+            requests:
+              memory: "3Gi"
+              cpu: "1"
+            limits:
+              memory: "6Gi"
+              cpu: "2"
+          volumeMounts:
+            - name: graphdb-data
+              mountPath: /opt/graphdb/home
+          readinessProbe:
+            httpGet:
+              path: /rest/repositories
+              port: 7200
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            failureThreshold: 6
+          livenessProbe:
+            httpGet:
+              path: /rest/repositories
+              port: 7200
+            initialDelaySeconds: 60
+            periodSeconds: 20
+            failureThreshold: 3
+      volumes:
+        - name: graphdb-data
+          persistentVolumeClaim:
+            claimName: graphdb-data-pvc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: graphdb-service
+  labels:
+    app: graphdb
+spec:
+  selector:
+    app: graphdb
+  ports:
+    - name: http
+      port: 7200
+      targetPort: 7200
+  type: ClusterIP
