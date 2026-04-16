@@ -82,7 +82,7 @@ spec:
         kubernetes.io/hostname: s3lab-gpu-cluster
       containers:
         - name: graphdb
-          image: ontotext/graphdb:11.0.0
+          image: ontotext/graphdb:11.3.0
           ports:
             - containerPort: 7200
           env:
