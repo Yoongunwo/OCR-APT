@@ -6,6 +6,10 @@
 #   cp -r /workspace/fourth_research/Data/Darpa/ocr-apt/repositories/. \
 #         /home/s3lab/ygw/graphdb_ocr-apt/data/repositories/
 #
+# 라이선스 등록 (노드에서 직접 복사):
+#   mkdir -p /home/s3lab/ygw/graphdb_ocr-apt/conf
+#   cp /path/to/graphdb.license /home/s3lab/ygw/graphdb_ocr-apt/conf/graphdb.license
+#
 # 배포:
 #   kubectl apply -f graphdb.yaml
 #   kubectl wait --for=condition=ready pod -l app=graphdb --timeout=120s
