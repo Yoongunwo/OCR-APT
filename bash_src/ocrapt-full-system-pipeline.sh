@@ -132,7 +132,7 @@ train_GNN_models () {
     parameters+=" --hidden-channels ${HiddenLayer} "
     logs+="_Hly${HiddenLayer}"
   fi
-  save_path+="_dynConVal${minCon}To${maxCon}"
+  save_path+="_dynConVal${minCon}To${maxCon}_TrainRatio${train_ratio}"
   if [ ! -f ${root_path}/results/${exp_name}/${save_path}/anomaly_results_summary.csv ]
   then
     save_path+=".model"
