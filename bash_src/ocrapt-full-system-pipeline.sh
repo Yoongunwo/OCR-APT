@@ -96,6 +96,7 @@ transform_to_RDF () {
   python -B -u ../src/transform_to_RDF.py --dataset ${dataset} --host ${host} --root-path ${root_path} --source-graph ${source_graph} ${rdf_parameter} >> ../logs/${host}/${exp_name}/Transform_to_RDF_${date}.txt
   if [[ "$node_attrs_graph_nx" == "y" ]]
   then
+    read -p "Enter the NetworkX source graph name: " nx_source_graph
     python -B -u ../src/get_node_attributes.py --adjust-uuid --host ${host} --root-path ${root_path} --source-graph ${source_graph} --source-graph-nx ${nx_source_graph} >> ../logs/${host}/${exp_name}/Transform_to_RDF_${date}.txt
   fi
   echo "Done converting to RDF"

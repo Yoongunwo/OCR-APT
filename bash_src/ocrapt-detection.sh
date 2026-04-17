@@ -8,6 +8,9 @@ read -p "Enter the host name: " host
 read -p "Enter the experiment name: " exp_name
 read -p "Enter the number of runs: " runs
 
+read -p "Enter train ratio of the model to evaluate (0.0~1.0, default=1.0): " train_ratio
+train_ratio=${train_ratio:-1.0}
+
 read -p "Do you want to detect anomalous subgraphs uisng GNN? (y/N): " detectSubgraphs
 if [[ "$detectSubgraphs" == "y" ]]
 then
@@ -16,7 +19,7 @@ then
   then
     read -p "Enter the GNN model name: " load_model
   else
-    load_model="OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05.model"
+    load_model="OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio${train_ratio}.model"
   fi
 fi
 
@@ -30,7 +33,7 @@ then
     then
       read -p "Enter the GNN model name: " load_model
     else
-      load_model="OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05.model"
+      load_model="OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio${train_ratio}.model"
     fi
     read -p "Enter the experiment name for anomalous subgraphs: " inv_logs_name
     read -p "Do you want to load previously indexed subgraphs (y/N): " load_index
@@ -75,7 +78,7 @@ Detect_Anomolous_Nodes () {
   echo "Parameters are: ${parameters}"
   echo "load from: ${load_model}"
   mkdir -p ../logs/${host}/${exp_name}
-  python -B -u ../src/train_gnn_models.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --detector ${detector} ${parameters} --load-model ${load_model}  >> ../logs/${host}/${exp_name}/${logs}
+  python -B -u ../src/train_gnn_models.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --detector ${detector} ${parameters} --load-model ${load_model} --train-ratio ${train_ratio} >> ../logs/${host}/${exp_name}/${logs}
 }
 
 Detect_Anomolous_Subgraph () {
