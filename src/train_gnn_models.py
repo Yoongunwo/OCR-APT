@@ -56,6 +56,8 @@ parser.add_argument('--random-features', action="store_true", default=False)
 parser.add_argument('--save-emb', action="store_true", default=False)
 parser.add_argument('--debug-one-subject', action="store_true", default=False)
 parser.add_argument('--debug-subjects', type=int, default=-1)
+parser.add_argument('--train-ratio', type=float, default=1.0,
+                    help='Fraction of training data to use (0.0~1.0, time-ordered first X%%)')
 
 
 init_ru_maxrss = getrusage(RUSAGE_SELF).ru_maxrss
@@ -224,7 +226,10 @@ def pyGod(run,seed):
         homo_data_per_type.train_mask = torch.zeros((node_type.size(0)), dtype=torch.bool)
         homo_data_per_type.val_mask = torch.zeros((node_type.size(0)), dtype=torch.bool)
         homo_data_per_type.test_mask = torch.zeros((node_type.size(0)), dtype=torch.bool)
-        homo_data_per_type.train_mask[local2global[target_node][split_idx['train'][target_node]]] = True
+        train_idx = split_idx['train'][target_node]
+        n_train = max(1, int(len(train_idx) * args.train_ratio))
+        train_idx = train_idx[:n_train]
+        homo_data_per_type.train_mask[local2global[target_node][train_idx]] = True
         homo_data_per_type.val_mask[local2global[target_node][split_idx['valid'][target_node]]] = True
         homo_data_per_type.test_mask[local2global[target_node][split_idx['test'][target_node]]] = True
         print("Remove ", sum(homo_data_per_type.y[homo_data_per_type.train_mask]).item(), " malicious samples from training set:")
@@ -542,7 +547,10 @@ def pyGod(run,seed):
     homo_data.test_mask = torch.zeros((node_type.size(0)), dtype=torch.bool)
     subject_nodes_num,subject_nodes_mal = {},{}
     for subject_node in subject_nodes:
-        homo_data.train_mask[local2global[subject_node][split_idx['train'][subject_node]]] = True
+        train_idx = split_idx['train'][subject_node]
+        n_train = max(1, int(len(train_idx) * args.train_ratio))
+        train_idx = train_idx[:n_train]
+        homo_data.train_mask[local2global[subject_node][train_idx]] = True
         homo_data.val_mask[local2global[subject_node][split_idx['valid'][subject_node]]] = True
         homo_data.test_mask[local2global[subject_node][split_idx['test'][subject_node]]] = True
         subject_nodes_num[subject_node] = local2global[subject_node][split_idx['valid'][subject_node]].size()[0]

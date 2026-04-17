@@ -40,6 +40,8 @@ if [[ "$trainGNN" != "y" ]]
 then
   read -p "Enter the GNN model full name: " load_model
 fi
+read -p "Enter train ratio for model drift simulation (0.0~1.0, default=1.0): " train_ratio
+train_ratio=${train_ratio:-1.0}
 read -p "Do you want to detect anomalous subgraphs with trained GNN model? (y/N): " detectSubgraphs
 if [[ "$detectSubgraphs" != "y" ]]
 then
@@ -137,7 +139,7 @@ train_GNN_models () {
     logs+="_${date}.txt"
     echo "Parameters are: ${parameters}"
     echo "save to: ${save_path}"
-    python -B -u ../src/train_gnn_models.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --detector ${detector} ${parameters} --save-model ${save_path} >> ../logs/${host}/${exp_name}/${logs}
+    python -B -u ../src/train_gnn_models.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --detector ${detector} ${parameters} --save-model ${save_path} --train-ratio ${train_ratio} >> ../logs/${host}/${exp_name}/${logs}
   else
     echo "The model already trained before"
   fi
@@ -170,7 +172,7 @@ Detect_Anomolous_Nodes () {
   logs+="_${date}.txt"
   echo "Parameters are: ${parameters}"
   echo "load from: ${load_model}"
-  python -B -u ../src/train_gnn_models.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --detector ${detector} ${parameters} --load-model ${load_model}  >> ../logs/${host}/${exp_name}/${logs}
+  python -B -u ../src/train_gnn_models.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --detector ${detector} ${parameters} --load-model ${load_model} --train-ratio ${train_ratio} >> ../logs/${host}/${exp_name}/${logs}
 }
 
 
