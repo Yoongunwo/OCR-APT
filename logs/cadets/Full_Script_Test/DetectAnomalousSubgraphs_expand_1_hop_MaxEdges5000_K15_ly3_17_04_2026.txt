@@ -1,0 +1,2179 @@
+Namespace(dataset='tc3', host='cadets', runs=1, exp_name='Full_Script_Test', inv_exp_name='expand_1_hop_MaxEdges5000_K15_ly3', model='OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05.model', root_path='../dataset/darpa_tc3/cadets/experiments/', number_of_hops=1, abnormality_level='Moderate', max_edges=5000, top_k=15, top_k_anomalous_subgraphs=10, min_nodes=3, expand_2_hop='no', top_k_percent=None, anomalies_path_only=False, backwards_only=False, anomalies_or_process_only=False, draw_subgraphs=False, get_node_attrs=True, construct_from_anomaly_subgraph=True, remove_duplicated_subgraph=True, correlate_anomalous_once=True, process_centric=False)
+Check Covered IOCs in all dataset nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 4
+The covered IOCS are: {'155.162.39.48', '76.56.184.25', '25.159.96.207', 'passwd'}
+Number of covered IOCS of attack BSD_3  is: 7
+The covered IOCS are: {'sendmail', '53.158.101.118', '192.113.144.28', '155.162.39.48', '25.159.96.207', 'tmux-1002', '76.56.184.25'}
+Number of covered IOCS of attack BSD_4  is: 4
+The covered IOCS are: {'155.162.39.48', '53.158.101.118', '25.159.96.207', 'passwd'}
+The total number of covered IOCs is 8
+________________________________________________
+resource.struct_rusage(ru_utime=14.075375, ru_stime=8.050098, ru_maxrss=1075484, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=283677, ru_majflt=5, ru_nswap=0, ru_inblock=1192, ru_oublock=32, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=21381, ru_nivcsw=193)
+DEBUG: Number of testing cases  303595
+DEBUG:  {'FILE_OBJECT_DIR': 0, 'FILE_OBJECT_FILE': 1, 'FILE_OBJECT_UNIX_SOCKET': 2, 'NetFlowObject': 3, 'SUBJECT_PROCESS': 4, 'UnnamedPipeObject': 5, ('SUBJECT_PROCESS', 'EVENT_ACCEPT', 'FILE_OBJECT_UNIX_SOCKET'): 0, ('SUBJECT_PROCESS', 'EVENT_ACCEPT', 'NetFlowObject'): 1, ('SUBJECT_PROCESS', 'EVENT_BIND', 'FILE_OBJECT_UNIX_SOCKET'): 2, ('SUBJECT_PROCESS', 'EVENT_CHANGE_PRINCIPAL', 'SUBJECT_PROCESS'): 3, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_DIR'): 4, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_FILE'): 5, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_UNIX_SOCKET'): 6, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'NetFlowObject'): 7, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'UnnamedPipeObject'): 8, ('SUBJECT_PROCESS', 'EVENT_CONNECT', 'FILE_OBJECT_UNIX_SOCKET'): 9, ('SUBJECT_PROCESS', 'EVENT_CONNECT', 'NetFlowObject'): 10, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'FILE_OBJECT_DIR'): 11, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'FILE_OBJECT_UNIX_SOCKET'): 12, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'UnnamedPipeObject'): 13, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'FILE_OBJECT_FILE'): 14, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'FILE_OBJECT_UNIX_SOCKET'): 15, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'UnnamedPipeObject'): 16, ('SUBJECT_PROCESS', 'EVENT_EXIT', 'SUBJECT_PROCESS'): 17, ('SUBJECT_PROCESS', 'EVENT_FCNTL', 'FILE_OBJECT_FILE'): 18, ('SUBJECT_PROCESS', 'EVENT_FCNTL', 'UnnamedPipeObject'): 19, ('SUBJECT_PROCESS', 'EVENT_FLOWS_TO', 'FILE_OBJECT_FILE'): 20, ('SUBJECT_PROCESS', 'EVENT_FLOWS_TO', 'UnnamedPipeObject'): 21, ('SUBJECT_PROCESS', 'EVENT_FORK', 'SUBJECT_PROCESS'): 22, ('SUBJECT_PROCESS', 'EVENT_LINK', 'FILE_OBJECT_FILE'): 23, ('SUBJECT_PROCESS', 'EVENT_LSEEK', 'FILE_OBJECT_FILE'): 24, ('SUBJECT_PROCESS', 'EVENT_MMAP', 'FILE_OBJECT_FILE'): 25, ('SUBJECT_PROCESS', 'EVENT_MODIFY_FILE_ATTRIBUTES', 'FILE_OBJECT_FILE'): 26, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'FILE_OBJECT_DIR'): 27, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'FILE_OBJECT_FILE'): 28, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 29, ('SUBJECT_PROCESS', 'EVENT_OPEN', 'FILE_OBJECT_DIR'): 30, ('SUBJECT_PROCESS', 'EVENT_OPEN', 'FILE_OBJECT_FILE'): 31, ('SUBJECT_PROCESS', 'EVENT_OTHER', 'FILE_OBJECT_UNIX_SOCKET'): 32, ('SUBJECT_PROCESS', 'EVENT_READ', 'FILE_OBJECT_FILE'): 33, ('SUBJECT_PROCESS', 'EVENT_READ', 'FILE_OBJECT_UNIX_SOCKET'): 34, ('SUBJECT_PROCESS', 'EVENT_READ', 'NetFlowObject'): 35, ('SUBJECT_PROCESS', 'EVENT_READ', 'UnnamedPipeObject'): 36, ('SUBJECT_PROCESS', 'EVENT_RECVFROM', 'FILE_OBJECT_UNIX_SOCKET'): 37, ('SUBJECT_PROCESS', 'EVENT_RECVFROM', 'NetFlowObject'): 38, ('SUBJECT_PROCESS', 'EVENT_RECVMSG', 'FILE_OBJECT_UNIX_SOCKET'): 39, ('SUBJECT_PROCESS', 'EVENT_RECVMSG', 'NetFlowObject'): 40, ('SUBJECT_PROCESS', 'EVENT_RENAME', 'FILE_OBJECT_FILE'): 41, ('SUBJECT_PROCESS', 'EVENT_SENDMSG', 'FILE_OBJECT_UNIX_SOCKET'): 42, ('SUBJECT_PROCESS', 'EVENT_SENDMSG', 'NetFlowObject'): 43, ('SUBJECT_PROCESS', 'EVENT_SENDTO', 'FILE_OBJECT_UNIX_SOCKET'): 44, ('SUBJECT_PROCESS', 'EVENT_SENDTO', 'NetFlowObject'): 45, ('SUBJECT_PROCESS', 'EVENT_SIGNAL', 'SUBJECT_PROCESS'): 46, ('SUBJECT_PROCESS', 'EVENT_TRUNCATE', 'FILE_OBJECT_FILE'): 47, ('SUBJECT_PROCESS', 'EVENT_UNLINK', 'FILE_OBJECT_DIR'): 48, ('SUBJECT_PROCESS', 'EVENT_UNLINK', 'FILE_OBJECT_FILE'): 49, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'FILE_OBJECT_FILE'): 50, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'FILE_OBJECT_UNIX_SOCKET'): 51, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'NetFlowObject'): 52, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'UnnamedPipeObject'): 53, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_ACCEPT', 'SUBJECT_PROCESS'): 54, ('NetFlowObject', 'inv_EVENT_ACCEPT', 'SUBJECT_PROCESS'): 55, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_BIND', 'SUBJECT_PROCESS'): 56, ('SUBJECT_PROCESS', 'inv_EVENT_CHANGE_PRINCIPAL', 'SUBJECT_PROCESS'): 57, ('FILE_OBJECT_DIR', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 58, ('FILE_OBJECT_FILE', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 59, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 60, ('NetFlowObject', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 61, ('UnnamedPipeObject', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 62, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CONNECT', 'SUBJECT_PROCESS'): 63, ('NetFlowObject', 'inv_EVENT_CONNECT', 'SUBJECT_PROCESS'): 64, ('FILE_OBJECT_DIR', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 65, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 66, ('UnnamedPipeObject', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 67, ('FILE_OBJECT_FILE', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 68, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 69, ('UnnamedPipeObject', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 70, ('SUBJECT_PROCESS', 'inv_EVENT_EXIT', 'SUBJECT_PROCESS'): 71, ('FILE_OBJECT_FILE', 'inv_EVENT_FCNTL', 'SUBJECT_PROCESS'): 72, ('UnnamedPipeObject', 'inv_EVENT_FCNTL', 'SUBJECT_PROCESS'): 73, ('FILE_OBJECT_FILE', 'inv_EVENT_FLOWS_TO', 'SUBJECT_PROCESS'): 74, ('UnnamedPipeObject', 'inv_EVENT_FLOWS_TO', 'SUBJECT_PROCESS'): 75, ('SUBJECT_PROCESS', 'inv_EVENT_FORK', 'SUBJECT_PROCESS'): 76, ('FILE_OBJECT_FILE', 'inv_EVENT_LINK', 'SUBJECT_PROCESS'): 77, ('FILE_OBJECT_FILE', 'inv_EVENT_LSEEK', 'SUBJECT_PROCESS'): 78, ('FILE_OBJECT_FILE', 'inv_EVENT_MMAP', 'SUBJECT_PROCESS'): 79, ('FILE_OBJECT_FILE', 'inv_EVENT_MODIFY_FILE_ATTRIBUTES', 'SUBJECT_PROCESS'): 80, ('FILE_OBJECT_DIR', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 81, ('FILE_OBJECT_FILE', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 82, ('SUBJECT_PROCESS', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 83, ('FILE_OBJECT_DIR', 'inv_EVENT_OPEN', 'SUBJECT_PROCESS'): 84, ('FILE_OBJECT_FILE', 'inv_EVENT_OPEN', 'SUBJECT_PROCESS'): 85, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_OTHER', 'SUBJECT_PROCESS'): 86, ('FILE_OBJECT_FILE', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 87, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 88, ('NetFlowObject', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 89, ('UnnamedPipeObject', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 90, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_RECVFROM', 'SUBJECT_PROCESS'): 91, ('NetFlowObject', 'inv_EVENT_RECVFROM', 'SUBJECT_PROCESS'): 92, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_RECVMSG', 'SUBJECT_PROCESS'): 93, ('NetFlowObject', 'inv_EVENT_RECVMSG', 'SUBJECT_PROCESS'): 94, ('FILE_OBJECT_FILE', 'inv_EVENT_RENAME', 'SUBJECT_PROCESS'): 95, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_SENDMSG', 'SUBJECT_PROCESS'): 96, ('NetFlowObject', 'inv_EVENT_SENDMSG', 'SUBJECT_PROCESS'): 97, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_SENDTO', 'SUBJECT_PROCESS'): 98, ('NetFlowObject', 'inv_EVENT_SENDTO', 'SUBJECT_PROCESS'): 99, ('SUBJECT_PROCESS', 'inv_EVENT_SIGNAL', 'SUBJECT_PROCESS'): 100, ('FILE_OBJECT_FILE', 'inv_EVENT_TRUNCATE', 'SUBJECT_PROCESS'): 101, ('FILE_OBJECT_DIR', 'inv_EVENT_UNLINK', 'SUBJECT_PROCESS'): 102, ('FILE_OBJECT_FILE', 'inv_EVENT_UNLINK', 'SUBJECT_PROCESS'): 103, ('FILE_OBJECT_FILE', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 104, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 105, ('NetFlowObject', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 106, ('UnnamedPipeObject', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 107}
+DEBUG: edge_index stats tensor(13613845166210) tensor(0) tensor(696372)
+******************************************
+Run number: 0
+Seed:  360
+Number of anomalies nodes:  76340
+malicious nodes per node type: node_type
+FILE_OBJECT_FILE     10885
+NetFlowObject           21
+SUBJECT_PROCESS         13
+UnnamedPipeObject        5
+Name: count, dtype: int64
+Number of benign nodes predicted anomalies:  65429
+Number of malicious nodes predicted anomalies:  10911
+Number of nodes labelled malicious:  10924
+Check Covered IOCs in all raised anomalies nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 2
+The covered IOCS are: {'155.162.39.48', 'passwd'}
+Number of covered IOCS of attack BSD_3  is: 5
+The covered IOCS are: {'sendmail', '155.162.39.48', '53.158.101.118', 'tmux-1002', '192.113.144.28'}
+Number of covered IOCS of attack BSD_4  is: 3
+The covered IOCS are: {'155.162.39.48', '53.158.101.118', 'passwd'}
+The total number of covered IOCs is 6
+________________________________________________
+Number of inserted anomalies nodes: 76340
+Number of nodes with attributes 58455
+Total number of triples before dropping node attributes 1307113
+Total number of triples after dropping node attributes 1307113
+Total number of triples before dropping duplicated actions (within one second) 1307113
+Total number of triples after dropping duplicated actions (within one second) 965341
+Number of nodes in queried subgraph object: 106438
+Number of edges in queried subgraph object: 965341
+The subgraph query time is:  75.04084277153015 seconds.
+Number of initially disconnected nodes nodes: 0
+Number of initially correlated nodes: 76340
+Total number of NetFlowObject nodes is 103 
+Number of seed nodes for   NetFlowObject is 15
+Total number of FILE_OBJECT_FILE nodes is 75969 
+Number of seed nodes for   FILE_OBJECT_FILE is 15
+Total number of SUBJECT_PROCESS nodes is 41 
+Number of seed nodes for   SUBJECT_PROCESS is 15
+Total Number of seed nodes: 45
+Debug: seed node is BF208583-3E05-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007334232330322266 seconds.
+DEBUG: number of correlated_anomalies_nodes 0
+In seed number 0, number of remaining anomalous nodes is 76340
+Debug: seed node is 690160E4-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.015443563461303711 seconds.
+DEBUG: number of correlated_anomalies_nodes 0
+In seed number 1, number of remaining anomalous nodes is 76340
+Debug: seed node is E393303B-721F-8457-9F72-2DA477847B65-file_object_file
+Constructed a subgraph with 3 nodes and 701 edges
+The traverse time is:  0.011722326278686523 seconds.
+DEBUG: number of correlated_anomalies_nodes 3
+In seed number 2, number of remaining anomalous nodes is 76338
+Debug: seed node is 84459C9D-4B55-E757-954B-3D3927E780EC-file_object_file
+Constructed a subgraph with 9 nodes and 20 edges
+The traverse time is:  0.00735783576965332 seconds.
+DEBUG: number of correlated_anomalies_nodes 12
+In seed number 3, number of remaining anomalous nodes is 76330
+Debug: seed node is 7244372A-63A0-695F-A063-E6AD8F69F046-file_object_file
+Constructed a subgraph with 12 nodes and 19 edges
+The traverse time is:  0.00732731819152832 seconds.
+DEBUG: number of correlated_anomalies_nodes 24
+In seed number 4, number of remaining anomalous nodes is 76319
+Debug: seed node is A0E0997B-8B26-A55C-A68B-FA7C5CA5991D-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.007266998291015625 seconds.
+DEBUG: number of correlated_anomalies_nodes 28
+In seed number 5, number of remaining anomalous nodes is 76316
+Debug: seed node is 21F2EBB3-E438-F85B-B8E4-D8E06BF8E62F-file_object_file
+Constructed a subgraph with 5 nodes and 11 edges
+The traverse time is:  0.007353544235229492 seconds.
+DEBUG: number of correlated_anomalies_nodes 33
+In seed number 6, number of remaining anomalous nodes is 76312
+Debug: seed node is C0CB38BD-59A6-9E5C-A659-B5362C9EF45A-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.009231090545654297 seconds.
+DEBUG: number of correlated_anomalies_nodes 37
+In seed number 7, number of remaining anomalous nodes is 76309
+Debug: seed node is 5EE4F311-C814-7A59-94C8-0E6F197A7946-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.0072040557861328125 seconds.
+DEBUG: number of correlated_anomalies_nodes 41
+In seed number 8, number of remaining anomalous nodes is 76306
+Debug: seed node is F7ACFABA-F8F1-FB55-B1F8-196DD5FB30E1-file_object_file
+Constructed a subgraph with 3 nodes and 3 edges
+The traverse time is:  0.025791168212890625 seconds.
+DEBUG: number of correlated_anomalies_nodes 44
+In seed number 9, number of remaining anomalous nodes is 76304
+Debug: seed node is 29BD08FE-7656-BF51-9676-B6C811BF9E22-file_object_file
+Constructed a subgraph with 3 nodes and 4 edges
+The traverse time is:  0.014087677001953125 seconds.
+DEBUG: number of correlated_anomalies_nodes 47
+In seed number 10, number of remaining anomalous nodes is 76302
+Debug: seed node is 451946BD-12F7-8356-B712-07F5A683E62E-file_object_file
+subgraph is less than  3 nodes
+The traverse time is:  0.006999015808105469 seconds.
+DEBUG: number of correlated_anomalies_nodes 47
+In seed number 11, number of remaining anomalous nodes is 76302
+Debug: seed node is 76CB53C6-3DFE-11E8-A5CB-3FA3753A265A-file_object_file
+Constructed a subgraph with 4 nodes and 4 edges
+The traverse time is:  0.007141828536987305 seconds.
+DEBUG: number of correlated_anomalies_nodes 51
+In seed number 12, number of remaining anomalous nodes is 76299
+Debug: seed node is BDE72B85-DCD9-835C-99DC-32E13C838365-file_object_file
+partition a graph with 602 nodes and 21704 edges
+partitioned a subgraph with 124 nodes and 1289 edges
+partitioned a subgraph with 6 nodes and 4 edges
+partitioned a subgraph with 140 nodes and 2379 edges
+partitioned a subgraph with 328 nodes and 2797 edges
+partitioned a subgraph with 4 nodes and 6 edges
+Partition time:  0.1303386688232422 seconds.
+Constructed a subgraph with 124 nodes and 1289 edges
+Constructed a subgraph with 6 nodes and 4 edges
+Constructed a subgraph with 140 nodes and 2379 edges
+Constructed a subgraph with 328 nodes and 2797 edges
+Constructed a subgraph with 4 nodes and 6 edges
+The traverse time is:  1.237931728363037 seconds.
+DEBUG: number of correlated_anomalies_nodes 653
+In seed number 13, number of remaining anomalous nodes is 75895
+Debug: seed node is 330061CF-6BB3-C45E-B36B-B89D7EC4F443-file_object_file
+Constructed a subgraph with 9 nodes and 24 edges
+The traverse time is:  17.762371301651 seconds.
+DEBUG: number of correlated_anomalies_nodes 662
+In seed number 14, number of remaining anomalous nodes is 75888
+Debug: seed node is 22A5E28F-B690-9651-90B6-68D05196AF07-file_object_file
+subgraph is less than  3 nodes
+The traverse time is:  0.02559971809387207 seconds.
+DEBUG: number of correlated_anomalies_nodes 662
+In seed number 15, number of remaining anomalous nodes is 75888
+Debug: seed node is F182D96A-9536-8854-B695-67B68488E300-file_object_file
+Constructed a subgraph with 4 nodes and 3 edges
+The traverse time is:  0.007137298583984375 seconds.
+DEBUG: number of correlated_anomalies_nodes 666
+In seed number 16, number of remaining anomalous nodes is 75885
+Debug: seed node is 1AD38A84-3DC3-11E8-A5CB-3FA3753A265A-netflowobject
+Constructed a subgraph with 11 nodes and 1423 edges
+The traverse time is:  0.013912200927734375 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 17, number of remaining anomalous nodes is 75875
+Debug: seed node is 219DC4CD-3E7E-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.0073583126068115234 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 18, number of remaining anomalous nodes is 75875
+Debug: seed node is BE40B48C-3EC1-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.007237434387207031 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 19, number of remaining anomalous nodes is 75875
+Debug: seed node is 1AD39F36-3DC3-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.007234811782836914 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 20, number of remaining anomalous nodes is 75875
+Debug: seed node is 47E61FFC-3E80-11E8-A5CB-3FA3753A265A-subject_process
+partition a graph with 10907 nodes and 11044 edges
+partitioned a subgraph with 9 nodes and 122 edges
+partitioned a subgraph with 10898 nodes and 10921 edges
+Sampling a subgraph with 10898 nodes and 10921 edges (sample from different actions)
+sampled a subgraph with 4994 nodes and 5013 edges
+Remains unsampled a subgraph with 5904 nodes and 0 edges (sample from different actions)
+Partition time:  1.2986924648284912 seconds.
+Constructed a subgraph with 9 nodes and 122 edges
+Constructed a subgraph with 4994 nodes and 5013 edges
+The traverse time is:  62.6969268321991 seconds.
+DEBUG: number of correlated_anomalies_nodes 5679
+In seed number 21, number of remaining anomalous nodes is 70873
+Debug: seed node is 78FEF500-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+partition a graph with 5905 nodes and 5905 edges
+Couldn't partition the big subgraph
+partitioned a subgraph with 5905 nodes and 5905 edges
+Sampling a subgraph with 5905 nodes and 5905 edges (sample from different actions)
+sampled a subgraph with 5000 nodes and 5000 edges
+Remains unsampled a subgraph with 905 nodes and 0 edges (sample from different actions)
+Partition time:  0.32231616973876953 seconds.
+Constructed a subgraph with 5000 nodes and 5000 edges
+The traverse time is:  0.4203755855560303 seconds.
+DEBUG: number of correlated_anomalies_nodes 10678
+In seed number 22, number of remaining anomalous nodes is 65874
+Debug: seed node is 791053E1-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+Constructed a subgraph with 907 nodes and 907 edges
+The traverse time is:  0.0303952693939209 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 23, number of remaining anomalous nodes is 64969
+Debug: seed node is 7910F342-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013994693756103516 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 24, number of remaining anomalous nodes is 64969
+Debug: seed node is 8133CB53-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013507843017578125 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 25, number of remaining anomalous nodes is 64969
+Debug: seed node is 8748DACF-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012873411178588867 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 26, number of remaining anomalous nodes is 64969
+Debug: seed node is 8751D93A-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012553215026855469 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 27, number of remaining anomalous nodes is 64969
+Debug: seed node is 875694BD-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012346744537353516 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 28, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A680A0C-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012286186218261719 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 29, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A733A70-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012271881103515625 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 30, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A742A3A-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012354135513305664 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 31, number of remaining anomalous nodes is 64969
+Debug: seed node is 9AA5ADAB-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012381553649902344 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 32, number of remaining anomalous nodes is 64969
+Debug: seed node is 1AC357D0-3DC3-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 4 edges
+The traverse time is:  2.742934226989746 seconds.
+DEBUG: number of correlated_anomalies_nodes 11588
+In seed number 33, number of remaining anomalous nodes is 64965
+Debug: seed node is BF1CCA72-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 8 edges
+The traverse time is:  0.0074443817138671875 seconds.
+DEBUG: number of correlated_anomalies_nodes 11593
+In seed number 34, number of remaining anomalous nodes is 64961
+Debug: seed node is CE45E423-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 3 nodes and 2 edges
+The traverse time is:  0.01191091537475586 seconds.
+DEBUG: number of correlated_anomalies_nodes 11596
+In seed number 35, number of remaining anomalous nodes is 64958
+Debug: seed node is DE7FB6B3-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 28 nodes and 80 edges
+The traverse time is:  92.03284788131714 seconds.
+DEBUG: number of correlated_anomalies_nodes 11623
+In seed number 36, number of remaining anomalous nodes is 64938
+Debug: seed node is 49934AC7-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007453441619873047 seconds.
+DEBUG: number of correlated_anomalies_nodes 11623
+In seed number 37, number of remaining anomalous nodes is 64938
+Debug: seed node is 76F0D44D-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 5 edges
+The traverse time is:  0.007172346115112305 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 38, number of remaining anomalous nodes is 64934
+Debug: seed node is 77035EE2-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007192373275756836 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 39, number of remaining anomalous nodes is 64934
+Debug: seed node is 7705637B-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007006168365478516 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 40, number of remaining anomalous nodes is 64934
+Debug: seed node is BF1467C9-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 6 edges
+The traverse time is:  0.00726318359375 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 41, number of remaining anomalous nodes is 64929
+Debug: seed node is BF1501C1-3E05-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007066011428833008 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 42, number of remaining anomalous nodes is 64929
+Debug: seed node is 8BBE2510-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.011604547500610352 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 43, number of remaining anomalous nodes is 64929
+Debug: seed node is C3817B91-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.011640548706054688 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 44, number of remaining anomalous nodes is 64929
+The total traverse time is:  177.45529961585999 seconds.
+Number of subgraphs before removing duplication 28
+Number of removed duplicated subgraphs is 0
+Number of constructed subgraphs: 28
+Number of correlated anomalies nodes: 11411
+Number of disconnected nodes 64929
+--------------------------------------
+subgraph 0 actions are between: 2018-04-11 16:36:48  and  2018-04-12 22:15:08
+Number of Nodes: 3 , Number of edges: 701
+The subgraph has 48 actions (0.068%) within BSD3 attack time range
+--------------------------------------
+subgraph 1 actions are between: 2018-04-11 23:01:08  and  2018-04-11 23:01:08
+Number of Nodes: 9 , Number of edges: 20
+--------------------------------------
+subgraph 2 actions are between: 2018-04-11 16:37:06  and  2018-04-11 16:37:06
+Number of Nodes: 12 , Number of edges: 19
+--------------------------------------
+subgraph 3 actions are between: 2018-04-12 14:17:34  and  2018-04-12 14:17:34
+Number of Nodes: 4 , Number of edges: 5
+The subgraph has 5 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 4 actions are between: 2018-04-11 23:01:00  and  2018-04-11 23:01:00
+Number of Nodes: 5 , Number of edges: 11
+--------------------------------------
+subgraph 5 actions are between: 2018-04-11 23:01:08  and  2018-04-11 23:01:08
+Number of Nodes: 4 , Number of edges: 5
+--------------------------------------
+subgraph 6 actions are between: 2018-04-11 23:06:16  and  2018-04-11 23:06:16
+Number of Nodes: 4 , Number of edges: 5
+--------------------------------------
+subgraph 7 actions are between: 2018-04-12 14:35:31  and  2018-04-12 14:38:31
+Number of Nodes: 3 , Number of edges: 3
+The subgraph has 3 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 8 actions are between: 2018-04-11 23:58:22  and  2018-04-11 23:58:22
+Number of Nodes: 3 , Number of edges: 4
+--------------------------------------
+subgraph 9 actions are between: 2018-04-11 23:06:15  and  2018-04-11 23:06:15
+Number of Nodes: 4 , Number of edges: 4
+--------------------------------------
+subgraph 10 actions are between: 2018-04-11 16:37:43  and  2018-04-11 22:50:10
+Number of Nodes: 124 , Number of edges: 1289
+--------------------------------------
+subgraph 11 actions are between: 2018-04-12 09:15:54  and  2018-04-12 12:24:40
+Number of Nodes: 6 , Number of edges: 4
+--------------------------------------
+subgraph 12 actions are between: 2018-04-11 22:29:24  and  2018-04-12 22:10:00
+Number of Nodes: 140 , Number of edges: 2379
+The subgraph has 398 actions (0.167%) within BSD3 attack time range
+--------------------------------------
+subgraph 13 actions are between: 2018-04-12 07:00:32  and  2018-04-12 22:15:08
+Number of Nodes: 328 , Number of edges: 2797
+The subgraph has 271 actions (0.097%) within BSD3 attack time range
+--------------------------------------
+subgraph 14 actions are between: 2018-04-12 14:33:00  and  2018-04-12 14:33:01
+Number of Nodes: 4 , Number of edges: 6
+The subgraph has 6 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 15 actions are between: 2018-04-11 21:37:02  and  2018-04-12 09:40:02
+Number of Nodes: 9 , Number of edges: 24
+--------------------------------------
+subgraph 16 actions are between: 2018-04-11 23:06:16  and  2018-04-11 23:06:16
+Number of Nodes: 4 , Number of edges: 3
+--------------------------------------
+subgraph 17 actions are between: 2018-04-11 16:41:51  and  2018-04-12 22:24:07
+Number of Nodes: 11 , Number of edges: 1423
+The subgraph has 56 actions (0.039%) within BSD3 attack time range
+--------------------------------------
+subgraph 18 actions are between: 2018-04-12 14:21:13  and  2018-04-12 14:39:04
+Number of Nodes: 9 , Number of edges: 122
+The subgraph has 120 actions (0.984%) within BSD3 attack time range
+--------------------------------------
+subgraph 19 actions are between: 2018-04-12 14:35:31  and  2018-04-12 14:38:31
+Number of Nodes: 4994 , Number of edges: 5013
+The subgraph has 5013 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 20 actions are between: 2018-04-12 14:36:42  and  2018-04-12 14:38:31
+Number of Nodes: 5000 , Number of edges: 5000
+The subgraph has 5000 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 21 actions are between: 2018-04-12 14:36:42  and  2018-04-12 14:38:31
+Number of Nodes: 907 , Number of edges: 907
+The subgraph has 907 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 22 actions are between: 2018-04-11 23:05:00  and  2018-04-12 14:55:00
+Number of Nodes: 5 , Number of edges: 4
+--------------------------------------
+subgraph 23 actions are between: 2018-04-11 23:58:23  and  2018-04-11 23:58:23
+Number of Nodes: 5 , Number of edges: 8
+--------------------------------------
+subgraph 24 actions are between: 2018-04-11 23:58:49  and  2018-04-11 23:58:49
+Number of Nodes: 3 , Number of edges: 2
+--------------------------------------
+subgraph 25 actions are between: 2018-04-11 16:41:30  and  2018-04-12 18:08:16
+Number of Nodes: 28 , Number of edges: 80
+--------------------------------------
+subgraph 26 actions are between: 2018-04-11 23:01:24  and  2018-04-11 23:06:16
+Number of Nodes: 5 , Number of edges: 5
+--------------------------------------
+subgraph 27 actions are between: 2018-04-11 23:01:00  and  2018-04-11 23:58:23
+Number of Nodes: 5 , Number of edges: 6
+----------------------------------------
+
+Total Number of Predicted Anomalies Nodes in correlated subgraphs 11411
+Total Number of Predicted Anomalies, Labeled Malicious Nodes in correlated subgraphs 10907
+Total Number of Predicted Anomalies, Labeled Benign Nodes in correlated subgraphs 504
+
+Total Number of Predicted Normal Nodes in correlated subgraphs 222
+Total Number of Predicted Normal, Labeled Malicious Nodes in correlated subgraphs 1
+Total Number of Predicted Normal, Labeled Benign Nodes in correlated subgraphs 221
+       number_of_nodes  number_of_edges  subgraph_anomaly_score
+count        28.000000        28.000000               28.000000
+mean        415.642857       708.892857               20.237324
+std        1306.246792      1421.602756               62.889725
+min           3.000000         2.000000                0.000058
+25%           4.000000         4.750000                1.086642
+50%           5.000000         9.500000                1.434078
+75%          16.000000       752.500000                2.015470
+max        5000.000000      5013.000000              243.300514
+Evaluate Node anomaly detection after subgraph construction (with all anomalous subgraphs) 
+Evaluate with abnormality level: Moderate
+evaluate with anomalous subgraphs that has ['Moderate', 'Significant', 'Critical'] severity levels 
+Number of subgraphs is  3
+
+*******************************************
+TP: 10922, FP: 0, FN: 2, TN: 292671
+Precision: 1.0, Recall: 1.0, Fscore: 1.0
+MCC: 1.0
+Computed related nodes in  34.00490117073059
+
+*******************************************
+The subgraph construction time is:  286.0637192726135 seconds.
+The subgraph detection time is:  286.8529908657074 seconds.
+None
+Memory usage (ru_maxrss) :  6161.8359375  MB
+Memory usage (psutil) :  4198.6640625 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  2.6959228515625
+used virtual memory GB: 22.54602813720703  percent 3.6
+Check IOCs in disconnected anomalies nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 2
+The covered IOCS are: {'155.162.39.48', 'passwd'}
+Number of covered IOCS of attack BSD_3  is: 3
+The covered IOCS are: {'sendmail', '155.162.39.48', 'tmux-1002'}
+Number of covered IOCS of attack BSD_4  is: 2
+The covered IOCS are: {'155.162.39.48', 'passwd'}
+The total number of covered IOCs is 4
+________________________________________________
+Check IOCs in anomalies nodes correlated into subgraphs
+Number of covered IOCS of attack BSD_1  is: 0
+The covered IOCS are: set()
+Number of covered IOCS of attack BSD_2  is: 0
+The covered IOCS are: set()
+Number of covered IOCS of attack BSD_3  is: 3
+The covered IOCS are: {'sendmail', '53.158.101.118', '192.113.144.28'}
+Number of covered IOCS of attack BSD_4  is: 1
+The covered IOCS are: {'53.158.101.118'}
+The total number of covered IOCs is 3
+________________________________________________
+investigating subgraph:  0
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  1
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  2
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  3
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  4
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  5
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  6
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  7
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  8
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  9
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  10
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  11
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  12
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  13
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  14
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  15
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  16
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  17
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  18
+The covered IOCS of attack BSD_3 are: {'sendmail', '53.158.101.118'}
+The Subgraph has 0.2 percent of  BSD_3  Query Graph IOCs
+The covered IOCS of attack BSD_4 are: {'53.158.101.118'}
+The Subgraph has 0.125 percent of  BSD_4  Query Graph IOCs
+investigating subgraph:  19
+The covered IOCS of attack BSD_3 are: {'192.113.144.28'}
+The Subgraph has 0.1 percent of  BSD_3  Query Graph IOCs
+investigating subgraph:  20
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  21
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  22
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  23
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  24
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  25
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  26
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  27
+The subgraph doesn't cover any attack IOCs
+Number of covered IOCs correlated into subgraphs : 3
+Covered IOCs in all constructed subgraphs {'sendmail', '53.158.101.118', '192.113.144.28'}
+
+************************************************************
+Average performance across all runs:
+       accuracy  precision    recall  f_measure       tp        tn   fp   fn       tpr  fpr       mcc  subgraph_detection_time  memory_usage_mb
+count  1.000000        1.0  1.000000   1.000000      1.0       1.0  1.0  1.0  1.000000  1.0  1.000000                 1.000000         1.000000
+mean   0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               286.852991      6161.835938
+std         NaN        NaN       NaN        NaN      NaN       NaN  NaN  NaN       NaN  NaN       NaN                      NaN              NaN
+min    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               286.852991      6161.835938
+25%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               286.852991      6161.835938
+50%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               286.852991      6161.835938
+75%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               286.852991      6161.835938
+max    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               286.852991      6161.835938
+Total time:  338.22751355171204 seconds.
+Namespace(dataset='tc3', host='cadets', runs=1, exp_name='Full_Script_Test', inv_exp_name='expand_1_hop_MaxEdges5000_K15_ly3', model='OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05.model', root_path='../dataset/darpa_tc3/cadets/experiments/', number_of_hops=1, abnormality_level='Moderate', max_edges=5000, top_k=15, top_k_anomalous_subgraphs=10, min_nodes=3, expand_2_hop='no', top_k_percent=None, anomalies_path_only=False, backwards_only=False, anomalies_or_process_only=False, draw_subgraphs=False, get_node_attrs=True, construct_from_anomaly_subgraph=True, remove_duplicated_subgraph=True, correlate_anomalous_once=True, process_centric=False)
+Check Covered IOCs in all dataset nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 4
+The covered IOCS are: {'25.159.96.207', '155.162.39.48', 'passwd', '76.56.184.25'}
+Number of covered IOCS of attack BSD_3  is: 7
+The covered IOCS are: {'sendmail', '155.162.39.48', '53.158.101.118', '76.56.184.25', 'tmux-1002', '25.159.96.207', '192.113.144.28'}
+Number of covered IOCS of attack BSD_4  is: 4
+The covered IOCS are: {'25.159.96.207', '155.162.39.48', 'passwd', '53.158.101.118'}
+The total number of covered IOCs is 8
+________________________________________________
+resource.struct_rusage(ru_utime=14.810924, ru_stime=8.303978, ru_maxrss=1075892, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=344722, ru_majflt=0, ru_nswap=0, ru_inblock=0, ru_oublock=24, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=22395, ru_nivcsw=283)
+DEBUG: Number of testing cases  303595
+DEBUG:  {'FILE_OBJECT_DIR': 0, 'FILE_OBJECT_FILE': 1, 'FILE_OBJECT_UNIX_SOCKET': 2, 'NetFlowObject': 3, 'SUBJECT_PROCESS': 4, 'UnnamedPipeObject': 5, ('SUBJECT_PROCESS', 'EVENT_ACCEPT', 'FILE_OBJECT_UNIX_SOCKET'): 0, ('SUBJECT_PROCESS', 'EVENT_ACCEPT', 'NetFlowObject'): 1, ('SUBJECT_PROCESS', 'EVENT_BIND', 'FILE_OBJECT_UNIX_SOCKET'): 2, ('SUBJECT_PROCESS', 'EVENT_CHANGE_PRINCIPAL', 'SUBJECT_PROCESS'): 3, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_DIR'): 4, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_FILE'): 5, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_UNIX_SOCKET'): 6, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'NetFlowObject'): 7, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'UnnamedPipeObject'): 8, ('SUBJECT_PROCESS', 'EVENT_CONNECT', 'FILE_OBJECT_UNIX_SOCKET'): 9, ('SUBJECT_PROCESS', 'EVENT_CONNECT', 'NetFlowObject'): 10, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'FILE_OBJECT_DIR'): 11, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'FILE_OBJECT_UNIX_SOCKET'): 12, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'UnnamedPipeObject'): 13, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'FILE_OBJECT_FILE'): 14, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'FILE_OBJECT_UNIX_SOCKET'): 15, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'UnnamedPipeObject'): 16, ('SUBJECT_PROCESS', 'EVENT_EXIT', 'SUBJECT_PROCESS'): 17, ('SUBJECT_PROCESS', 'EVENT_FCNTL', 'FILE_OBJECT_FILE'): 18, ('SUBJECT_PROCESS', 'EVENT_FCNTL', 'UnnamedPipeObject'): 19, ('SUBJECT_PROCESS', 'EVENT_FLOWS_TO', 'FILE_OBJECT_FILE'): 20, ('SUBJECT_PROCESS', 'EVENT_FLOWS_TO', 'UnnamedPipeObject'): 21, ('SUBJECT_PROCESS', 'EVENT_FORK', 'SUBJECT_PROCESS'): 22, ('SUBJECT_PROCESS', 'EVENT_LINK', 'FILE_OBJECT_FILE'): 23, ('SUBJECT_PROCESS', 'EVENT_LSEEK', 'FILE_OBJECT_FILE'): 24, ('SUBJECT_PROCESS', 'EVENT_MMAP', 'FILE_OBJECT_FILE'): 25, ('SUBJECT_PROCESS', 'EVENT_MODIFY_FILE_ATTRIBUTES', 'FILE_OBJECT_FILE'): 26, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'FILE_OBJECT_DIR'): 27, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'FILE_OBJECT_FILE'): 28, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 29, ('SUBJECT_PROCESS', 'EVENT_OPEN', 'FILE_OBJECT_DIR'): 30, ('SUBJECT_PROCESS', 'EVENT_OPEN', 'FILE_OBJECT_FILE'): 31, ('SUBJECT_PROCESS', 'EVENT_OTHER', 'FILE_OBJECT_UNIX_SOCKET'): 32, ('SUBJECT_PROCESS', 'EVENT_READ', 'FILE_OBJECT_FILE'): 33, ('SUBJECT_PROCESS', 'EVENT_READ', 'FILE_OBJECT_UNIX_SOCKET'): 34, ('SUBJECT_PROCESS', 'EVENT_READ', 'NetFlowObject'): 35, ('SUBJECT_PROCESS', 'EVENT_READ', 'UnnamedPipeObject'): 36, ('SUBJECT_PROCESS', 'EVENT_RECVFROM', 'FILE_OBJECT_UNIX_SOCKET'): 37, ('SUBJECT_PROCESS', 'EVENT_RECVFROM', 'NetFlowObject'): 38, ('SUBJECT_PROCESS', 'EVENT_RECVMSG', 'FILE_OBJECT_UNIX_SOCKET'): 39, ('SUBJECT_PROCESS', 'EVENT_RECVMSG', 'NetFlowObject'): 40, ('SUBJECT_PROCESS', 'EVENT_RENAME', 'FILE_OBJECT_FILE'): 41, ('SUBJECT_PROCESS', 'EVENT_SENDMSG', 'FILE_OBJECT_UNIX_SOCKET'): 42, ('SUBJECT_PROCESS', 'EVENT_SENDMSG', 'NetFlowObject'): 43, ('SUBJECT_PROCESS', 'EVENT_SENDTO', 'FILE_OBJECT_UNIX_SOCKET'): 44, ('SUBJECT_PROCESS', 'EVENT_SENDTO', 'NetFlowObject'): 45, ('SUBJECT_PROCESS', 'EVENT_SIGNAL', 'SUBJECT_PROCESS'): 46, ('SUBJECT_PROCESS', 'EVENT_TRUNCATE', 'FILE_OBJECT_FILE'): 47, ('SUBJECT_PROCESS', 'EVENT_UNLINK', 'FILE_OBJECT_DIR'): 48, ('SUBJECT_PROCESS', 'EVENT_UNLINK', 'FILE_OBJECT_FILE'): 49, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'FILE_OBJECT_FILE'): 50, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'FILE_OBJECT_UNIX_SOCKET'): 51, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'NetFlowObject'): 52, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'UnnamedPipeObject'): 53, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_ACCEPT', 'SUBJECT_PROCESS'): 54, ('NetFlowObject', 'inv_EVENT_ACCEPT', 'SUBJECT_PROCESS'): 55, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_BIND', 'SUBJECT_PROCESS'): 56, ('SUBJECT_PROCESS', 'inv_EVENT_CHANGE_PRINCIPAL', 'SUBJECT_PROCESS'): 57, ('FILE_OBJECT_DIR', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 58, ('FILE_OBJECT_FILE', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 59, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 60, ('NetFlowObject', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 61, ('UnnamedPipeObject', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 62, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CONNECT', 'SUBJECT_PROCESS'): 63, ('NetFlowObject', 'inv_EVENT_CONNECT', 'SUBJECT_PROCESS'): 64, ('FILE_OBJECT_DIR', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 65, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 66, ('UnnamedPipeObject', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 67, ('FILE_OBJECT_FILE', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 68, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 69, ('UnnamedPipeObject', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 70, ('SUBJECT_PROCESS', 'inv_EVENT_EXIT', 'SUBJECT_PROCESS'): 71, ('FILE_OBJECT_FILE', 'inv_EVENT_FCNTL', 'SUBJECT_PROCESS'): 72, ('UnnamedPipeObject', 'inv_EVENT_FCNTL', 'SUBJECT_PROCESS'): 73, ('FILE_OBJECT_FILE', 'inv_EVENT_FLOWS_TO', 'SUBJECT_PROCESS'): 74, ('UnnamedPipeObject', 'inv_EVENT_FLOWS_TO', 'SUBJECT_PROCESS'): 75, ('SUBJECT_PROCESS', 'inv_EVENT_FORK', 'SUBJECT_PROCESS'): 76, ('FILE_OBJECT_FILE', 'inv_EVENT_LINK', 'SUBJECT_PROCESS'): 77, ('FILE_OBJECT_FILE', 'inv_EVENT_LSEEK', 'SUBJECT_PROCESS'): 78, ('FILE_OBJECT_FILE', 'inv_EVENT_MMAP', 'SUBJECT_PROCESS'): 79, ('FILE_OBJECT_FILE', 'inv_EVENT_MODIFY_FILE_ATTRIBUTES', 'SUBJECT_PROCESS'): 80, ('FILE_OBJECT_DIR', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 81, ('FILE_OBJECT_FILE', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 82, ('SUBJECT_PROCESS', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 83, ('FILE_OBJECT_DIR', 'inv_EVENT_OPEN', 'SUBJECT_PROCESS'): 84, ('FILE_OBJECT_FILE', 'inv_EVENT_OPEN', 'SUBJECT_PROCESS'): 85, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_OTHER', 'SUBJECT_PROCESS'): 86, ('FILE_OBJECT_FILE', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 87, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 88, ('NetFlowObject', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 89, ('UnnamedPipeObject', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 90, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_RECVFROM', 'SUBJECT_PROCESS'): 91, ('NetFlowObject', 'inv_EVENT_RECVFROM', 'SUBJECT_PROCESS'): 92, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_RECVMSG', 'SUBJECT_PROCESS'): 93, ('NetFlowObject', 'inv_EVENT_RECVMSG', 'SUBJECT_PROCESS'): 94, ('FILE_OBJECT_FILE', 'inv_EVENT_RENAME', 'SUBJECT_PROCESS'): 95, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_SENDMSG', 'SUBJECT_PROCESS'): 96, ('NetFlowObject', 'inv_EVENT_SENDMSG', 'SUBJECT_PROCESS'): 97, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_SENDTO', 'SUBJECT_PROCESS'): 98, ('NetFlowObject', 'inv_EVENT_SENDTO', 'SUBJECT_PROCESS'): 99, ('SUBJECT_PROCESS', 'inv_EVENT_SIGNAL', 'SUBJECT_PROCESS'): 100, ('FILE_OBJECT_FILE', 'inv_EVENT_TRUNCATE', 'SUBJECT_PROCESS'): 101, ('FILE_OBJECT_DIR', 'inv_EVENT_UNLINK', 'SUBJECT_PROCESS'): 102, ('FILE_OBJECT_FILE', 'inv_EVENT_UNLINK', 'SUBJECT_PROCESS'): 103, ('FILE_OBJECT_FILE', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 104, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 105, ('NetFlowObject', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 106, ('UnnamedPipeObject', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 107}
+DEBUG: edge_index stats tensor(13613845166210) tensor(0) tensor(696372)
+******************************************
+Run number: 0
+Seed:  360
+Number of anomalies nodes:  76340
+malicious nodes per node type: node_type
+FILE_OBJECT_FILE     10885
+NetFlowObject           21
+SUBJECT_PROCESS         13
+UnnamedPipeObject        5
+Name: count, dtype: int64
+Number of benign nodes predicted anomalies:  65429
+Number of malicious nodes predicted anomalies:  10911
+Number of nodes labelled malicious:  10924
+Check Covered IOCs in all raised anomalies nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 2
+The covered IOCS are: {'155.162.39.48', 'passwd'}
+Number of covered IOCS of attack BSD_3  is: 5
+The covered IOCS are: {'sendmail', '155.162.39.48', '53.158.101.118', '192.113.144.28', 'tmux-1002'}
+Number of covered IOCS of attack BSD_4  is: 3
+The covered IOCS are: {'155.162.39.48', 'passwd', '53.158.101.118'}
+The total number of covered IOCs is 6
+________________________________________________
+Number of inserted anomalies nodes: 76340
+Number of nodes with attributes 58455
+Total number of triples before dropping node attributes 1307113
+Total number of triples after dropping node attributes 1307113
+Total number of triples before dropping duplicated actions (within one second) 1307113
+Total number of triples after dropping duplicated actions (within one second) 965341
+Number of nodes in queried subgraph object: 106438
+Number of edges in queried subgraph object: 965341
+The subgraph query time is:  72.99307918548584 seconds.
+Number of initially disconnected nodes nodes: 0
+Number of initially correlated nodes: 76340
+Total number of NetFlowObject nodes is 103 
+Number of seed nodes for   NetFlowObject is 15
+Total number of FILE_OBJECT_FILE nodes is 75969 
+Number of seed nodes for   FILE_OBJECT_FILE is 15
+Total number of SUBJECT_PROCESS nodes is 41 
+Number of seed nodes for   SUBJECT_PROCESS is 15
+Total Number of seed nodes: 45
+Debug: seed node is BF208583-3E05-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.006900310516357422 seconds.
+DEBUG: number of correlated_anomalies_nodes 0
+In seed number 0, number of remaining anomalous nodes is 76340
+Debug: seed node is 690160E4-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.016690969467163086 seconds.
+DEBUG: number of correlated_anomalies_nodes 0
+In seed number 1, number of remaining anomalous nodes is 76340
+Debug: seed node is E393303B-721F-8457-9F72-2DA477847B65-file_object_file
+Constructed a subgraph with 3 nodes and 701 edges
+The traverse time is:  0.011586904525756836 seconds.
+DEBUG: number of correlated_anomalies_nodes 3
+In seed number 2, number of remaining anomalous nodes is 76338
+Debug: seed node is 84459C9D-4B55-E757-954B-3D3927E780EC-file_object_file
+Constructed a subgraph with 9 nodes and 20 edges
+The traverse time is:  0.00722503662109375 seconds.
+DEBUG: number of correlated_anomalies_nodes 12
+In seed number 3, number of remaining anomalous nodes is 76330
+Debug: seed node is 7244372A-63A0-695F-A063-E6AD8F69F046-file_object_file
+Constructed a subgraph with 12 nodes and 19 edges
+The traverse time is:  0.007135629653930664 seconds.
+DEBUG: number of correlated_anomalies_nodes 24
+In seed number 4, number of remaining anomalous nodes is 76319
+Debug: seed node is A0E0997B-8B26-A55C-A68B-FA7C5CA5991D-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.007035255432128906 seconds.
+DEBUG: number of correlated_anomalies_nodes 28
+In seed number 5, number of remaining anomalous nodes is 76316
+Debug: seed node is 21F2EBB3-E438-F85B-B8E4-D8E06BF8E62F-file_object_file
+Constructed a subgraph with 5 nodes and 11 edges
+The traverse time is:  0.0070416927337646484 seconds.
+DEBUG: number of correlated_anomalies_nodes 33
+In seed number 6, number of remaining anomalous nodes is 76312
+Debug: seed node is C0CB38BD-59A6-9E5C-A659-B5362C9EF45A-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.009110689163208008 seconds.
+DEBUG: number of correlated_anomalies_nodes 37
+In seed number 7, number of remaining anomalous nodes is 76309
+Debug: seed node is 5EE4F311-C814-7A59-94C8-0E6F197A7946-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.0070421695709228516 seconds.
+DEBUG: number of correlated_anomalies_nodes 41
+In seed number 8, number of remaining anomalous nodes is 76306
+Debug: seed node is F7ACFABA-F8F1-FB55-B1F8-196DD5FB30E1-file_object_file
+Constructed a subgraph with 3 nodes and 3 edges
+The traverse time is:  0.011551618576049805 seconds.
+DEBUG: number of correlated_anomalies_nodes 44
+In seed number 9, number of remaining anomalous nodes is 76304
+Debug: seed node is 29BD08FE-7656-BF51-9676-B6C811BF9E22-file_object_file
+Constructed a subgraph with 3 nodes and 4 edges
+The traverse time is:  0.011501073837280273 seconds.
+DEBUG: number of correlated_anomalies_nodes 47
+In seed number 10, number of remaining anomalous nodes is 76302
+Debug: seed node is 451946BD-12F7-8356-B712-07F5A683E62E-file_object_file
+subgraph is less than  3 nodes
+The traverse time is:  0.007009029388427734 seconds.
+DEBUG: number of correlated_anomalies_nodes 47
+In seed number 11, number of remaining anomalous nodes is 76302
+Debug: seed node is 76CB53C6-3DFE-11E8-A5CB-3FA3753A265A-file_object_file
+Constructed a subgraph with 4 nodes and 4 edges
+The traverse time is:  0.0070078372955322266 seconds.
+DEBUG: number of correlated_anomalies_nodes 51
+In seed number 12, number of remaining anomalous nodes is 76299
+Debug: seed node is BDE72B85-DCD9-835C-99DC-32E13C838365-file_object_file
+partition a graph with 602 nodes and 21704 edges
+partitioned a subgraph with 55 nodes and 227 edges
+partitioned a subgraph with 127 nodes and 1681 edges
+partitioned a subgraph with 282 nodes and 1636 edges
+partitioned a subgraph with 130 nodes and 1886 edges
+partitioned a subgraph with 8 nodes and 18 edges
+Partition time:  0.12268996238708496 seconds.
+Constructed a subgraph with 55 nodes and 227 edges
+Constructed a subgraph with 127 nodes and 1681 edges
+Constructed a subgraph with 282 nodes and 1636 edges
+Constructed a subgraph with 130 nodes and 1886 edges
+Constructed a subgraph with 8 nodes and 18 edges
+The traverse time is:  1.1865065097808838 seconds.
+DEBUG: number of correlated_anomalies_nodes 653
+In seed number 13, number of remaining anomalous nodes is 75895
+Debug: seed node is 330061CF-6BB3-C45E-B36B-B89D7EC4F443-file_object_file
+Constructed a subgraph with 9 nodes and 24 edges
+The traverse time is:  16.240057229995728 seconds.
+DEBUG: number of correlated_anomalies_nodes 662
+In seed number 14, number of remaining anomalous nodes is 75888
+Debug: seed node is 22A5E28F-B690-9651-90B6-68D05196AF07-file_object_file
+subgraph is less than  3 nodes
+The traverse time is:  0.024977445602416992 seconds.
+DEBUG: number of correlated_anomalies_nodes 662
+In seed number 15, number of remaining anomalous nodes is 75888
+Debug: seed node is F182D96A-9536-8854-B695-67B68488E300-file_object_file
+Constructed a subgraph with 4 nodes and 3 edges
+The traverse time is:  0.007019758224487305 seconds.
+DEBUG: number of correlated_anomalies_nodes 666
+In seed number 16, number of remaining anomalous nodes is 75885
+Debug: seed node is 1AD38A84-3DC3-11E8-A5CB-3FA3753A265A-netflowobject
+Constructed a subgraph with 11 nodes and 1423 edges
+The traverse time is:  0.01362156867980957 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 17, number of remaining anomalous nodes is 75875
+Debug: seed node is 219DC4CD-3E7E-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.0070683956146240234 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 18, number of remaining anomalous nodes is 75875
+Debug: seed node is BE40B48C-3EC1-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.007067441940307617 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 19, number of remaining anomalous nodes is 75875
+Debug: seed node is 1AD39F36-3DC3-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.007081031799316406 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 20, number of remaining anomalous nodes is 75875
+Debug: seed node is 47E61FFC-3E80-11E8-A5CB-3FA3753A265A-subject_process
+partition a graph with 10907 nodes and 11044 edges
+partitioned a subgraph with 9 nodes and 122 edges
+partitioned a subgraph with 10898 nodes and 10921 edges
+Sampling a subgraph with 10898 nodes and 10921 edges (sample from different actions)
+sampled a subgraph with 4994 nodes and 5013 edges
+Remains unsampled a subgraph with 5904 nodes and 0 edges (sample from different actions)
+Partition time:  1.3235130310058594 seconds.
+Constructed a subgraph with 9 nodes and 122 edges
+Constructed a subgraph with 4994 nodes and 5013 edges
+The traverse time is:  59.948121786117554 seconds.
+DEBUG: number of correlated_anomalies_nodes 5679
+In seed number 21, number of remaining anomalous nodes is 70873
+Debug: seed node is 78FEF500-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+partition a graph with 5905 nodes and 5905 edges
+Couldn't partition the big subgraph
+partitioned a subgraph with 5905 nodes and 5905 edges
+Sampling a subgraph with 5905 nodes and 5905 edges (sample from different actions)
+sampled a subgraph with 5000 nodes and 5000 edges
+Remains unsampled a subgraph with 905 nodes and 0 edges (sample from different actions)
+Partition time:  0.33121395111083984 seconds.
+Constructed a subgraph with 5000 nodes and 5000 edges
+The traverse time is:  0.4380929470062256 seconds.
+DEBUG: number of correlated_anomalies_nodes 10678
+In seed number 22, number of remaining anomalous nodes is 65874
+Debug: seed node is 791053E1-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+Constructed a subgraph with 907 nodes and 907 edges
+The traverse time is:  0.03226971626281738 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 23, number of remaining anomalous nodes is 64969
+Debug: seed node is 7910F342-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.016111135482788086 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 24, number of remaining anomalous nodes is 64969
+Debug: seed node is 8133CB53-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.015895843505859375 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 25, number of remaining anomalous nodes is 64969
+Debug: seed node is 8748DACF-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.014335393905639648 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 26, number of remaining anomalous nodes is 64969
+Debug: seed node is 8751D93A-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.01360177993774414 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 27, number of remaining anomalous nodes is 64969
+Debug: seed node is 875694BD-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013251066207885742 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 28, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A680A0C-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013038873672485352 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 29, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A733A70-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013855934143066406 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 30, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A742A3A-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013404607772827148 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 31, number of remaining anomalous nodes is 64969
+Debug: seed node is 9AA5ADAB-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013223648071289062 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 32, number of remaining anomalous nodes is 64969
+Debug: seed node is 1AC357D0-3DC3-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 4 edges
+The traverse time is:  2.655526638031006 seconds.
+DEBUG: number of correlated_anomalies_nodes 11588
+In seed number 33, number of remaining anomalous nodes is 64965
+Debug: seed node is BF1CCA72-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 8 edges
+The traverse time is:  0.007194995880126953 seconds.
+DEBUG: number of correlated_anomalies_nodes 11593
+In seed number 34, number of remaining anomalous nodes is 64961
+Debug: seed node is CE45E423-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 3 nodes and 2 edges
+The traverse time is:  0.011650323867797852 seconds.
+DEBUG: number of correlated_anomalies_nodes 11596
+In seed number 35, number of remaining anomalous nodes is 64958
+Debug: seed node is DE7FB6B3-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 28 nodes and 80 edges
+The traverse time is:  92.62556409835815 seconds.
+DEBUG: number of correlated_anomalies_nodes 11623
+In seed number 36, number of remaining anomalous nodes is 64938
+Debug: seed node is 49934AC7-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.008510351181030273 seconds.
+DEBUG: number of correlated_anomalies_nodes 11623
+In seed number 37, number of remaining anomalous nodes is 64938
+Debug: seed node is 76F0D44D-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 5 edges
+The traverse time is:  0.007248878479003906 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 38, number of remaining anomalous nodes is 64934
+Debug: seed node is 77035EE2-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.0070247650146484375 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 39, number of remaining anomalous nodes is 64934
+Debug: seed node is 7705637B-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007008790969848633 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 40, number of remaining anomalous nodes is 64934
+Debug: seed node is BF1467C9-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 6 edges
+The traverse time is:  0.00727391242980957 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 41, number of remaining anomalous nodes is 64929
+Debug: seed node is BF1501C1-3E05-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007054328918457031 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 42, number of remaining anomalous nodes is 64929
+Debug: seed node is 8BBE2510-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.01188516616821289 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 43, number of remaining anomalous nodes is 64929
+Debug: seed node is C3817B91-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.011657238006591797 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 44, number of remaining anomalous nodes is 64929
+The total traverse time is:  173.64150023460388 seconds.
+Number of subgraphs before removing duplication 28
+Number of removed duplicated subgraphs is 0
+Number of constructed subgraphs: 28
+Number of correlated anomalies nodes: 11411
+Number of disconnected nodes 64929
+--------------------------------------
+subgraph 0 actions are between: 2018-04-11 16:36:48  and  2018-04-12 22:15:08
+Number of Nodes: 3 , Number of edges: 701
+The subgraph has 48 actions (0.068%) within BSD3 attack time range
+--------------------------------------
+subgraph 1 actions are between: 2018-04-11 23:01:08  and  2018-04-11 23:01:08
+Number of Nodes: 9 , Number of edges: 20
+--------------------------------------
+subgraph 2 actions are between: 2018-04-11 16:37:06  and  2018-04-11 16:37:06
+Number of Nodes: 12 , Number of edges: 19
+--------------------------------------
+subgraph 3 actions are between: 2018-04-12 14:17:34  and  2018-04-12 14:17:34
+Number of Nodes: 4 , Number of edges: 5
+The subgraph has 5 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 4 actions are between: 2018-04-11 23:01:00  and  2018-04-11 23:01:00
+Number of Nodes: 5 , Number of edges: 11
+--------------------------------------
+subgraph 5 actions are between: 2018-04-11 23:01:08  and  2018-04-11 23:01:08
+Number of Nodes: 4 , Number of edges: 5
+--------------------------------------
+subgraph 6 actions are between: 2018-04-11 23:06:16  and  2018-04-11 23:06:16
+Number of Nodes: 4 , Number of edges: 5
+--------------------------------------
+subgraph 7 actions are between: 2018-04-12 14:35:31  and  2018-04-12 14:38:31
+Number of Nodes: 3 , Number of edges: 3
+The subgraph has 3 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 8 actions are between: 2018-04-11 23:58:22  and  2018-04-11 23:58:22
+Number of Nodes: 3 , Number of edges: 4
+--------------------------------------
+subgraph 9 actions are between: 2018-04-11 23:06:15  and  2018-04-11 23:06:15
+Number of Nodes: 4 , Number of edges: 4
+--------------------------------------
+subgraph 10 actions are between: 2018-04-11 19:47:10  and  2018-04-12 20:03:24
+Number of Nodes: 55 , Number of edges: 227
+The subgraph has 29 actions (0.128%) within BSD3 attack time range
+--------------------------------------
+subgraph 11 actions are between: 2018-04-11 16:37:43  and  2018-04-11 22:50:10
+Number of Nodes: 127 , Number of edges: 1681
+--------------------------------------
+subgraph 12 actions are between: 2018-04-12 07:14:28  and  2018-04-12 22:15:08
+Number of Nodes: 282 , Number of edges: 1636
+The subgraph has 145 actions (0.089%) within BSD3 attack time range
+--------------------------------------
+subgraph 13 actions are between: 2018-04-12 07:26:09  and  2018-04-12 22:10:00
+Number of Nodes: 130 , Number of edges: 1886
+The subgraph has 359 actions (0.19%) within BSD3 attack time range
+--------------------------------------
+subgraph 14 actions are between: 2018-04-12 14:33:00  and  2018-04-12 20:56:25
+Number of Nodes: 8 , Number of edges: 18
+The subgraph has 9 actions (0.5%) within BSD3 attack time range
+--------------------------------------
+subgraph 15 actions are between: 2018-04-11 21:37:02  and  2018-04-12 09:40:02
+Number of Nodes: 9 , Number of edges: 24
+--------------------------------------
+subgraph 16 actions are between: 2018-04-11 23:06:16  and  2018-04-11 23:06:16
+Number of Nodes: 4 , Number of edges: 3
+--------------------------------------
+subgraph 17 actions are between: 2018-04-11 16:41:51  and  2018-04-12 22:24:07
+Number of Nodes: 11 , Number of edges: 1423
+The subgraph has 56 actions (0.039%) within BSD3 attack time range
+--------------------------------------
+subgraph 18 actions are between: 2018-04-12 14:21:13  and  2018-04-12 14:39:04
+Number of Nodes: 9 , Number of edges: 122
+The subgraph has 120 actions (0.984%) within BSD3 attack time range
+--------------------------------------
+subgraph 19 actions are between: 2018-04-12 14:35:31  and  2018-04-12 14:38:31
+Number of Nodes: 4994 , Number of edges: 5013
+The subgraph has 5013 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 20 actions are between: 2018-04-12 14:36:42  and  2018-04-12 14:38:31
+Number of Nodes: 5000 , Number of edges: 5000
+The subgraph has 5000 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 21 actions are between: 2018-04-12 14:36:42  and  2018-04-12 14:38:31
+Number of Nodes: 907 , Number of edges: 907
+The subgraph has 907 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 22 actions are between: 2018-04-11 23:05:00  and  2018-04-12 14:55:00
+Number of Nodes: 5 , Number of edges: 4
+--------------------------------------
+subgraph 23 actions are between: 2018-04-11 23:58:23  and  2018-04-11 23:58:23
+Number of Nodes: 5 , Number of edges: 8
+--------------------------------------
+subgraph 24 actions are between: 2018-04-11 23:58:49  and  2018-04-11 23:58:49
+Number of Nodes: 3 , Number of edges: 2
+--------------------------------------
+subgraph 25 actions are between: 2018-04-11 16:41:30  and  2018-04-12 18:08:16
+Number of Nodes: 28 , Number of edges: 80
+--------------------------------------
+subgraph 26 actions are between: 2018-04-11 23:01:24  and  2018-04-11 23:06:16
+Number of Nodes: 5 , Number of edges: 5
+--------------------------------------
+subgraph 27 actions are between: 2018-04-11 23:01:00  and  2018-04-11 23:58:23
+Number of Nodes: 5 , Number of edges: 6
+----------------------------------------
+
+Total Number of Predicted Anomalies Nodes in correlated subgraphs 11411
+Total Number of Predicted Anomalies, Labeled Malicious Nodes in correlated subgraphs 10907
+Total Number of Predicted Anomalies, Labeled Benign Nodes in correlated subgraphs 504
+
+Total Number of Predicted Normal Nodes in correlated subgraphs 222
+Total Number of Predicted Normal, Labeled Malicious Nodes in correlated subgraphs 1
+Total Number of Predicted Normal, Labeled Benign Nodes in correlated subgraphs 221
+       number_of_nodes  number_of_edges  subgraph_anomaly_score
+count        28.000000        28.000000               28.000000
+mean        415.642857       672.214286               20.237324
+std        1305.864386      1360.158606               62.985077
+min           3.000000         2.000000                0.000117
+25%           4.000000         5.000000                1.086642
+50%           6.500000        18.500000                1.434078
+75%          34.750000       752.500000                2.140448
+max        5000.000000      5013.000000              244.118897
+Evaluate Node anomaly detection after subgraph construction (with all anomalous subgraphs) 
+Evaluate with abnormality level: Moderate
+evaluate with anomalous subgraphs that has ['Moderate', 'Significant', 'Critical'] severity levels 
+Number of subgraphs is  3
+
+*******************************************
+TP: 10922, FP: 0, FN: 2, TN: 292671
+Precision: 1.0, Recall: 1.0, Fscore: 1.0
+MCC: 1.0
+Computed related nodes in  34.528876543045044
+
+*******************************************
+The subgraph construction time is:  278.20798540115356 seconds.
+The subgraph detection time is:  278.720520734787 seconds.
+None
+Memory usage (ru_maxrss) :  6160.99609375  MB
+Memory usage (psutil) :  4195.51953125 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  2.5238037109375
+used virtual memory GB: 22.5062255859375  percent 3.6
+Check IOCs in disconnected anomalies nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 2
+The covered IOCS are: {'155.162.39.48', 'passwd'}
+Number of covered IOCS of attack BSD_3  is: 3
+The covered IOCS are: {'sendmail', '155.162.39.48', 'tmux-1002'}
+Number of covered IOCS of attack BSD_4  is: 2
+The covered IOCS are: {'155.162.39.48', 'passwd'}
+The total number of covered IOCs is 4
+________________________________________________
+Check IOCs in anomalies nodes correlated into subgraphs
+Number of covered IOCS of attack BSD_1  is: 0
+The covered IOCS are: set()
+Number of covered IOCS of attack BSD_2  is: 0
+The covered IOCS are: set()
+Number of covered IOCS of attack BSD_3  is: 3
+The covered IOCS are: {'sendmail', '53.158.101.118', '192.113.144.28'}
+Number of covered IOCS of attack BSD_4  is: 1
+The covered IOCS are: {'53.158.101.118'}
+The total number of covered IOCs is 3
+________________________________________________
+investigating subgraph:  0
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  1
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  2
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  3
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  4
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  5
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  6
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  7
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  8
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  9
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  10
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  11
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  12
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  13
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  14
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  15
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  16
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  17
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  18
+The covered IOCS of attack BSD_3 are: {'sendmail', '53.158.101.118'}
+The Subgraph has 0.2 percent of  BSD_3  Query Graph IOCs
+The covered IOCS of attack BSD_4 are: {'53.158.101.118'}
+The Subgraph has 0.125 percent of  BSD_4  Query Graph IOCs
+investigating subgraph:  19
+The covered IOCS of attack BSD_3 are: {'192.113.144.28'}
+The Subgraph has 0.1 percent of  BSD_3  Query Graph IOCs
+investigating subgraph:  20
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  21
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  22
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  23
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  24
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  25
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  26
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  27
+The subgraph doesn't cover any attack IOCs
+Number of covered IOCs correlated into subgraphs : 3
+Covered IOCs in all constructed subgraphs {'sendmail', '53.158.101.118', '192.113.144.28'}
+
+************************************************************
+Average performance across all runs:
+       accuracy  precision    recall  f_measure       tp        tn   fp   fn       tpr  fpr       mcc  subgraph_detection_time  memory_usage_mb
+count  1.000000        1.0  1.000000   1.000000      1.0       1.0  1.0  1.0  1.000000  1.0  1.000000                 1.000000         1.000000
+mean   0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               278.720521      6160.996094
+std         NaN        NaN       NaN        NaN      NaN       NaN  NaN  NaN       NaN  NaN       NaN                      NaN              NaN
+min    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               278.720521      6160.996094
+25%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               278.720521      6160.996094
+50%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               278.720521      6160.996094
+75%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               278.720521      6160.996094
+max    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               278.720521      6160.996094
+Total time:  326.52518796920776 seconds.
+Namespace(dataset='tc3', host='cadets', runs=1, exp_name='Full_Script_Test', inv_exp_name='expand_1_hop_MaxEdges5000_K15_ly3', model='OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05.model', root_path='../dataset/darpa_tc3/cadets/experiments/', number_of_hops=1, abnormality_level='Moderate', max_edges=5000, top_k=15, top_k_anomalous_subgraphs=10, min_nodes=3, expand_2_hop='no', top_k_percent=None, anomalies_path_only=False, backwards_only=False, anomalies_or_process_only=False, draw_subgraphs=False, get_node_attrs=True, construct_from_anomaly_subgraph=True, remove_duplicated_subgraph=True, correlate_anomalous_once=True, process_centric=False)
+Check Covered IOCs in all dataset nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 4
+The covered IOCS are: {'25.159.96.207', '155.162.39.48', 'passwd', '76.56.184.25'}
+Number of covered IOCS of attack BSD_3  is: 7
+The covered IOCS are: {'tmux-1002', '76.56.184.25', '192.113.144.28', '155.162.39.48', 'sendmail', '53.158.101.118', '25.159.96.207'}
+Number of covered IOCS of attack BSD_4  is: 4
+The covered IOCS are: {'25.159.96.207', '155.162.39.48', '53.158.101.118', 'passwd'}
+The total number of covered IOCs is 8
+________________________________________________
+Extracting ../dataset/darpa_tc3/cadets/experiments/Full_Script_Test.zip
+Loading necessary files...
+This might take a while.
+Processing graphs...
+Converting graphs into PyG objects...
+Saving...
+resource.struct_rusage(ru_utime=19.683796, ru_stime=9.057275, ru_maxrss=1024724, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=271151, ru_majflt=0, ru_nswap=0, ru_inblock=0, ru_oublock=1119304, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=50382, ru_nivcsw=140)
+DEBUG: Number of testing cases  303595
+DEBUG:  {'FILE_OBJECT_DIR': 0, 'FILE_OBJECT_FILE': 1, 'FILE_OBJECT_UNIX_SOCKET': 2, 'NetFlowObject': 3, 'SUBJECT_PROCESS': 4, 'UnnamedPipeObject': 5, ('SUBJECT_PROCESS', 'EVENT_ACCEPT', 'FILE_OBJECT_UNIX_SOCKET'): 0, ('SUBJECT_PROCESS', 'EVENT_ACCEPT', 'NetFlowObject'): 1, ('SUBJECT_PROCESS', 'EVENT_BIND', 'FILE_OBJECT_UNIX_SOCKET'): 2, ('SUBJECT_PROCESS', 'EVENT_CHANGE_PRINCIPAL', 'SUBJECT_PROCESS'): 3, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_DIR'): 4, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_FILE'): 5, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_UNIX_SOCKET'): 6, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'NetFlowObject'): 7, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'UnnamedPipeObject'): 8, ('SUBJECT_PROCESS', 'EVENT_CONNECT', 'FILE_OBJECT_UNIX_SOCKET'): 9, ('SUBJECT_PROCESS', 'EVENT_CONNECT', 'NetFlowObject'): 10, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'FILE_OBJECT_DIR'): 11, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'FILE_OBJECT_UNIX_SOCKET'): 12, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'UnnamedPipeObject'): 13, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'FILE_OBJECT_FILE'): 14, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'FILE_OBJECT_UNIX_SOCKET'): 15, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'UnnamedPipeObject'): 16, ('SUBJECT_PROCESS', 'EVENT_EXIT', 'SUBJECT_PROCESS'): 17, ('SUBJECT_PROCESS', 'EVENT_FCNTL', 'FILE_OBJECT_FILE'): 18, ('SUBJECT_PROCESS', 'EVENT_FCNTL', 'UnnamedPipeObject'): 19, ('SUBJECT_PROCESS', 'EVENT_FLOWS_TO', 'FILE_OBJECT_FILE'): 20, ('SUBJECT_PROCESS', 'EVENT_FLOWS_TO', 'UnnamedPipeObject'): 21, ('SUBJECT_PROCESS', 'EVENT_FORK', 'SUBJECT_PROCESS'): 22, ('SUBJECT_PROCESS', 'EVENT_LINK', 'FILE_OBJECT_FILE'): 23, ('SUBJECT_PROCESS', 'EVENT_LSEEK', 'FILE_OBJECT_FILE'): 24, ('SUBJECT_PROCESS', 'EVENT_MMAP', 'FILE_OBJECT_FILE'): 25, ('SUBJECT_PROCESS', 'EVENT_MODIFY_FILE_ATTRIBUTES', 'FILE_OBJECT_FILE'): 26, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'FILE_OBJECT_DIR'): 27, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'FILE_OBJECT_FILE'): 28, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 29, ('SUBJECT_PROCESS', 'EVENT_OPEN', 'FILE_OBJECT_DIR'): 30, ('SUBJECT_PROCESS', 'EVENT_OPEN', 'FILE_OBJECT_FILE'): 31, ('SUBJECT_PROCESS', 'EVENT_OTHER', 'FILE_OBJECT_UNIX_SOCKET'): 32, ('SUBJECT_PROCESS', 'EVENT_READ', 'FILE_OBJECT_FILE'): 33, ('SUBJECT_PROCESS', 'EVENT_READ', 'FILE_OBJECT_UNIX_SOCKET'): 34, ('SUBJECT_PROCESS', 'EVENT_READ', 'NetFlowObject'): 35, ('SUBJECT_PROCESS', 'EVENT_READ', 'UnnamedPipeObject'): 36, ('SUBJECT_PROCESS', 'EVENT_RECVFROM', 'FILE_OBJECT_UNIX_SOCKET'): 37, ('SUBJECT_PROCESS', 'EVENT_RECVFROM', 'NetFlowObject'): 38, ('SUBJECT_PROCESS', 'EVENT_RECVMSG', 'FILE_OBJECT_UNIX_SOCKET'): 39, ('SUBJECT_PROCESS', 'EVENT_RECVMSG', 'NetFlowObject'): 40, ('SUBJECT_PROCESS', 'EVENT_RENAME', 'FILE_OBJECT_FILE'): 41, ('SUBJECT_PROCESS', 'EVENT_SENDMSG', 'FILE_OBJECT_UNIX_SOCKET'): 42, ('SUBJECT_PROCESS', 'EVENT_SENDMSG', 'NetFlowObject'): 43, ('SUBJECT_PROCESS', 'EVENT_SENDTO', 'FILE_OBJECT_UNIX_SOCKET'): 44, ('SUBJECT_PROCESS', 'EVENT_SENDTO', 'NetFlowObject'): 45, ('SUBJECT_PROCESS', 'EVENT_SIGNAL', 'SUBJECT_PROCESS'): 46, ('SUBJECT_PROCESS', 'EVENT_TRUNCATE', 'FILE_OBJECT_FILE'): 47, ('SUBJECT_PROCESS', 'EVENT_UNLINK', 'FILE_OBJECT_DIR'): 48, ('SUBJECT_PROCESS', 'EVENT_UNLINK', 'FILE_OBJECT_FILE'): 49, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'FILE_OBJECT_FILE'): 50, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'FILE_OBJECT_UNIX_SOCKET'): 51, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'NetFlowObject'): 52, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'UnnamedPipeObject'): 53, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_ACCEPT', 'SUBJECT_PROCESS'): 54, ('NetFlowObject', 'inv_EVENT_ACCEPT', 'SUBJECT_PROCESS'): 55, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_BIND', 'SUBJECT_PROCESS'): 56, ('SUBJECT_PROCESS', 'inv_EVENT_CHANGE_PRINCIPAL', 'SUBJECT_PROCESS'): 57, ('FILE_OBJECT_DIR', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 58, ('FILE_OBJECT_FILE', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 59, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 60, ('NetFlowObject', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 61, ('UnnamedPipeObject', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 62, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CONNECT', 'SUBJECT_PROCESS'): 63, ('NetFlowObject', 'inv_EVENT_CONNECT', 'SUBJECT_PROCESS'): 64, ('FILE_OBJECT_DIR', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 65, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 66, ('UnnamedPipeObject', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 67, ('FILE_OBJECT_FILE', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 68, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 69, ('UnnamedPipeObject', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 70, ('SUBJECT_PROCESS', 'inv_EVENT_EXIT', 'SUBJECT_PROCESS'): 71, ('FILE_OBJECT_FILE', 'inv_EVENT_FCNTL', 'SUBJECT_PROCESS'): 72, ('UnnamedPipeObject', 'inv_EVENT_FCNTL', 'SUBJECT_PROCESS'): 73, ('FILE_OBJECT_FILE', 'inv_EVENT_FLOWS_TO', 'SUBJECT_PROCESS'): 74, ('UnnamedPipeObject', 'inv_EVENT_FLOWS_TO', 'SUBJECT_PROCESS'): 75, ('SUBJECT_PROCESS', 'inv_EVENT_FORK', 'SUBJECT_PROCESS'): 76, ('FILE_OBJECT_FILE', 'inv_EVENT_LINK', 'SUBJECT_PROCESS'): 77, ('FILE_OBJECT_FILE', 'inv_EVENT_LSEEK', 'SUBJECT_PROCESS'): 78, ('FILE_OBJECT_FILE', 'inv_EVENT_MMAP', 'SUBJECT_PROCESS'): 79, ('FILE_OBJECT_FILE', 'inv_EVENT_MODIFY_FILE_ATTRIBUTES', 'SUBJECT_PROCESS'): 80, ('FILE_OBJECT_DIR', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 81, ('FILE_OBJECT_FILE', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 82, ('SUBJECT_PROCESS', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 83, ('FILE_OBJECT_DIR', 'inv_EVENT_OPEN', 'SUBJECT_PROCESS'): 84, ('FILE_OBJECT_FILE', 'inv_EVENT_OPEN', 'SUBJECT_PROCESS'): 85, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_OTHER', 'SUBJECT_PROCESS'): 86, ('FILE_OBJECT_FILE', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 87, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 88, ('NetFlowObject', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 89, ('UnnamedPipeObject', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 90, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_RECVFROM', 'SUBJECT_PROCESS'): 91, ('NetFlowObject', 'inv_EVENT_RECVFROM', 'SUBJECT_PROCESS'): 92, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_RECVMSG', 'SUBJECT_PROCESS'): 93, ('NetFlowObject', 'inv_EVENT_RECVMSG', 'SUBJECT_PROCESS'): 94, ('FILE_OBJECT_FILE', 'inv_EVENT_RENAME', 'SUBJECT_PROCESS'): 95, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_SENDMSG', 'SUBJECT_PROCESS'): 96, ('NetFlowObject', 'inv_EVENT_SENDMSG', 'SUBJECT_PROCESS'): 97, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_SENDTO', 'SUBJECT_PROCESS'): 98, ('NetFlowObject', 'inv_EVENT_SENDTO', 'SUBJECT_PROCESS'): 99, ('SUBJECT_PROCESS', 'inv_EVENT_SIGNAL', 'SUBJECT_PROCESS'): 100, ('FILE_OBJECT_FILE', 'inv_EVENT_TRUNCATE', 'SUBJECT_PROCESS'): 101, ('FILE_OBJECT_DIR', 'inv_EVENT_UNLINK', 'SUBJECT_PROCESS'): 102, ('FILE_OBJECT_FILE', 'inv_EVENT_UNLINK', 'SUBJECT_PROCESS'): 103, ('FILE_OBJECT_FILE', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 104, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 105, ('NetFlowObject', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 106, ('UnnamedPipeObject', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 107}
+DEBUG: edge_index stats tensor(13613845166210) tensor(0) tensor(696372)
+******************************************
+Run number: 0
+Seed:  360
+Number of anomalies nodes:  76340
+malicious nodes per node type: node_type
+FILE_OBJECT_FILE     10885
+NetFlowObject           21
+SUBJECT_PROCESS         13
+UnnamedPipeObject        5
+Name: count, dtype: int64
+Number of benign nodes predicted anomalies:  65429
+Number of malicious nodes predicted anomalies:  10911
+Number of nodes labelled malicious:  10924
+Check Covered IOCs in all raised anomalies nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 2
+The covered IOCS are: {'passwd', '155.162.39.48'}
+Number of covered IOCS of attack BSD_3  is: 5
+The covered IOCS are: {'tmux-1002', '192.113.144.28', '155.162.39.48', 'sendmail', '53.158.101.118'}
+Number of covered IOCS of attack BSD_4  is: 3
+The covered IOCS are: {'passwd', '155.162.39.48', '53.158.101.118'}
+The total number of covered IOCs is 6
+________________________________________________
+Number of inserted anomalies nodes: 76340
+Number of nodes with attributes 58455
+Total number of triples before dropping node attributes 1307113
+Total number of triples after dropping node attributes 1307113
+Total number of triples before dropping duplicated actions (within one second) 1307113
+Total number of triples after dropping duplicated actions (within one second) 965341
+Number of nodes in queried subgraph object: 106438
+Number of edges in queried subgraph object: 965341
+The subgraph query time is:  76.55144047737122 seconds.
+Number of initially disconnected nodes nodes: 0
+Number of initially correlated nodes: 76340
+Total number of NetFlowObject nodes is 103 
+Number of seed nodes for   NetFlowObject is 15
+Total number of FILE_OBJECT_FILE nodes is 75969 
+Number of seed nodes for   FILE_OBJECT_FILE is 15
+Total number of SUBJECT_PROCESS nodes is 41 
+Number of seed nodes for   SUBJECT_PROCESS is 15
+Total Number of seed nodes: 45
+Debug: seed node is BF208583-3E05-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007294893264770508 seconds.
+DEBUG: number of correlated_anomalies_nodes 0
+In seed number 0, number of remaining anomalous nodes is 76340
+Debug: seed node is 690160E4-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.017766237258911133 seconds.
+DEBUG: number of correlated_anomalies_nodes 0
+In seed number 1, number of remaining anomalous nodes is 76340
+Debug: seed node is E393303B-721F-8457-9F72-2DA477847B65-file_object_file
+Constructed a subgraph with 3 nodes and 701 edges
+The traverse time is:  0.01190495491027832 seconds.
+DEBUG: number of correlated_anomalies_nodes 3
+In seed number 2, number of remaining anomalous nodes is 76338
+Debug: seed node is 84459C9D-4B55-E757-954B-3D3927E780EC-file_object_file
+Constructed a subgraph with 9 nodes and 20 edges
+The traverse time is:  0.007548809051513672 seconds.
+DEBUG: number of correlated_anomalies_nodes 12
+In seed number 3, number of remaining anomalous nodes is 76330
+Debug: seed node is 7244372A-63A0-695F-A063-E6AD8F69F046-file_object_file
+Constructed a subgraph with 12 nodes and 19 edges
+The traverse time is:  0.007384061813354492 seconds.
+DEBUG: number of correlated_anomalies_nodes 24
+In seed number 4, number of remaining anomalous nodes is 76319
+Debug: seed node is A0E0997B-8B26-A55C-A68B-FA7C5CA5991D-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.00722956657409668 seconds.
+DEBUG: number of correlated_anomalies_nodes 28
+In seed number 5, number of remaining anomalous nodes is 76316
+Debug: seed node is 21F2EBB3-E438-F85B-B8E4-D8E06BF8E62F-file_object_file
+Constructed a subgraph with 5 nodes and 11 edges
+The traverse time is:  0.007208108901977539 seconds.
+DEBUG: number of correlated_anomalies_nodes 33
+In seed number 6, number of remaining anomalous nodes is 76312
+Debug: seed node is C0CB38BD-59A6-9E5C-A659-B5362C9EF45A-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.00927114486694336 seconds.
+DEBUG: number of correlated_anomalies_nodes 37
+In seed number 7, number of remaining anomalous nodes is 76309
+Debug: seed node is 5EE4F311-C814-7A59-94C8-0E6F197A7946-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.007235527038574219 seconds.
+DEBUG: number of correlated_anomalies_nodes 41
+In seed number 8, number of remaining anomalous nodes is 76306
+Debug: seed node is F7ACFABA-F8F1-FB55-B1F8-196DD5FB30E1-file_object_file
+Constructed a subgraph with 3 nodes and 3 edges
+The traverse time is:  0.011823415756225586 seconds.
+DEBUG: number of correlated_anomalies_nodes 44
+In seed number 9, number of remaining anomalous nodes is 76304
+Debug: seed node is 29BD08FE-7656-BF51-9676-B6C811BF9E22-file_object_file
+Constructed a subgraph with 3 nodes and 4 edges
+The traverse time is:  0.01189565658569336 seconds.
+DEBUG: number of correlated_anomalies_nodes 47
+In seed number 10, number of remaining anomalous nodes is 76302
+Debug: seed node is 451946BD-12F7-8356-B712-07F5A683E62E-file_object_file
+subgraph is less than  3 nodes
+The traverse time is:  0.007058143615722656 seconds.
+DEBUG: number of correlated_anomalies_nodes 47
+In seed number 11, number of remaining anomalous nodes is 76302
+Debug: seed node is 76CB53C6-3DFE-11E8-A5CB-3FA3753A265A-file_object_file
+Constructed a subgraph with 4 nodes and 4 edges
+The traverse time is:  0.007200002670288086 seconds.
+DEBUG: number of correlated_anomalies_nodes 51
+In seed number 12, number of remaining anomalous nodes is 76299
+Debug: seed node is BDE72B85-DCD9-835C-99DC-32E13C838365-file_object_file
+partition a graph with 602 nodes and 21704 edges
+partitioned a subgraph with 128 nodes and 1723 edges
+partitioned a subgraph with 130 nodes and 1886 edges
+partitioned a subgraph with 98 nodes and 398 edges
+partitioned a subgraph with 246 nodes and 1686 edges
+Partition time:  0.12768793106079102 seconds.
+Constructed a subgraph with 128 nodes and 1723 edges
+Constructed a subgraph with 130 nodes and 1886 edges
+Constructed a subgraph with 98 nodes and 398 edges
+Constructed a subgraph with 246 nodes and 1686 edges
+The traverse time is:  1.2558457851409912 seconds.
+DEBUG: number of correlated_anomalies_nodes 653
+In seed number 13, number of remaining anomalous nodes is 75895
+Debug: seed node is 330061CF-6BB3-C45E-B36B-B89D7EC4F443-file_object_file
+Constructed a subgraph with 9 nodes and 24 edges
+The traverse time is:  16.85288143157959 seconds.
+DEBUG: number of correlated_anomalies_nodes 662
+In seed number 14, number of remaining anomalous nodes is 75888
+Debug: seed node is 22A5E28F-B690-9651-90B6-68D05196AF07-file_object_file
+subgraph is less than  3 nodes
+The traverse time is:  0.02577495574951172 seconds.
+DEBUG: number of correlated_anomalies_nodes 662
+In seed number 15, number of remaining anomalous nodes is 75888
+Debug: seed node is F182D96A-9536-8854-B695-67B68488E300-file_object_file
+Constructed a subgraph with 4 nodes and 3 edges
+The traverse time is:  0.0072345733642578125 seconds.
+DEBUG: number of correlated_anomalies_nodes 666
+In seed number 16, number of remaining anomalous nodes is 75885
+Debug: seed node is 1AD38A84-3DC3-11E8-A5CB-3FA3753A265A-netflowobject
+Constructed a subgraph with 11 nodes and 1423 edges
+The traverse time is:  0.013752460479736328 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 17, number of remaining anomalous nodes is 75875
+Debug: seed node is 219DC4CD-3E7E-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.007312774658203125 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 18, number of remaining anomalous nodes is 75875
+Debug: seed node is BE40B48C-3EC1-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.007241010665893555 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 19, number of remaining anomalous nodes is 75875
+Debug: seed node is 1AD39F36-3DC3-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.007355928421020508 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 20, number of remaining anomalous nodes is 75875
+Debug: seed node is 47E61FFC-3E80-11E8-A5CB-3FA3753A265A-subject_process
+partition a graph with 10907 nodes and 11044 edges
+partitioned a subgraph with 9 nodes and 122 edges
+partitioned a subgraph with 10898 nodes and 10921 edges
+Sampling a subgraph with 10898 nodes and 10921 edges (sample from different actions)
+sampled a subgraph with 4994 nodes and 5013 edges
+Remains unsampled a subgraph with 5904 nodes and 0 edges (sample from different actions)
+Partition time:  1.4156360626220703 seconds.
+Constructed a subgraph with 9 nodes and 122 edges
+Constructed a subgraph with 4994 nodes and 5013 edges
+The traverse time is:  62.79846787452698 seconds.
+DEBUG: number of correlated_anomalies_nodes 5679
+In seed number 21, number of remaining anomalous nodes is 70873
+Debug: seed node is 78FEF500-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+partition a graph with 5905 nodes and 5905 edges
+Couldn't partition the big subgraph
+partitioned a subgraph with 5905 nodes and 5905 edges
+Sampling a subgraph with 5905 nodes and 5905 edges (sample from different actions)
+sampled a subgraph with 5000 nodes and 5000 edges
+Remains unsampled a subgraph with 905 nodes and 0 edges (sample from different actions)
+Partition time:  0.3390848636627197 seconds.
+Constructed a subgraph with 5000 nodes and 5000 edges
+The traverse time is:  0.4468708038330078 seconds.
+DEBUG: number of correlated_anomalies_nodes 10678
+In seed number 22, number of remaining anomalous nodes is 65874
+Debug: seed node is 791053E1-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+Constructed a subgraph with 906 nodes and 906 edges
+The traverse time is:  0.03535604476928711 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 23, number of remaining anomalous nodes is 64969
+Debug: seed node is 7910F342-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.016564130783081055 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 24, number of remaining anomalous nodes is 64969
+Debug: seed node is 8133CB53-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.015867233276367188 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 25, number of remaining anomalous nodes is 64969
+Debug: seed node is 8748DACF-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.014707803726196289 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 26, number of remaining anomalous nodes is 64969
+Debug: seed node is 8751D93A-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013727188110351562 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 27, number of remaining anomalous nodes is 64969
+Debug: seed node is 875694BD-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013926267623901367 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 28, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A680A0C-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013236522674560547 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 29, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A733A70-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.014016151428222656 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 30, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A742A3A-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013083696365356445 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 31, number of remaining anomalous nodes is 64969
+Debug: seed node is 9AA5ADAB-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013287782669067383 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 32, number of remaining anomalous nodes is 64969
+Debug: seed node is 1AC357D0-3DC3-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 4 edges
+The traverse time is:  2.726855516433716 seconds.
+DEBUG: number of correlated_anomalies_nodes 11588
+In seed number 33, number of remaining anomalous nodes is 64965
+Debug: seed node is BF1CCA72-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 8 edges
+The traverse time is:  0.007302761077880859 seconds.
+DEBUG: number of correlated_anomalies_nodes 11593
+In seed number 34, number of remaining anomalous nodes is 64961
+Debug: seed node is CE45E423-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 3 nodes and 2 edges
+The traverse time is:  0.011761903762817383 seconds.
+DEBUG: number of correlated_anomalies_nodes 11596
+In seed number 35, number of remaining anomalous nodes is 64958
+Debug: seed node is DE7FB6B3-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 28 nodes and 80 edges
+The traverse time is:  94.4983868598938 seconds.
+DEBUG: number of correlated_anomalies_nodes 11623
+In seed number 36, number of remaining anomalous nodes is 64938
+Debug: seed node is 49934AC7-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007423877716064453 seconds.
+DEBUG: number of correlated_anomalies_nodes 11623
+In seed number 37, number of remaining anomalous nodes is 64938
+Debug: seed node is 76F0D44D-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 5 edges
+The traverse time is:  0.007375478744506836 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 38, number of remaining anomalous nodes is 64934
+Debug: seed node is 77035EE2-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007042884826660156 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 39, number of remaining anomalous nodes is 64934
+Debug: seed node is 7705637B-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007121086120605469 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 40, number of remaining anomalous nodes is 64934
+Debug: seed node is BF1467C9-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 6 edges
+The traverse time is:  0.007470369338989258 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 41, number of remaining anomalous nodes is 64929
+Debug: seed node is BF1501C1-3E05-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007177591323852539 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 42, number of remaining anomalous nodes is 64929
+Debug: seed node is 8BBE2510-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.011972188949584961 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 43, number of remaining anomalous nodes is 64929
+Debug: seed node is C3817B91-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.011861085891723633 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 44, number of remaining anomalous nodes is 64929
+The total traverse time is:  179.13777565956116 seconds.
+Number of subgraphs before removing duplication 27
+Number of removed duplicated subgraphs is 0
+Number of constructed subgraphs: 27
+Number of correlated anomalies nodes: 11411
+Number of disconnected nodes 64929
+--------------------------------------
+subgraph 0 actions are between: 2018-04-11 16:36:48  and  2018-04-12 22:15:08
+Number of Nodes: 3 , Number of edges: 701
+The subgraph has 48 actions (0.068%) within BSD3 attack time range
+--------------------------------------
+subgraph 1 actions are between: 2018-04-11 23:01:08  and  2018-04-11 23:01:08
+Number of Nodes: 9 , Number of edges: 20
+--------------------------------------
+subgraph 2 actions are between: 2018-04-11 16:37:06  and  2018-04-11 16:37:06
+Number of Nodes: 12 , Number of edges: 19
+--------------------------------------
+subgraph 3 actions are between: 2018-04-12 14:17:34  and  2018-04-12 14:17:34
+Number of Nodes: 4 , Number of edges: 5
+The subgraph has 5 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 4 actions are between: 2018-04-11 23:01:00  and  2018-04-11 23:01:00
+Number of Nodes: 5 , Number of edges: 11
+--------------------------------------
+subgraph 5 actions are between: 2018-04-11 23:01:08  and  2018-04-11 23:01:08
+Number of Nodes: 4 , Number of edges: 5
+--------------------------------------
+subgraph 6 actions are between: 2018-04-11 23:06:16  and  2018-04-11 23:06:16
+Number of Nodes: 4 , Number of edges: 5
+--------------------------------------
+subgraph 7 actions are between: 2018-04-12 14:35:31  and  2018-04-12 14:38:31
+Number of Nodes: 3 , Number of edges: 3
+The subgraph has 3 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 8 actions are between: 2018-04-11 23:58:22  and  2018-04-11 23:58:22
+Number of Nodes: 3 , Number of edges: 4
+--------------------------------------
+subgraph 9 actions are between: 2018-04-11 23:06:15  and  2018-04-11 23:06:15
+Number of Nodes: 4 , Number of edges: 4
+--------------------------------------
+subgraph 10 actions are between: 2018-04-11 16:37:43  and  2018-04-11 22:50:10
+Number of Nodes: 128 , Number of edges: 1723
+--------------------------------------
+subgraph 11 actions are between: 2018-04-12 07:26:09  and  2018-04-12 22:10:00
+Number of Nodes: 130 , Number of edges: 1886
+The subgraph has 359 actions (0.19%) within BSD3 attack time range
+--------------------------------------
+subgraph 12 actions are between: 2018-04-11 19:47:10  and  2018-04-12 17:36:53
+Number of Nodes: 98 , Number of edges: 398
+The subgraph has 71 actions (0.178%) within BSD3 attack time range
+--------------------------------------
+subgraph 13 actions are between: 2018-04-12 07:19:24  and  2018-04-12 22:15:08
+Number of Nodes: 246 , Number of edges: 1686
+The subgraph has 117 actions (0.069%) within BSD3 attack time range
+--------------------------------------
+subgraph 14 actions are between: 2018-04-11 21:37:02  and  2018-04-12 09:40:02
+Number of Nodes: 9 , Number of edges: 24
+--------------------------------------
+subgraph 15 actions are between: 2018-04-11 23:06:16  and  2018-04-11 23:06:16
+Number of Nodes: 4 , Number of edges: 3
+--------------------------------------
+subgraph 16 actions are between: 2018-04-11 16:41:51  and  2018-04-12 22:24:07
+Number of Nodes: 11 , Number of edges: 1423
+The subgraph has 56 actions (0.039%) within BSD3 attack time range
+--------------------------------------
+subgraph 17 actions are between: 2018-04-12 14:21:13  and  2018-04-12 14:39:04
+Number of Nodes: 9 , Number of edges: 122
+The subgraph has 120 actions (0.984%) within BSD3 attack time range
+--------------------------------------
+subgraph 18 actions are between: 2018-04-12 14:35:31  and  2018-04-12 14:38:31
+Number of Nodes: 4994 , Number of edges: 5013
+The subgraph has 5013 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 19 actions are between: 2018-04-12 14:36:42  and  2018-04-12 14:38:31
+Number of Nodes: 5000 , Number of edges: 5000
+The subgraph has 5000 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 20 actions are between: 2018-04-12 14:36:42  and  2018-04-12 14:38:31
+Number of Nodes: 906 , Number of edges: 906
+The subgraph has 906 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 21 actions are between: 2018-04-11 23:05:00  and  2018-04-12 14:55:00
+Number of Nodes: 5 , Number of edges: 4
+--------------------------------------
+subgraph 22 actions are between: 2018-04-11 23:58:23  and  2018-04-11 23:58:23
+Number of Nodes: 5 , Number of edges: 8
+--------------------------------------
+subgraph 23 actions are between: 2018-04-11 23:58:49  and  2018-04-11 23:58:49
+Number of Nodes: 3 , Number of edges: 2
+--------------------------------------
+subgraph 24 actions are between: 2018-04-11 16:41:30  and  2018-04-12 18:08:16
+Number of Nodes: 28 , Number of edges: 80
+--------------------------------------
+subgraph 25 actions are between: 2018-04-11 23:01:24  and  2018-04-11 23:06:16
+Number of Nodes: 5 , Number of edges: 5
+--------------------------------------
+subgraph 26 actions are between: 2018-04-11 23:01:00  and  2018-04-11 23:58:23
+Number of Nodes: 5 , Number of edges: 6
+----------------------------------------
+
+Total Number of Predicted Anomalies Nodes in correlated subgraphs 11411
+Total Number of Predicted Anomalies, Labeled Malicious Nodes in correlated subgraphs 10907
+Total Number of Predicted Anomalies, Labeled Benign Nodes in correlated subgraphs 504
+
+Total Number of Predicted Normal Nodes in correlated subgraphs 222
+Total Number of Predicted Normal, Labeled Malicious Nodes in correlated subgraphs 1
+Total Number of Predicted Normal, Labeled Benign Nodes in correlated subgraphs 221
+       number_of_nodes  number_of_edges  subgraph_anomaly_score
+count        27.000000        27.000000               27.000000
+mean        431.000000       706.148148               20.954828
+std        1327.957686      1380.546873               64.045255
+min           3.000000         2.000000                0.001244
+25%           4.000000         5.000000                1.112184
+50%           5.000000        19.000000                1.455879
+75%          63.000000       803.500000                2.179240
+max        5000.000000      5013.000000              244.118897
+Evaluate Node anomaly detection after subgraph construction (with all anomalous subgraphs) 
+Evaluate with abnormality level: Moderate
+evaluate with anomalous subgraphs that has ['Moderate', 'Significant', 'Critical'] severity levels 
+Number of subgraphs is  3
+
+*******************************************
+TP: 10922, FP: 0, FN: 2, TN: 292671
+Precision: 1.0, Recall: 1.0, Fscore: 1.0
+MCC: 1.0
+Computed related nodes in  35.50839805603027
+
+*******************************************
+The subgraph construction time is:  288.9202845096588 seconds.
+The subgraph detection time is:  289.540718793869 seconds.
+None
+Memory usage (ru_maxrss) :  6080.9609375  MB
+Memory usage (psutil) :  4107.84765625 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  4.0496826171875
+used virtual memory GB: 22.577682495117188  percent 3.6
+Check IOCs in disconnected anomalies nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 2
+The covered IOCS are: {'passwd', '155.162.39.48'}
+Number of covered IOCS of attack BSD_3  is: 3
+The covered IOCS are: {'tmux-1002', '155.162.39.48', 'sendmail'}
+Number of covered IOCS of attack BSD_4  is: 2
+The covered IOCS are: {'passwd', '155.162.39.48'}
+The total number of covered IOCs is 4
+________________________________________________
+Check IOCs in anomalies nodes correlated into subgraphs
+Number of covered IOCS of attack BSD_1  is: 0
+The covered IOCS are: set()
+Number of covered IOCS of attack BSD_2  is: 0
+The covered IOCS are: set()
+Number of covered IOCS of attack BSD_3  is: 3
+The covered IOCS are: {'192.113.144.28', 'sendmail', '53.158.101.118'}
+Number of covered IOCS of attack BSD_4  is: 1
+The covered IOCS are: {'53.158.101.118'}
+The total number of covered IOCs is 3
+________________________________________________
+investigating subgraph:  0
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  1
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  2
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  3
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  4
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  5
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  6
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  7
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  8
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  9
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  10
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  11
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  12
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  13
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  14
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  15
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  16
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  17
+The covered IOCS of attack BSD_3 are: {'sendmail', '53.158.101.118'}
+The Subgraph has 0.2 percent of  BSD_3  Query Graph IOCs
+The covered IOCS of attack BSD_4 are: {'53.158.101.118'}
+The Subgraph has 0.125 percent of  BSD_4  Query Graph IOCs
+investigating subgraph:  18
+The covered IOCS of attack BSD_3 are: {'192.113.144.28'}
+The Subgraph has 0.1 percent of  BSD_3  Query Graph IOCs
+investigating subgraph:  19
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  20
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  21
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  22
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  23
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  24
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  25
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  26
+The subgraph doesn't cover any attack IOCs
+Number of covered IOCs correlated into subgraphs : 3
+Covered IOCs in all constructed subgraphs {'192.113.144.28', 'sendmail', '53.158.101.118'}
+
+************************************************************
+Average performance across all runs:
+       accuracy  precision    recall  f_measure       tp        tn   fp   fn       tpr  fpr       mcc  subgraph_detection_time  memory_usage_mb
+count  1.000000        1.0  1.000000   1.000000      1.0       1.0  1.0  1.0  1.000000  1.0  1.000000                 1.000000         1.000000
+mean   0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               289.540719      6080.960938
+std         NaN        NaN       NaN        NaN      NaN       NaN  NaN  NaN       NaN  NaN       NaN                      NaN              NaN
+min    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               289.540719      6080.960938
+25%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               289.540719      6080.960938
+50%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               289.540719      6080.960938
+75%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               289.540719      6080.960938
+max    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               289.540719      6080.960938
+Total time:  366.9613597393036 seconds.
+Namespace(dataset='tc3', host='cadets', runs=1, exp_name='Full_Script_Test', inv_exp_name='expand_1_hop_MaxEdges5000_K15_ly3', model='OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05.model', root_path='../dataset/darpa_tc3/cadets/experiments/', number_of_hops=1, abnormality_level='Moderate', max_edges=5000, top_k=15, top_k_anomalous_subgraphs=10, min_nodes=3, expand_2_hop='no', top_k_percent=None, anomalies_path_only=False, backwards_only=False, anomalies_or_process_only=False, draw_subgraphs=False, get_node_attrs=True, construct_from_anomaly_subgraph=True, remove_duplicated_subgraph=True, correlate_anomalous_once=True, process_centric=False)
+Check Covered IOCs in all dataset nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 4
+The covered IOCS are: {'25.159.96.207', '76.56.184.25', '155.162.39.48', 'passwd'}
+Number of covered IOCS of attack BSD_3  is: 7
+The covered IOCS are: {'53.158.101.118', '76.56.184.25', 'sendmail', '25.159.96.207', '192.113.144.28', 'tmux-1002', '155.162.39.48'}
+Number of covered IOCS of attack BSD_4  is: 4
+The covered IOCS are: {'25.159.96.207', '155.162.39.48', '53.158.101.118', 'passwd'}
+The total number of covered IOCs is 8
+________________________________________________
+Extracting ../dataset/darpa_tc3/cadets/experiments/Full_Script_Test.zip
+Loading necessary files...
+This might take a while.
+Processing graphs...
+Converting graphs into PyG objects...
+Saving...
+resource.struct_rusage(ru_utime=19.642083, ru_stime=9.173373, ru_maxrss=1186908, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=310906, ru_majflt=0, ru_nswap=0, ru_inblock=0, ru_oublock=1119304, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=53936, ru_nivcsw=194)
+DEBUG: Number of testing cases  303595
+DEBUG:  {'FILE_OBJECT_DIR': 0, 'FILE_OBJECT_FILE': 1, 'FILE_OBJECT_UNIX_SOCKET': 2, 'NetFlowObject': 3, 'SUBJECT_PROCESS': 4, 'UnnamedPipeObject': 5, ('SUBJECT_PROCESS', 'EVENT_ACCEPT', 'FILE_OBJECT_UNIX_SOCKET'): 0, ('SUBJECT_PROCESS', 'EVENT_ACCEPT', 'NetFlowObject'): 1, ('SUBJECT_PROCESS', 'EVENT_BIND', 'FILE_OBJECT_UNIX_SOCKET'): 2, ('SUBJECT_PROCESS', 'EVENT_CHANGE_PRINCIPAL', 'SUBJECT_PROCESS'): 3, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_DIR'): 4, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_FILE'): 5, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'FILE_OBJECT_UNIX_SOCKET'): 6, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'NetFlowObject'): 7, ('SUBJECT_PROCESS', 'EVENT_CLOSE', 'UnnamedPipeObject'): 8, ('SUBJECT_PROCESS', 'EVENT_CONNECT', 'FILE_OBJECT_UNIX_SOCKET'): 9, ('SUBJECT_PROCESS', 'EVENT_CONNECT', 'NetFlowObject'): 10, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'FILE_OBJECT_DIR'): 11, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'FILE_OBJECT_UNIX_SOCKET'): 12, ('SUBJECT_PROCESS', 'EVENT_CREATE_OBJECT', 'UnnamedPipeObject'): 13, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'FILE_OBJECT_FILE'): 14, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'FILE_OBJECT_UNIX_SOCKET'): 15, ('SUBJECT_PROCESS', 'EVENT_EXECUTE', 'UnnamedPipeObject'): 16, ('SUBJECT_PROCESS', 'EVENT_EXIT', 'SUBJECT_PROCESS'): 17, ('SUBJECT_PROCESS', 'EVENT_FCNTL', 'FILE_OBJECT_FILE'): 18, ('SUBJECT_PROCESS', 'EVENT_FCNTL', 'UnnamedPipeObject'): 19, ('SUBJECT_PROCESS', 'EVENT_FLOWS_TO', 'FILE_OBJECT_FILE'): 20, ('SUBJECT_PROCESS', 'EVENT_FLOWS_TO', 'UnnamedPipeObject'): 21, ('SUBJECT_PROCESS', 'EVENT_FORK', 'SUBJECT_PROCESS'): 22, ('SUBJECT_PROCESS', 'EVENT_LINK', 'FILE_OBJECT_FILE'): 23, ('SUBJECT_PROCESS', 'EVENT_LSEEK', 'FILE_OBJECT_FILE'): 24, ('SUBJECT_PROCESS', 'EVENT_MMAP', 'FILE_OBJECT_FILE'): 25, ('SUBJECT_PROCESS', 'EVENT_MODIFY_FILE_ATTRIBUTES', 'FILE_OBJECT_FILE'): 26, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'FILE_OBJECT_DIR'): 27, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'FILE_OBJECT_FILE'): 28, ('SUBJECT_PROCESS', 'EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 29, ('SUBJECT_PROCESS', 'EVENT_OPEN', 'FILE_OBJECT_DIR'): 30, ('SUBJECT_PROCESS', 'EVENT_OPEN', 'FILE_OBJECT_FILE'): 31, ('SUBJECT_PROCESS', 'EVENT_OTHER', 'FILE_OBJECT_UNIX_SOCKET'): 32, ('SUBJECT_PROCESS', 'EVENT_READ', 'FILE_OBJECT_FILE'): 33, ('SUBJECT_PROCESS', 'EVENT_READ', 'FILE_OBJECT_UNIX_SOCKET'): 34, ('SUBJECT_PROCESS', 'EVENT_READ', 'NetFlowObject'): 35, ('SUBJECT_PROCESS', 'EVENT_READ', 'UnnamedPipeObject'): 36, ('SUBJECT_PROCESS', 'EVENT_RECVFROM', 'FILE_OBJECT_UNIX_SOCKET'): 37, ('SUBJECT_PROCESS', 'EVENT_RECVFROM', 'NetFlowObject'): 38, ('SUBJECT_PROCESS', 'EVENT_RECVMSG', 'FILE_OBJECT_UNIX_SOCKET'): 39, ('SUBJECT_PROCESS', 'EVENT_RECVMSG', 'NetFlowObject'): 40, ('SUBJECT_PROCESS', 'EVENT_RENAME', 'FILE_OBJECT_FILE'): 41, ('SUBJECT_PROCESS', 'EVENT_SENDMSG', 'FILE_OBJECT_UNIX_SOCKET'): 42, ('SUBJECT_PROCESS', 'EVENT_SENDMSG', 'NetFlowObject'): 43, ('SUBJECT_PROCESS', 'EVENT_SENDTO', 'FILE_OBJECT_UNIX_SOCKET'): 44, ('SUBJECT_PROCESS', 'EVENT_SENDTO', 'NetFlowObject'): 45, ('SUBJECT_PROCESS', 'EVENT_SIGNAL', 'SUBJECT_PROCESS'): 46, ('SUBJECT_PROCESS', 'EVENT_TRUNCATE', 'FILE_OBJECT_FILE'): 47, ('SUBJECT_PROCESS', 'EVENT_UNLINK', 'FILE_OBJECT_DIR'): 48, ('SUBJECT_PROCESS', 'EVENT_UNLINK', 'FILE_OBJECT_FILE'): 49, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'FILE_OBJECT_FILE'): 50, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'FILE_OBJECT_UNIX_SOCKET'): 51, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'NetFlowObject'): 52, ('SUBJECT_PROCESS', 'EVENT_WRITE', 'UnnamedPipeObject'): 53, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_ACCEPT', 'SUBJECT_PROCESS'): 54, ('NetFlowObject', 'inv_EVENT_ACCEPT', 'SUBJECT_PROCESS'): 55, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_BIND', 'SUBJECT_PROCESS'): 56, ('SUBJECT_PROCESS', 'inv_EVENT_CHANGE_PRINCIPAL', 'SUBJECT_PROCESS'): 57, ('FILE_OBJECT_DIR', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 58, ('FILE_OBJECT_FILE', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 59, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 60, ('NetFlowObject', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 61, ('UnnamedPipeObject', 'inv_EVENT_CLOSE', 'SUBJECT_PROCESS'): 62, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CONNECT', 'SUBJECT_PROCESS'): 63, ('NetFlowObject', 'inv_EVENT_CONNECT', 'SUBJECT_PROCESS'): 64, ('FILE_OBJECT_DIR', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 65, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 66, ('UnnamedPipeObject', 'inv_EVENT_CREATE_OBJECT', 'SUBJECT_PROCESS'): 67, ('FILE_OBJECT_FILE', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 68, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 69, ('UnnamedPipeObject', 'inv_EVENT_EXECUTE', 'SUBJECT_PROCESS'): 70, ('SUBJECT_PROCESS', 'inv_EVENT_EXIT', 'SUBJECT_PROCESS'): 71, ('FILE_OBJECT_FILE', 'inv_EVENT_FCNTL', 'SUBJECT_PROCESS'): 72, ('UnnamedPipeObject', 'inv_EVENT_FCNTL', 'SUBJECT_PROCESS'): 73, ('FILE_OBJECT_FILE', 'inv_EVENT_FLOWS_TO', 'SUBJECT_PROCESS'): 74, ('UnnamedPipeObject', 'inv_EVENT_FLOWS_TO', 'SUBJECT_PROCESS'): 75, ('SUBJECT_PROCESS', 'inv_EVENT_FORK', 'SUBJECT_PROCESS'): 76, ('FILE_OBJECT_FILE', 'inv_EVENT_LINK', 'SUBJECT_PROCESS'): 77, ('FILE_OBJECT_FILE', 'inv_EVENT_LSEEK', 'SUBJECT_PROCESS'): 78, ('FILE_OBJECT_FILE', 'inv_EVENT_MMAP', 'SUBJECT_PROCESS'): 79, ('FILE_OBJECT_FILE', 'inv_EVENT_MODIFY_FILE_ATTRIBUTES', 'SUBJECT_PROCESS'): 80, ('FILE_OBJECT_DIR', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 81, ('FILE_OBJECT_FILE', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 82, ('SUBJECT_PROCESS', 'inv_EVENT_MODIFY_PROCESS', 'SUBJECT_PROCESS'): 83, ('FILE_OBJECT_DIR', 'inv_EVENT_OPEN', 'SUBJECT_PROCESS'): 84, ('FILE_OBJECT_FILE', 'inv_EVENT_OPEN', 'SUBJECT_PROCESS'): 85, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_OTHER', 'SUBJECT_PROCESS'): 86, ('FILE_OBJECT_FILE', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 87, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 88, ('NetFlowObject', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 89, ('UnnamedPipeObject', 'inv_EVENT_READ', 'SUBJECT_PROCESS'): 90, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_RECVFROM', 'SUBJECT_PROCESS'): 91, ('NetFlowObject', 'inv_EVENT_RECVFROM', 'SUBJECT_PROCESS'): 92, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_RECVMSG', 'SUBJECT_PROCESS'): 93, ('NetFlowObject', 'inv_EVENT_RECVMSG', 'SUBJECT_PROCESS'): 94, ('FILE_OBJECT_FILE', 'inv_EVENT_RENAME', 'SUBJECT_PROCESS'): 95, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_SENDMSG', 'SUBJECT_PROCESS'): 96, ('NetFlowObject', 'inv_EVENT_SENDMSG', 'SUBJECT_PROCESS'): 97, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_SENDTO', 'SUBJECT_PROCESS'): 98, ('NetFlowObject', 'inv_EVENT_SENDTO', 'SUBJECT_PROCESS'): 99, ('SUBJECT_PROCESS', 'inv_EVENT_SIGNAL', 'SUBJECT_PROCESS'): 100, ('FILE_OBJECT_FILE', 'inv_EVENT_TRUNCATE', 'SUBJECT_PROCESS'): 101, ('FILE_OBJECT_DIR', 'inv_EVENT_UNLINK', 'SUBJECT_PROCESS'): 102, ('FILE_OBJECT_FILE', 'inv_EVENT_UNLINK', 'SUBJECT_PROCESS'): 103, ('FILE_OBJECT_FILE', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 104, ('FILE_OBJECT_UNIX_SOCKET', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 105, ('NetFlowObject', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 106, ('UnnamedPipeObject', 'inv_EVENT_WRITE', 'SUBJECT_PROCESS'): 107}
+DEBUG: edge_index stats tensor(13613845166210) tensor(0) tensor(696372)
+******************************************
+Run number: 0
+Seed:  360
+Number of anomalies nodes:  76340
+malicious nodes per node type: node_type
+FILE_OBJECT_FILE     10885
+NetFlowObject           21
+SUBJECT_PROCESS         13
+UnnamedPipeObject        5
+Name: count, dtype: int64
+Number of benign nodes predicted anomalies:  65429
+Number of malicious nodes predicted anomalies:  10911
+Number of nodes labelled malicious:  10924
+Check Covered IOCs in all raised anomalies nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 2
+The covered IOCS are: {'155.162.39.48', 'passwd'}
+Number of covered IOCS of attack BSD_3  is: 5
+The covered IOCS are: {'192.113.144.28', '53.158.101.118', 'tmux-1002', '155.162.39.48', 'sendmail'}
+Number of covered IOCS of attack BSD_4  is: 3
+The covered IOCS are: {'155.162.39.48', '53.158.101.118', 'passwd'}
+The total number of covered IOCs is 6
+________________________________________________
+Number of inserted anomalies nodes: 76340
+Number of nodes with attributes 58455
+Total number of triples before dropping node attributes 1307113
+Total number of triples after dropping node attributes 1307113
+Total number of triples before dropping duplicated actions (within one second) 1307113
+Total number of triples after dropping duplicated actions (within one second) 965341
+Number of nodes in queried subgraph object: 106438
+Number of edges in queried subgraph object: 965341
+The subgraph query time is:  67.31963896751404 seconds.
+Number of initially disconnected nodes nodes: 0
+Number of initially correlated nodes: 76340
+Total number of NetFlowObject nodes is 103 
+Number of seed nodes for   NetFlowObject is 15
+Total number of FILE_OBJECT_FILE nodes is 75969 
+Number of seed nodes for   FILE_OBJECT_FILE is 15
+Total number of SUBJECT_PROCESS nodes is 41 
+Number of seed nodes for   SUBJECT_PROCESS is 15
+Total Number of seed nodes: 45
+Debug: seed node is BF208583-3E05-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007006645202636719 seconds.
+DEBUG: number of correlated_anomalies_nodes 0
+In seed number 0, number of remaining anomalous nodes is 76340
+Debug: seed node is 690160E4-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.015029668807983398 seconds.
+DEBUG: number of correlated_anomalies_nodes 0
+In seed number 1, number of remaining anomalous nodes is 76340
+Debug: seed node is E393303B-721F-8457-9F72-2DA477847B65-file_object_file
+Constructed a subgraph with 3 nodes and 701 edges
+The traverse time is:  0.011378049850463867 seconds.
+DEBUG: number of correlated_anomalies_nodes 3
+In seed number 2, number of remaining anomalous nodes is 76338
+Debug: seed node is 84459C9D-4B55-E757-954B-3D3927E780EC-file_object_file
+Constructed a subgraph with 9 nodes and 20 edges
+The traverse time is:  0.0071065425872802734 seconds.
+DEBUG: number of correlated_anomalies_nodes 12
+In seed number 3, number of remaining anomalous nodes is 76330
+Debug: seed node is 7244372A-63A0-695F-A063-E6AD8F69F046-file_object_file
+Constructed a subgraph with 12 nodes and 19 edges
+The traverse time is:  0.007065773010253906 seconds.
+DEBUG: number of correlated_anomalies_nodes 24
+In seed number 4, number of remaining anomalous nodes is 76319
+Debug: seed node is A0E0997B-8B26-A55C-A68B-FA7C5CA5991D-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.006927967071533203 seconds.
+DEBUG: number of correlated_anomalies_nodes 28
+In seed number 5, number of remaining anomalous nodes is 76316
+Debug: seed node is 21F2EBB3-E438-F85B-B8E4-D8E06BF8E62F-file_object_file
+Constructed a subgraph with 5 nodes and 11 edges
+The traverse time is:  0.006995439529418945 seconds.
+DEBUG: number of correlated_anomalies_nodes 33
+In seed number 6, number of remaining anomalous nodes is 76312
+Debug: seed node is C0CB38BD-59A6-9E5C-A659-B5362C9EF45A-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.010317802429199219 seconds.
+DEBUG: number of correlated_anomalies_nodes 37
+In seed number 7, number of remaining anomalous nodes is 76309
+Debug: seed node is 5EE4F311-C814-7A59-94C8-0E6F197A7946-file_object_file
+Constructed a subgraph with 4 nodes and 5 edges
+The traverse time is:  0.007422447204589844 seconds.
+DEBUG: number of correlated_anomalies_nodes 41
+In seed number 8, number of remaining anomalous nodes is 76306
+Debug: seed node is F7ACFABA-F8F1-FB55-B1F8-196DD5FB30E1-file_object_file
+Constructed a subgraph with 3 nodes and 3 edges
+The traverse time is:  0.011492490768432617 seconds.
+DEBUG: number of correlated_anomalies_nodes 44
+In seed number 9, number of remaining anomalous nodes is 76304
+Debug: seed node is 29BD08FE-7656-BF51-9676-B6C811BF9E22-file_object_file
+Constructed a subgraph with 3 nodes and 4 edges
+The traverse time is:  0.011416196823120117 seconds.
+DEBUG: number of correlated_anomalies_nodes 47
+In seed number 10, number of remaining anomalous nodes is 76302
+Debug: seed node is 451946BD-12F7-8356-B712-07F5A683E62E-file_object_file
+subgraph is less than  3 nodes
+The traverse time is:  0.0068285465240478516 seconds.
+DEBUG: number of correlated_anomalies_nodes 47
+In seed number 11, number of remaining anomalous nodes is 76302
+Debug: seed node is 76CB53C6-3DFE-11E8-A5CB-3FA3753A265A-file_object_file
+Constructed a subgraph with 4 nodes and 4 edges
+The traverse time is:  0.006964683532714844 seconds.
+DEBUG: number of correlated_anomalies_nodes 51
+In seed number 12, number of remaining anomalous nodes is 76299
+Debug: seed node is BDE72B85-DCD9-835C-99DC-32E13C838365-file_object_file
+partition a graph with 602 nodes and 21704 edges
+partitioned a subgraph with 8 nodes and 18 edges
+partitioned a subgraph with 130 nodes and 1886 edges
+partitioned a subgraph with 132 nodes and 1646 edges
+partitioned a subgraph with 332 nodes and 3171 edges
+Partition time:  0.12814712524414062 seconds.
+Constructed a subgraph with 8 nodes and 18 edges
+Constructed a subgraph with 130 nodes and 1886 edges
+Constructed a subgraph with 132 nodes and 1646 edges
+Constructed a subgraph with 332 nodes and 3171 edges
+The traverse time is:  1.1834168434143066 seconds.
+DEBUG: number of correlated_anomalies_nodes 653
+In seed number 13, number of remaining anomalous nodes is 75895
+Debug: seed node is 330061CF-6BB3-C45E-B36B-B89D7EC4F443-file_object_file
+Constructed a subgraph with 9 nodes and 24 edges
+The traverse time is:  16.23211121559143 seconds.
+DEBUG: number of correlated_anomalies_nodes 662
+In seed number 14, number of remaining anomalous nodes is 75888
+Debug: seed node is 22A5E28F-B690-9651-90B6-68D05196AF07-file_object_file
+subgraph is less than  3 nodes
+The traverse time is:  0.025061368942260742 seconds.
+DEBUG: number of correlated_anomalies_nodes 662
+In seed number 15, number of remaining anomalous nodes is 75888
+Debug: seed node is F182D96A-9536-8854-B695-67B68488E300-file_object_file
+Constructed a subgraph with 4 nodes and 3 edges
+The traverse time is:  0.007027864456176758 seconds.
+DEBUG: number of correlated_anomalies_nodes 666
+In seed number 16, number of remaining anomalous nodes is 75885
+Debug: seed node is 1AD38A84-3DC3-11E8-A5CB-3FA3753A265A-netflowobject
+Constructed a subgraph with 11 nodes and 1423 edges
+The traverse time is:  0.013304710388183594 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 17, number of remaining anomalous nodes is 75875
+Debug: seed node is 219DC4CD-3E7E-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.007314443588256836 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 18, number of remaining anomalous nodes is 75875
+Debug: seed node is BE40B48C-3EC1-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.007310628890991211 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 19, number of remaining anomalous nodes is 75875
+Debug: seed node is 1AD39F36-3DC3-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.007100582122802734 seconds.
+DEBUG: number of correlated_anomalies_nodes 677
+In seed number 20, number of remaining anomalous nodes is 75875
+Debug: seed node is 47E61FFC-3E80-11E8-A5CB-3FA3753A265A-subject_process
+partition a graph with 10907 nodes and 11044 edges
+partitioned a subgraph with 9 nodes and 122 edges
+partitioned a subgraph with 10898 nodes and 10921 edges
+Sampling a subgraph with 10898 nodes and 10921 edges (sample from different actions)
+sampled a subgraph with 4994 nodes and 5013 edges
+Remains unsampled a subgraph with 5904 nodes and 0 edges (sample from different actions)
+Partition time:  0.6507163047790527 seconds.
+Constructed a subgraph with 9 nodes and 122 edges
+Constructed a subgraph with 4994 nodes and 5013 edges
+The traverse time is:  59.70548605918884 seconds.
+DEBUG: number of correlated_anomalies_nodes 5679
+In seed number 21, number of remaining anomalous nodes is 70873
+Debug: seed node is 78FEF500-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+partition a graph with 5905 nodes and 5905 edges
+Couldn't partition the big subgraph
+partitioned a subgraph with 5905 nodes and 5905 edges
+Sampling a subgraph with 5905 nodes and 5905 edges (sample from different actions)
+sampled a subgraph with 5000 nodes and 5000 edges
+Remains unsampled a subgraph with 905 nodes and 0 edges (sample from different actions)
+Partition time:  0.8005931377410889 seconds.
+Constructed a subgraph with 5000 nodes and 5000 edges
+The traverse time is:  0.8957705497741699 seconds.
+DEBUG: number of correlated_anomalies_nodes 10678
+In seed number 22, number of remaining anomalous nodes is 65874
+Debug: seed node is 791053E1-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+Constructed a subgraph with 907 nodes and 907 edges
+The traverse time is:  0.03114032745361328 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 23, number of remaining anomalous nodes is 64969
+Debug: seed node is 7910F342-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.014111757278442383 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 24, number of remaining anomalous nodes is 64969
+Debug: seed node is 8133CB53-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.014464855194091797 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 25, number of remaining anomalous nodes is 64969
+Debug: seed node is 8748DACF-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.013047218322753906 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 26, number of remaining anomalous nodes is 64969
+Debug: seed node is 8751D93A-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012577056884765625 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 27, number of remaining anomalous nodes is 64969
+Debug: seed node is 875694BD-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012241840362548828 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 28, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A680A0C-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012192726135253906 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 29, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A733A70-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.01215672492980957 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 30, number of remaining anomalous nodes is 64969
+Debug: seed node is 9A742A3A-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012163400650024414 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 31, number of remaining anomalous nodes is 64969
+Debug: seed node is 9AA5ADAB-3E80-11E8-A5CB-3FA3753A265A-netflowobject
+subgraph is less than  3 nodes
+The traverse time is:  0.012149333953857422 seconds.
+DEBUG: number of correlated_anomalies_nodes 11583
+In seed number 32, number of remaining anomalous nodes is 64969
+Debug: seed node is 1AC357D0-3DC3-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 4 edges
+The traverse time is:  2.6841976642608643 seconds.
+DEBUG: number of correlated_anomalies_nodes 11588
+In seed number 33, number of remaining anomalous nodes is 64965
+Debug: seed node is BF1CCA72-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 8 edges
+The traverse time is:  0.007118940353393555 seconds.
+DEBUG: number of correlated_anomalies_nodes 11593
+In seed number 34, number of remaining anomalous nodes is 64961
+Debug: seed node is CE45E423-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 3 nodes and 2 edges
+The traverse time is:  0.011589765548706055 seconds.
+DEBUG: number of correlated_anomalies_nodes 11596
+In seed number 35, number of remaining anomalous nodes is 64958
+Debug: seed node is DE7FB6B3-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 28 nodes and 80 edges
+The traverse time is:  90.82036066055298 seconds.
+DEBUG: number of correlated_anomalies_nodes 11623
+In seed number 36, number of remaining anomalous nodes is 64938
+Debug: seed node is 49934AC7-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.007407188415527344 seconds.
+DEBUG: number of correlated_anomalies_nodes 11623
+In seed number 37, number of remaining anomalous nodes is 64938
+Debug: seed node is 76F0D44D-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 5 edges
+The traverse time is:  0.0071065425872802734 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 38, number of remaining anomalous nodes is 64934
+Debug: seed node is 77035EE2-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.0069310665130615234 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 39, number of remaining anomalous nodes is 64934
+Debug: seed node is 7705637B-3DFE-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.006914615631103516 seconds.
+DEBUG: number of correlated_anomalies_nodes 11628
+In seed number 40, number of remaining anomalous nodes is 64934
+Debug: seed node is BF1467C9-3E05-11E8-A5CB-3FA3753A265A-subject_process
+Constructed a subgraph with 5 nodes and 6 edges
+The traverse time is:  0.00712895393371582 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 41, number of remaining anomalous nodes is 64929
+Debug: seed node is BF1501C1-3E05-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.006902217864990234 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 42, number of remaining anomalous nodes is 64929
+Debug: seed node is 8BBE2510-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.011478185653686523 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 43, number of remaining anomalous nodes is 64929
+Debug: seed node is C3817B91-3DC7-11E8-A5CB-3FA3753A265A-subject_process
+subgraph is less than  3 nodes
+The traverse time is:  0.011492729187011719 seconds.
+DEBUG: number of correlated_anomalies_nodes 11633
+In seed number 44, number of remaining anomalous nodes is 64929
+The total traverse time is:  172.05106353759766 seconds.
+Number of subgraphs before removing duplication 27
+Number of removed duplicated subgraphs is 0
+Number of constructed subgraphs: 27
+Number of correlated anomalies nodes: 11411
+Number of disconnected nodes 64929
+--------------------------------------
+subgraph 0 actions are between: 2018-04-11 16:36:48  and  2018-04-12 22:15:08
+Number of Nodes: 3 , Number of edges: 701
+The subgraph has 48 actions (0.068%) within BSD3 attack time range
+--------------------------------------
+subgraph 1 actions are between: 2018-04-11 23:01:08  and  2018-04-11 23:01:08
+Number of Nodes: 9 , Number of edges: 20
+--------------------------------------
+subgraph 2 actions are between: 2018-04-11 16:37:06  and  2018-04-11 16:37:06
+Number of Nodes: 12 , Number of edges: 19
+--------------------------------------
+subgraph 3 actions are between: 2018-04-12 14:17:34  and  2018-04-12 14:17:34
+Number of Nodes: 4 , Number of edges: 5
+The subgraph has 5 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 4 actions are between: 2018-04-11 23:01:00  and  2018-04-11 23:01:00
+Number of Nodes: 5 , Number of edges: 11
+--------------------------------------
+subgraph 5 actions are between: 2018-04-11 23:01:08  and  2018-04-11 23:01:08
+Number of Nodes: 4 , Number of edges: 5
+--------------------------------------
+subgraph 6 actions are between: 2018-04-11 23:06:16  and  2018-04-11 23:06:16
+Number of Nodes: 4 , Number of edges: 5
+--------------------------------------
+subgraph 7 actions are between: 2018-04-12 14:35:31  and  2018-04-12 14:38:31
+Number of Nodes: 3 , Number of edges: 3
+The subgraph has 3 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 8 actions are between: 2018-04-11 23:58:22  and  2018-04-11 23:58:22
+Number of Nodes: 3 , Number of edges: 4
+--------------------------------------
+subgraph 9 actions are between: 2018-04-11 23:06:15  and  2018-04-11 23:06:15
+Number of Nodes: 4 , Number of edges: 4
+--------------------------------------
+subgraph 10 actions are between: 2018-04-12 14:33:00  and  2018-04-12 20:56:25
+Number of Nodes: 8 , Number of edges: 18
+The subgraph has 9 actions (0.5%) within BSD3 attack time range
+--------------------------------------
+subgraph 11 actions are between: 2018-04-12 07:26:09  and  2018-04-12 22:10:00
+Number of Nodes: 130 , Number of edges: 1886
+The subgraph has 359 actions (0.19%) within BSD3 attack time range
+--------------------------------------
+subgraph 12 actions are between: 2018-04-11 16:37:43  and  2018-04-11 22:50:10
+Number of Nodes: 132 , Number of edges: 1646
+--------------------------------------
+subgraph 13 actions are between: 2018-04-12 07:00:32  and  2018-04-12 22:15:08
+Number of Nodes: 332 , Number of edges: 3171
+The subgraph has 304 actions (0.096%) within BSD3 attack time range
+--------------------------------------
+subgraph 14 actions are between: 2018-04-11 21:37:02  and  2018-04-12 09:40:02
+Number of Nodes: 9 , Number of edges: 24
+--------------------------------------
+subgraph 15 actions are between: 2018-04-11 23:06:16  and  2018-04-11 23:06:16
+Number of Nodes: 4 , Number of edges: 3
+--------------------------------------
+subgraph 16 actions are between: 2018-04-11 16:41:51  and  2018-04-12 22:24:07
+Number of Nodes: 11 , Number of edges: 1423
+The subgraph has 56 actions (0.039%) within BSD3 attack time range
+--------------------------------------
+subgraph 17 actions are between: 2018-04-12 14:21:13  and  2018-04-12 14:39:04
+Number of Nodes: 9 , Number of edges: 122
+The subgraph has 120 actions (0.984%) within BSD3 attack time range
+--------------------------------------
+subgraph 18 actions are between: 2018-04-12 14:35:31  and  2018-04-12 14:38:31
+Number of Nodes: 4994 , Number of edges: 5013
+The subgraph has 5013 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 19 actions are between: 2018-04-12 14:36:42  and  2018-04-12 14:38:31
+Number of Nodes: 5000 , Number of edges: 5000
+The subgraph has 5000 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 20 actions are between: 2018-04-12 14:36:42  and  2018-04-12 14:38:31
+Number of Nodes: 907 , Number of edges: 907
+The subgraph has 907 actions (1.0%) within BSD3 attack time range
+--------------------------------------
+subgraph 21 actions are between: 2018-04-11 23:05:00  and  2018-04-12 14:55:00
+Number of Nodes: 5 , Number of edges: 4
+--------------------------------------
+subgraph 22 actions are between: 2018-04-11 23:58:23  and  2018-04-11 23:58:23
+Number of Nodes: 5 , Number of edges: 8
+--------------------------------------
+subgraph 23 actions are between: 2018-04-11 23:58:49  and  2018-04-11 23:58:49
+Number of Nodes: 3 , Number of edges: 2
+--------------------------------------
+subgraph 24 actions are between: 2018-04-11 16:41:30  and  2018-04-12 18:08:16
+Number of Nodes: 28 , Number of edges: 80
+--------------------------------------
+subgraph 25 actions are between: 2018-04-11 23:01:24  and  2018-04-11 23:06:16
+Number of Nodes: 5 , Number of edges: 5
+--------------------------------------
+subgraph 26 actions are between: 2018-04-11 23:01:00  and  2018-04-11 23:58:23
+Number of Nodes: 5 , Number of edges: 6
+----------------------------------------
+
+Total Number of Predicted Anomalies Nodes in correlated subgraphs 11411
+Total Number of Predicted Anomalies, Labeled Malicious Nodes in correlated subgraphs 10907
+Total Number of Predicted Anomalies, Labeled Benign Nodes in correlated subgraphs 504
+
+Total Number of Predicted Normal Nodes in correlated subgraphs 222
+Total Number of Predicted Normal, Labeled Malicious Nodes in correlated subgraphs 1
+Total Number of Predicted Normal, Labeled Benign Nodes in correlated subgraphs 221
+       number_of_nodes  number_of_edges  subgraph_anomaly_score
+count        27.000000        27.000000               27.000000
+mean        431.037037       744.259259               20.986855
+std        1328.568069      1452.559375               63.862489
+min           3.000000         2.000000                0.000117
+25%           4.000000         5.000000                1.112184
+50%           5.000000        18.000000                1.455879
+75%          20.000000       804.000000                2.179240
+max        5000.000000      5013.000000              242.482131
+Evaluate Node anomaly detection after subgraph construction (with all anomalous subgraphs) 
+Evaluate with abnormality level: Moderate
+evaluate with anomalous subgraphs that has ['Moderate', 'Significant', 'Critical'] severity levels 
+Number of subgraphs is  3
+
+*******************************************
+TP: 10922, FP: 0, FN: 2, TN: 292671
+Precision: 1.0, Recall: 1.0, Fscore: 1.0
+MCC: 1.0
+Computed related nodes in  33.672141551971436
+
+*******************************************
+The subgraph construction time is:  270.4466218948364 seconds.
+The subgraph detection time is:  271.06435203552246 seconds.
+None
+Memory usage (ru_maxrss) :  6227.953125  MB
+Memory usage (psutil) :  4251.30078125 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  2.879638671875
+used virtual memory GB: 22.79648208618164  percent 3.6
+Check IOCs in disconnected anomalies nodes
+Number of covered IOCS of attack BSD_1  is: 1
+The covered IOCS are: {'passwd'}
+Number of covered IOCS of attack BSD_2  is: 2
+The covered IOCS are: {'155.162.39.48', 'passwd'}
+Number of covered IOCS of attack BSD_3  is: 3
+The covered IOCS are: {'155.162.39.48', 'sendmail', 'tmux-1002'}
+Number of covered IOCS of attack BSD_4  is: 2
+The covered IOCS are: {'155.162.39.48', 'passwd'}
+The total number of covered IOCs is 4
+________________________________________________
+Check IOCs in anomalies nodes correlated into subgraphs
+Number of covered IOCS of attack BSD_1  is: 0
+The covered IOCS are: set()
+Number of covered IOCS of attack BSD_2  is: 0
+The covered IOCS are: set()
+Number of covered IOCS of attack BSD_3  is: 3
+The covered IOCS are: {'sendmail', '192.113.144.28', '53.158.101.118'}
+Number of covered IOCS of attack BSD_4  is: 1
+The covered IOCS are: {'53.158.101.118'}
+The total number of covered IOCs is 3
+________________________________________________
+investigating subgraph:  0
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  1
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  2
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  3
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  4
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  5
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  6
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  7
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  8
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  9
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  10
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  11
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  12
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  13
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  14
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  15
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  16
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  17
+The covered IOCS of attack BSD_3 are: {'53.158.101.118', 'sendmail'}
+The Subgraph has 0.2 percent of  BSD_3  Query Graph IOCs
+The covered IOCS of attack BSD_4 are: {'53.158.101.118'}
+The Subgraph has 0.125 percent of  BSD_4  Query Graph IOCs
+investigating subgraph:  18
+The covered IOCS of attack BSD_3 are: {'192.113.144.28'}
+The Subgraph has 0.1 percent of  BSD_3  Query Graph IOCs
+investigating subgraph:  19
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  20
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  21
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  22
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  23
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  24
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  25
+The subgraph doesn't cover any attack IOCs
+investigating subgraph:  26
+The subgraph doesn't cover any attack IOCs
+Number of covered IOCs correlated into subgraphs : 3
+Covered IOCs in all constructed subgraphs {'53.158.101.118', '192.113.144.28', 'sendmail'}
+
+************************************************************
+Average performance across all runs:
+       accuracy  precision    recall  f_measure       tp        tn   fp   fn       tpr  fpr       mcc  subgraph_detection_time  memory_usage_mb
+count  1.000000        1.0  1.000000   1.000000      1.0       1.0  1.0  1.0  1.000000  1.0  1.000000                 1.000000         1.000000
+mean   0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               271.064352      6227.953125
+std         NaN        NaN       NaN        NaN      NaN       NaN  NaN  NaN       NaN  NaN       NaN                      NaN              NaN
+min    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               271.064352      6227.953125
+25%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               271.064352      6227.953125
+50%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               271.064352      6227.953125
+75%    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               271.064352      6227.953125
+max    0.999993        1.0  0.999817   0.999908  10922.0  292671.0  0.0  2.0  0.999817  0.0  0.999905               271.064352      6227.953125
+Total time:  344.29098176956177 seconds.

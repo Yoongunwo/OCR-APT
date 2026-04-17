@@ -1,0 +1,168 @@
+******************************************
+Run number: 0
+Seed:  360
+Namespace(dataset='tc3', host='cadets', exp_name='Full_Script_Test', root_path='../dataset/darpa_tc3/cadets/experiments/', load_model='OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05.model', save_model=None, detector='OCRGCN', multiple_models=True, dynamic_contamination=True, runs=1, num_layers=3, input_layer=64, hidden_channels=32, adjust_hidden_channels=False, n_classes=2, dropout=0.0, beta=0.5, warmup=2, visualize_training=False, lr=0.005, epochs=100, contamination=0.001, batch_size=0, batch_size_percentage=None, flexable_rate=0.001, max_contamination=0.05, top_k=1000, random_features=False, save_emb=False, debug_one_subject=False, debug_subjects=-1)
+Deleting : ../dataset/darpa_tc3/cadets/experiments/Full_Script_Test : No such file or directory
+Extracting ../dataset/darpa_tc3/cadets/experiments/Full_Script_Test.zip
+Loading necessary files...
+This might take a while.
+Processing graphs...
+Converting graphs into PyG objects...
+Saving...
+resource.struct_rusage(ru_utime=19.491299, ru_stime=9.414567, ru_maxrss=1179376, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=309913, ru_majflt=1897, ru_nswap=0, ru_inblock=1113488, ru_oublock=1119296, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=60996, ru_nivcsw=755)
+dataset init time= 0:00:00.143774  sec.
+Number of relations 108
+Remove  0  malicious samples from training set
+Total Training Samples: 339199
+Number of malicious samples: 0
+Number of benign samples: 339199
+Total Validating Samples: 53579
+Number of malicious samples: 1928
+Number of benign samples: 51651
+The contamination based on validating data is: 0.036
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 303595
+Number of malicious samples: 10924
+Number of benign samples: 292671
+Size of input layers: 59
+****************************************
+Testing with model for node type: FILE_OBJECT_FILE
+Remove  0  malicious samples from training set:
+Total Training Samples: 44893
+Number of malicious samples: 0
+Number of benign samples: 44893
+Total Validating Samples: 13407
+Number of malicious samples: 1921
+Number of benign samples: 11486
+The contamination based on validating data is: 0.143
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 75969
+Number of malicious samples: 10885
+Number of benign samples: 65084
+'NeighborSampler' requires either 'pyg-lib' or 'torch-sparse'
+******************************************
+Run number: 0
+Seed:  360
+Namespace(dataset='tc3', host='cadets', exp_name='Full_Script_Test', root_path='../dataset/darpa_tc3/cadets/experiments/', load_model='OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05.model', save_model=None, detector='OCRGCN', multiple_models=True, dynamic_contamination=True, runs=1, num_layers=3, input_layer=64, hidden_channels=32, adjust_hidden_channels=False, n_classes=2, dropout=0.0, beta=0.5, warmup=2, visualize_training=False, lr=0.005, epochs=100, contamination=0.001, batch_size=0, batch_size_percentage=None, flexable_rate=0.001, max_contamination=0.05, top_k=1000, random_features=False, save_emb=False, debug_one_subject=False, debug_subjects=-1)
+Folder Deleted
+Extracting ../dataset/darpa_tc3/cadets/experiments/Full_Script_Test.zip
+Loading necessary files...
+This might take a while.
+Processing graphs...
+Converting graphs into PyG objects...
+Saving...
+resource.struct_rusage(ru_utime=18.325319, ru_stime=7.740333, ru_maxrss=1187384, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=316738, ru_majflt=2, ru_nswap=0, ru_inblock=0, ru_oublock=1119304, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=50355, ru_nivcsw=571143)
+dataset init time= 0:00:00.136957  sec.
+Number of relations 108
+Remove  0  malicious samples from training set
+Total Training Samples: 339199
+Number of malicious samples: 0
+Number of benign samples: 339199
+Total Validating Samples: 53579
+Number of malicious samples: 1928
+Number of benign samples: 51651
+The contamination based on validating data is: 0.036
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 303595
+Number of malicious samples: 10924
+Number of benign samples: 292671
+Size of input layers: 59
+****************************************
+Testing with model for node type: FILE_OBJECT_FILE
+Remove  0  malicious samples from training set:
+Total Training Samples: 44893
+Number of malicious samples: 0
+Number of benign samples: 44893
+Total Validating Samples: 13407
+Number of malicious samples: 1921
+Number of benign samples: 11486
+The contamination based on validating data is: 0.143
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 75969
+Number of malicious samples: 10885
+Number of benign samples: 65084
+'NeighborSampler' requires either 'pyg-lib' or 'torch-sparse'
+******************************************
+Run number: 0
+Seed:  360
+Namespace(dataset='tc3', host='cadets', exp_name='Full_Script_Test', root_path='../dataset/darpa_tc3/cadets/experiments/', load_model='OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05.model', save_model=None, detector='OCRGCN', multiple_models=True, dynamic_contamination=True, runs=1, num_layers=3, input_layer=64, hidden_channels=32, adjust_hidden_channels=False, n_classes=2, dropout=0.0, beta=0.5, warmup=2, visualize_training=False, lr=0.005, epochs=100, contamination=0.001, batch_size=0, batch_size_percentage=None, flexable_rate=0.001, max_contamination=0.05, top_k=1000, random_features=False, save_emb=False, debug_one_subject=False, debug_subjects=-1)
+Folder Deleted
+Extracting ../dataset/darpa_tc3/cadets/experiments/Full_Script_Test.zip
+Loading necessary files...
+This might take a while.
+Processing graphs...
+Converting graphs into PyG objects...
+Saving...
+resource.struct_rusage(ru_utime=18.64594, ru_stime=9.307454, ru_maxrss=1190068, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=317404, ru_majflt=0, ru_nswap=0, ru_inblock=417056, ru_oublock=1119304, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=57171, ru_nivcsw=692)
+dataset init time= 0:00:00.102418  sec.
+Number of relations 108
+Remove  0  malicious samples from training set
+Total Training Samples: 339199
+Number of malicious samples: 0
+Number of benign samples: 339199
+Total Validating Samples: 53579
+Number of malicious samples: 1928
+Number of benign samples: 51651
+The contamination based on validating data is: 0.036
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 303595
+Number of malicious samples: 10924
+Number of benign samples: 292671
+Size of input layers: 59
+****************************************
+Testing with model for node type: FILE_OBJECT_FILE
+Remove  0  malicious samples from training set:
+Total Training Samples: 44893
+Number of malicious samples: 0
+Number of benign samples: 44893
+Total Validating Samples: 13407
+Number of malicious samples: 1921
+Number of benign samples: 11486
+The contamination based on validating data is: 0.143
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 75969
+Number of malicious samples: 10885
+Number of benign samples: 65084
+'NeighborSampler' requires either 'pyg-lib' or 'torch-sparse'
+******************************************
+Run number: 0
+Seed:  360
+Namespace(dataset='tc3', host='cadets', exp_name='Full_Script_Test', root_path='../dataset/darpa_tc3/cadets/experiments/', load_model='OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05.model', save_model=None, detector='OCRGCN', multiple_models=True, dynamic_contamination=True, runs=1, num_layers=3, input_layer=64, hidden_channels=32, adjust_hidden_channels=False, n_classes=2, dropout=0.0, beta=0.5, warmup=2, visualize_training=False, lr=0.005, epochs=100, contamination=0.001, batch_size=0, batch_size_percentage=None, flexable_rate=0.001, max_contamination=0.05, top_k=1000, random_features=False, save_emb=False, debug_one_subject=False, debug_subjects=-1)
+Folder Deleted
+Extracting ../dataset/darpa_tc3/cadets/experiments/Full_Script_Test.zip
+Loading necessary files...
+This might take a while.
+Processing graphs...
+Converting graphs into PyG objects...
+Saving...
+resource.struct_rusage(ru_utime=18.524181, ru_stime=9.265609, ru_maxrss=1191788, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=349839, ru_majflt=0, ru_nswap=0, ru_inblock=0, ru_oublock=1119304, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=50206, ru_nivcsw=408)
+dataset init time= 0:00:00.139218  sec.
+Number of relations 108
+Remove  0  malicious samples from training set
+Total Training Samples: 339199
+Number of malicious samples: 0
+Number of benign samples: 339199
+Total Validating Samples: 53579
+Number of malicious samples: 1928
+Number of benign samples: 51651
+The contamination based on validating data is: 0.036
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 303595
+Number of malicious samples: 10924
+Number of benign samples: 292671
+Size of input layers: 59
+****************************************
+Testing with model for node type: FILE_OBJECT_FILE
+Remove  0  malicious samples from training set:
+Total Training Samples: 44893
+Number of malicious samples: 0
+Number of benign samples: 44893
+Total Validating Samples: 13407
+Number of malicious samples: 1921
+Number of benign samples: 11486
+The contamination based on validating data is: 0.143
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 75969
+Number of malicious samples: 10885
+Number of benign samples: 65084
+'NeighborSampler' requires either 'pyg-lib' or 'torch-sparse'
