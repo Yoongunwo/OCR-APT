@@ -1,0 +1,2148 @@
+******************************************
+Run number: 0
+Seed:  360
+Namespace(dataset='tc3', host='cadets', exp_name='Full_Script_Test', root_path='../dataset/darpa_tc3/cadets/experiments/', load_model=None, save_model='OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.25.model', detector='OCRGCN', multiple_models=True, dynamic_contamination=True, runs=1, num_layers=3, input_layer=64, hidden_channels=32, adjust_hidden_channels=False, n_classes=2, dropout=0.0, beta=0.5, warmup=2, visualize_training=False, lr=0.005, epochs=100, contamination=0.001, batch_size=0, batch_size_percentage=None, flexable_rate=0.001, max_contamination=0.05, top_k=1000, random_features=False, save_emb=False, debug_one_subject=False, debug_subjects=-1, train_ratio=0.25)
+Folder Deleted
+Extracting ../dataset/darpa_tc3/cadets/experiments/Full_Script_Test.zip
+Loading necessary files...
+This might take a while.
+Processing graphs...
+Converting graphs into PyG objects...
+Saving...
+resource.struct_rusage(ru_utime=19.242879, ru_stime=9.314064, ru_maxrss=1089880, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=270924, ru_majflt=0, ru_nswap=0, ru_inblock=0, ru_oublock=1119304, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=50201, ru_nivcsw=176)
+dataset init time= 0:00:00.136323  sec.
+Number of relations 108
+Remove  0  malicious samples from training set
+Total Training Samples: 84797
+Number of malicious samples: 0
+Number of benign samples: 84797
+Total Validating Samples: 53579
+Number of malicious samples: 1928
+Number of benign samples: 51651
+The contamination based on validating data is: 0.036
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 303595
+Number of malicious samples: 10924
+Number of benign samples: 292671
+Size of input layers: 59
+****************************************
+Training a model for node type: FILE_OBJECT_FILE
+Remove  0  malicious samples from training set:
+Total Training Samples: 11223
+Number of malicious samples: 0
+Number of benign samples: 11223
+Total Validating Samples: 13407
+Number of malicious samples: 1921
+Number of benign samples: 11486
+The contamination based on validating data is: 0.143
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 75969
+Number of malicious samples: 10885
+Number of benign samples: 65084
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.05
+Epoch:00 (Loss=0.499017)
+Malicious Percentage:  tensor([0.1433])
+F1-Score baseline is:  tensor([0.2507])
+Validation AUC is: 0.6421555861908435
+Validation F1-score: 0.00184
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.69424
+Validation FPR: 0.30576
+Epoch:01 (Loss=0.185986)
+Validation AUC is: 0.4144161015157034
+Validation F1-score: 0.00182
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.69041
+Validation FPR: 0.30959
+Epoch:02 (Loss=0.103590)
+Validation AUC is: 0.37005863598923994
+Validation F1-score: 0.00121
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.44837
+Validation FPR: 0.55163
+Epoch:03 (Loss=0.061285)
+Validation AUC is: 0.0718976808378088
+Validation F1-score: 0.00121
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.44602
+Validation FPR: 0.55398
+Epoch:04 (Loss=0.044924)
+Validation AUC is: 0.07200744939655848
+Validation F1-score: 0.0012
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.44506
+Validation FPR: 0.55494
+Epoch:05 (Loss=0.037782)
+Validation AUC is: 0.08940481420787659
+Validation F1-score: 0.00121
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.44741
+Validation FPR: 0.55259
+Epoch:06 (Loss=0.030143)
+Validation AUC is: 0.1138448155385145
+Validation F1-score: 0.00121
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.44707
+Validation FPR: 0.55293
+Epoch:07 (Loss=0.026069)
+Validation AUC is: 0.140030463267733
+Validation F1-score: 0.00121
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.44811
+Validation FPR: 0.55189
+Epoch:08 (Loss=0.024451)
+Validation AUC is: 0.22728894411257558
+Validation F1-score: 0.00121
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.45055
+Validation FPR: 0.54945
+Epoch:09 (Loss=0.023370)
+Validation AUC is: 0.1384500588861637
+Validation F1-score: 0.00122
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.45255
+Validation FPR: 0.54745
+Epoch:10 (Loss=0.020619)
+Validation AUC is: 0.11761166276887065
+Validation F1-score: 0.00121
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.44898
+Validation FPR: 0.55102
+Epoch:11 (Loss=0.017945)
+Validation AUC is: 0.11501696427300807
+Validation F1-score: 0.00121
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.44637
+Validation FPR: 0.55363
+Epoch:12 (Loss=0.015169)
+Validation AUC is: 0.09095113685691915
+Validation F1-score: 0.00121
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.44785
+Validation FPR: 0.55215
+Epoch:13 (Loss=0.013687)
+Validation AUC is: 0.10276639428775665
+Validation F1-score: 0.00119
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.43766
+Validation FPR: 0.56234
+Epoch:14 (Loss=0.012599)
+Validation AUC is: 0.3969929487977262
+Validation F1-score: 0.00146
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.57322
+Validation FPR: 0.42678
+Epoch:15 (Loss=0.011766)
+Validation AUC is: 0.4122984566323097
+Validation F1-score: 0.00147
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.574
+Validation FPR: 0.426
+Epoch:16 (Loss=0.010897)
+Validation AUC is: 0.4235921094625483
+Validation F1-score: 0.00146
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.56965
+Validation FPR: 0.43035
+Epoch:17 (Loss=0.009942)
+Validation AUC is: 0.4289785641311701
+Validation F1-score: 0.00148
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.57923
+Validation FPR: 0.42077
+Epoch:18 (Loss=0.008953)
+Validation AUC is: 0.4440044386018042
+Validation F1-score: 0.00148
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.57897
+Validation FPR: 0.42103
+Epoch:19 (Loss=0.008061)
+Validation AUC is: 0.1494581412421324
+Validation F1-score: 0.00148
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.5787
+Validation FPR: 0.4213
+Epoch:20 (Loss=0.007312)
+Validation AUC is: 0.14415086315160122
+Validation F1-score: 0.00121
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.44628
+Validation FPR: 0.55372
+Epoch:21 (Loss=0.006511)
+Validation AUC is: 0.14371654766914946
+Validation F1-score: 0.00148
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.58106
+Validation FPR: 0.41894
+Epoch:22 (Loss=0.005960)
+Validation AUC is: 0.07302858705022874
+Validation F1-score: 0.00149
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.58236
+Validation FPR: 0.41764
+Epoch:23 (Loss=0.005524)
+Validation AUC is: 0.07328823365348106
+Validation F1-score: 0.00149
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.58358
+Validation FPR: 0.41642
+Epoch:24 (Loss=0.005154)
+Validation AUC is: 0.073280075791972
+Validation F1-score: 0.00149
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.58462
+Validation FPR: 0.41538
+Epoch:25 (Loss=0.004857)
+Validation AUC is: 0.0718801867570171
+Validation F1-score: 0.0015
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.58576
+Validation FPR: 0.41424
+Epoch:26 (Loss=0.004701)
+Validation AUC is: 0.14256415908808884
+Validation F1-score: 0.0015
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.5868
+Validation FPR: 0.4132
+Epoch:27 (Loss=0.004529)
+Validation AUC is: 0.14369107701266007
+Validation F1-score: 0.0015
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.58663
+Validation FPR: 0.41337
+Epoch:28 (Loss=0.004299)
+Validation AUC is: 0.13361580079879964
+Validation F1-score: 0.00151
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.59115
+Validation FPR: 0.40885
+Epoch:29 (Loss=0.004169)
+Validation AUC is: 0.2776787403319143
+Validation F1-score: 0.00151
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.59229
+Validation FPR: 0.40771
+Epoch:30 (Loss=0.004106)
+Validation AUC is: 0.28358199552713514
+Validation F1-score: 0.00151
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.59211
+Validation FPR: 0.40789
+Epoch:31 (Loss=0.003846)
+Validation AUC is: 0.2842782236854807
+Validation F1-score: 0.00151
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.59203
+Validation FPR: 0.40797
+Epoch:32 (Loss=0.003567)
+Validation AUC is: 0.29582676436642474
+Validation F1-score: 0.00151
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.59203
+Validation FPR: 0.40797
+Epoch:33 (Loss=0.003309)
+Validation AUC is: 0.29642935840322726
+Validation F1-score: 0.00151
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.58994
+Validation FPR: 0.41006
+Epoch:34 (Loss=0.003124)
+Validation AUC is: 0.29590843362442093
+Validation F1-score: 0.00151
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.58941
+Validation FPR: 0.41059
+Epoch:35 (Loss=0.003019)
+Validation AUC is: 0.29451924045233346
+Validation F1-score: 0.00162
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.63042
+Validation FPR: 0.36958
+Epoch:36 (Loss=0.002891)
+Validation AUC is: 0.33619956776024007
+Validation F1-score: 0.00163
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.63234
+Validation FPR: 0.36766
+Epoch:37 (Loss=0.002705)
+Validation AUC is: 0.6321353302207163
+Validation F1-score: 0.00162
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.63164
+Validation FPR: 0.36836
+Epoch:38 (Loss=0.002547)
+Validation AUC is: 0.6340393750969312
+Validation F1-score: 0.47567
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.63129
+Validation FPR: 0.36871
+Epoch:39 (Loss=0.002451)
+Validation AUC is: 0.6396830743318054
+Validation F1-score: 0.45089
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.59263
+Validation FPR: 0.40737
+Epoch:40 (Loss=0.002326)
+Validation AUC is: 0.5954617544496377
+Validation F1-score: 0.4503
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.59168
+Validation FPR: 0.40832
+Epoch:41 (Loss=0.002179)
+Validation AUC is: 0.601888245817759
+Validation F1-score: 0.45062
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.5922
+Validation FPR: 0.4078
+Epoch:42 (Loss=0.002057)
+Validation AUC is: 0.6040591887296787
+Validation F1-score: 0.45414
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.59795
+Validation FPR: 0.40205
+Epoch:43 (Loss=0.001992)
+Validation AUC is: 0.6047546011018733
+Validation F1-score: 0.45635
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.60151
+Validation FPR: 0.39849
+Final contamination is: 0.05
+Training time:  708.4019114971161 seconds.
+None
+Memory usage (ru_maxrss) :  24133.39453125  MB
+Memory usage (psutil) :  11247.78515625 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  16.9805908203125
+used virtual memory GB: 31.74591064453125  percent 5.0
+validating set CM:
+ [[  875 10611]
+ [    0  1921]]
+Validation time:  15.390755653381348 seconds.
+
+*****************************************
+Testing set CM:
+ [[ 5038 60046]
+ [    0 10885]]
+Detection time:  10.122088432312012 seconds.
+ Train accuracy: 0.321
+ Valid accuracy: 0.209
+ Test accuracy: 0.210
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/FILE_OBJECT_FILE_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.25.model
+****************************************
+Training a model for node type: NetFlowObject
+Remove  0  malicious samples from training set:
+Total Training Samples: 1440
+Number of malicious samples: 0
+Number of benign samples: 1440
+Total Validating Samples: 1062
+Number of malicious samples: 4
+Number of benign samples: 1058
+The contamination based on validating data is: 0.004
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 6014
+Number of malicious samples: 21
+Number of benign samples: 5993
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.004
+Epoch:00 (Loss=0.201310)
+Malicious Percentage:  tensor([0.0038])
+F1-Score baseline is:  tensor([0.0075])
+Validation AUC is: 0.9959829867674858
+Validation F1-score: 0.18182
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.96597
+Validation FPR: 0.03403
+Epoch:01 (Loss=0.065370)
+Validation AUC is: 0.9995274102079394
+Validation F1-score: 0.13793
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.95274
+Validation FPR: 0.04726
+Epoch:02 (Loss=0.031664)
+Validation AUC is: 0.9995274102079394
+Validation F1-score: 0.15686
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.95936
+Validation FPR: 0.04064
+Epoch:03 (Loss=0.024765)
+Validation AUC is: 0.9997637051039697
+Validation F1-score: 0.15686
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.95936
+Validation FPR: 0.04064
+Epoch:04 (Loss=0.021978)
+Validation AUC is: 0.9997637051039697
+Validation F1-score: 0.16667
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.96219
+Validation FPR: 0.03781
+Epoch:05 (Loss=0.018914)
+Validation AUC is: 0.9997637051039698
+Validation F1-score: 0.15385
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.95841
+Validation FPR: 0.04159
+Epoch:06 (Loss=0.015674)
+Validation AUC is: 0.9997637051039697
+Validation F1-score: 0.10811
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.93762
+Validation FPR: 0.06238
+Epoch:07 (Loss=0.012815)
+Validation AUC is: 0.9997637051039697
+Validation F1-score: 0.13793
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.95274
+Validation FPR: 0.04726
+Epoch:08 (Loss=0.010692)
+Validation AUC is: 0.9997637051039697
+Validation F1-score: 0.10256
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.93384
+Validation FPR: 0.06616
+Epoch:09 (Loss=0.009334)
+Validation AUC is: 0.9995274102079394
+Validation F1-score: 0.09195
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.92533
+Validation FPR: 0.07467
+Epoch:10 (Loss=0.008333)
+Validation AUC is: 0.9992911153119093
+Validation F1-score: 0.09302
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.92628
+Validation FPR: 0.07372
+Final contamination is: 0.004
+Training time:  171.0271909236908 seconds.
+None
+Memory usage (ru_maxrss) :  25868.5390625  MB
+Memory usage (psutil) :  11246.15625 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  18.2855224609375
+used virtual memory GB: 32.45173645019531  percent 5.2
+validating set CM:
+ [[1025   33]
+ [   0    4]]
+Validation time:  14.012628078460693 seconds.
+
+*****************************************
+Testing set CM:
+ [[5770  223]
+ [   0   21]]
+Detection time:  7.514728307723999 seconds.
+ Train accuracy: 0.997
+ Valid accuracy: 0.969
+ Test accuracy: 0.963
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/NetFlowObject_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.25.model
+****************************************
+Training a model for node type: SUBJECT_PROCESS
+Remove  0  malicious samples from training set:
+Total Training Samples: 7076
+Number of malicious samples: 0
+Number of benign samples: 7076
+Total Validating Samples: 3945
+Number of malicious samples: 2
+Number of benign samples: 3943
+The contamination based on validating data is: 0.001
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 22352
+Number of malicious samples: 13
+Number of benign samples: 22339
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.001
+Epoch:00 (Loss=0.145948)
+Malicious Percentage:  tensor([0.0005])
+F1-Score baseline is:  tensor([0.0010])
+Validation AUC is: 0.4682982500634035
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99822
+Validation FPR: 0.00178
+Epoch:01 (Loss=0.055657)
+Validation AUC is: 0.13745878772508247
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:02 (Loss=0.025741)
+Validation AUC is: 0.15888917068222164
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:03 (Loss=0.017671)
+Validation AUC is: 0.14633527770732946
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:04 (Loss=0.017889)
+Validation AUC is: 0.1477301547045397
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:05 (Loss=0.018034)
+Validation AUC is: 0.6107025107785949
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:06 (Loss=0.015654)
+Validation AUC is: 0.5952320568095358
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:07 (Loss=0.012280)
+Validation AUC is: 0.6782906416434188
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:08 (Loss=0.009595)
+Validation AUC is: 0.3832107532335785
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99822
+Validation FPR: 0.00178
+Epoch:09 (Loss=0.007846)
+Validation AUC is: 0.3569617042860766
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99822
+Validation FPR: 0.00178
+Epoch:10 (Loss=0.006641)
+Validation AUC is: 0.3612731422774537
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99797
+Validation FPR: 0.00203
+Epoch:11 (Loss=0.005644)
+Validation AUC is: 0.686279482627441
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99797
+Validation FPR: 0.00203
+Epoch:12 (Loss=0.004971)
+Validation AUC is: 0.5376616789246766
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99797
+Validation FPR: 0.00203
+Epoch:13 (Loss=0.004650)
+Validation AUC is: 0.42214050215571897
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99797
+Validation FPR: 0.00203
+Epoch:14 (Loss=0.004404)
+Validation AUC is: 0.38853664722292675
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99797
+Validation FPR: 0.00203
+Epoch:15 (Loss=0.004328)
+Validation AUC is: 0.3612731422774537
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99797
+Validation FPR: 0.00203
+Epoch:16 (Loss=0.004387)
+Validation AUC is: 0.3231042353537915
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99797
+Validation FPR: 0.00203
+Epoch:17 (Loss=0.004486)
+Validation AUC is: 0.3217093583565813
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99772
+Validation FPR: 0.00228
+Epoch:18 (Loss=0.004562)
+Validation AUC is: 0.3554400202891199
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.9967
+Validation FPR: 0.0033
+Epoch:19 (Loss=0.004429)
+Validation AUC is: 0.34199847831600305
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99569
+Validation FPR: 0.00431
+Epoch:20 (Loss=0.004313)
+Validation AUC is: 0.3889170682221658
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99543
+Validation FPR: 0.00457
+Epoch:21 (Loss=0.003676)
+Validation AUC is: 0.398173979203652
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99518
+Validation FPR: 0.00482
+Epoch:22 (Loss=0.003337)
+Validation AUC is: 0.585087496829825
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.9962
+Validation FPR: 0.0038
+Epoch:23 (Loss=0.003172)
+Validation AUC is: 0.7605883844788233
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99543
+Validation FPR: 0.00457
+Epoch:24 (Loss=0.003127)
+Validation AUC is: 0.8043367993913264
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99493
+Validation FPR: 0.00507
+Epoch:25 (Loss=0.003048)
+Validation AUC is: 0.8092822723814355
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99518
+Validation FPR: 0.00482
+Epoch:26 (Loss=0.002905)
+Validation AUC is: 0.8488460563023079
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99543
+Validation FPR: 0.00457
+Epoch:27 (Loss=0.002764)
+Validation AUC is: 0.8407304083185392
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99543
+Validation FPR: 0.00457
+Epoch:28 (Loss=0.002608)
+Validation AUC is: 0.8791529292416942
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99543
+Validation FPR: 0.00457
+Epoch:29 (Loss=0.002460)
+Validation AUC is: 0.8814354552371291
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99518
+Validation FPR: 0.00482
+Epoch:30 (Loss=0.002298)
+Validation AUC is: 0.886000507227999
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99645
+Validation FPR: 0.00355
+Epoch:31 (Loss=0.002143)
+Validation AUC is: 0.8950038042099924
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99645
+Validation FPR: 0.00355
+Epoch:32 (Loss=0.002008)
+Validation AUC is: 0.8877758052244484
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99645
+Validation FPR: 0.00355
+Epoch:33 (Loss=0.001865)
+Validation AUC is: 0.8867613492264774
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.9962
+Validation FPR: 0.0038
+Epoch:34 (Loss=0.001731)
+Validation AUC is: 0.8862541212274917
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99569
+Validation FPR: 0.00431
+Epoch:35 (Loss=0.001619)
+Validation AUC is: 0.8747146842505706
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99569
+Validation FPR: 0.00431
+Epoch:36 (Loss=0.001525)
+Validation AUC is: 0.8778848592442303
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99569
+Validation FPR: 0.00431
+Final contamination is: 0.001
+Training time:  568.4129340648651 seconds.
+None
+Memory usage (ru_maxrss) :  25868.5390625  MB
+Memory usage (psutil) :  11246.10546875 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  22.3663330078125
+used virtual memory GB: 31.58509063720703  percent 5.0
+validating set CM:
+ [[3927   16]
+ [   2    0]]
+Validation time:  13.351252555847168 seconds.
+
+*****************************************
+Testing set CM:
+ [[22219   120]
+ [   10     3]]
+Detection time:  7.979233026504517 seconds.
+ Train accuracy: 0.999
+ Valid accuracy: 0.995
+ Test accuracy: 0.994
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/SUBJECT_PROCESS_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.25.model
+****************************************
+Training a model for node type: UnnamedPipeObject
+Remove  0  malicious samples from training set:
+Total Training Samples: 1629
+Number of malicious samples: 0
+Number of benign samples: 1629
+Total Validating Samples: 972
+Number of malicious samples: 1
+Number of benign samples: 971
+The contamination based on validating data is: 0.001
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 5504
+Number of malicious samples: 5
+Number of benign samples: 5499
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.001
+Epoch:00 (Loss=0.216291)
+Malicious Percentage:  tensor([0.0010])
+F1-Score baseline is:  tensor([0.0021])
+Validation AUC is: 0.9969104016477858
+Validation F1-score: 0.28571
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.99485
+Validation FPR: 0.00515
+Epoch:01 (Loss=0.091271)
+Validation AUC is: 0.9969104016477858
+Validation F1-score: 0.18182
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.99073
+Validation FPR: 0.00927
+Epoch:02 (Loss=0.035098)
+Validation AUC is: 0.9969104016477859
+Validation F1-score: 0.11765
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.98455
+Validation FPR: 0.01545
+Epoch:03 (Loss=0.023946)
+Validation AUC is: 0.9969104016477858
+Validation F1-score: 0.11765
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.98455
+Validation FPR: 0.01545
+Epoch:04 (Loss=0.020164)
+Validation AUC is: 0.9969104016477858
+Validation F1-score: 0.04
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.95057
+Validation FPR: 0.04943
+Epoch:05 (Loss=0.016296)
+Validation AUC is: 0.9969104016477859
+Validation F1-score: 0.04255
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.95366
+Validation FPR: 0.04634
+Epoch:06 (Loss=0.014322)
+Validation AUC is: 0.9969104016477857
+Validation F1-score: 0.11765
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.98455
+Validation FPR: 0.01545
+Epoch:07 (Loss=0.012233)
+Validation AUC is: 0.9969104016477858
+Validation F1-score: 0.11765
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.98455
+Validation FPR: 0.01545
+Final contamination is: 0.001
+Training time:  123.688725233078 seconds.
+None
+Memory usage (ru_maxrss) :  25868.5390625  MB
+Memory usage (psutil) :  11248.5234375 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  22.34130859375
+used virtual memory GB: 32.21513748168945  percent 5.1
+validating set CM:
+ [[956  15]
+ [  0   1]]
+Validation time:  15.375319957733154 seconds.
+
+*****************************************
+Testing set CM:
+ [[5415   84]
+ [   0    5]]
+Detection time:  8.197536706924438 seconds.
+ Train accuracy: 0.999
+ Valid accuracy: 0.985
+ Test accuracy: 0.985
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/UnnamedPipeObject_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.25.model
+****************************************
+Training a model for node type: FILE_OBJECT_UNIX_SOCKET
+Remove  0  malicious samples from training set:
+Total Training Samples: 63416
+Number of malicious samples: 0
+Number of benign samples: 63416
+Total Validating Samples: 34181
+Number of malicious samples: 0
+Number of benign samples: 34181
+The contamination based on validating data is: 0.0
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 193688
+Number of malicious samples: 0
+Number of benign samples: 193688
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.001
+Epoch:00 (Loss=0.057466)
+Malicious Percentage:  tensor([0.])
+F1-Score baseline is:  tensor([0.])
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.99096
+Validation FPR: 0.00904
+Epoch:01 (Loss=0.025195)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.99994
+Validation FPR: 6e-05
+Epoch:02 (Loss=0.014702)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.99827
+Validation FPR: 0.00173
+Epoch:03 (Loss=0.011152)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.99789
+Validation FPR: 0.00211
+Epoch:04 (Loss=0.009936)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.99792
+Validation FPR: 0.00208
+Epoch:05 (Loss=0.006785)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.99786
+Validation FPR: 0.00214
+Epoch:06 (Loss=0.005058)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.99778
+Validation FPR: 0.00222
+Final contamination is: 0.001
+Training time:  119.31952691078186 seconds.
+None
+Memory usage (ru_maxrss) :  25868.5390625  MB
+Memory usage (psutil) :  11249.515625 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  22.042236328125
+used virtual memory GB: 32.656410217285156  percent 5.2
+validating set CM:
+ [[34114    67]
+ [    0     0]]
+Validation time:  14.926156044006348 seconds.
+
+*****************************************
+Testing set CM:
+ [[193327    361]
+ [     0      0]]
+Detection time:  15.859989166259766 seconds.
+ Train accuracy: 0.999
+ Valid accuracy: 0.998
+ Test accuracy: 0.998
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/FILE_OBJECT_UNIX_SOCKET_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.25.model
+****************************************
+Training a model for node type: FILE_OBJECT_DIR
+Remove  0  malicious samples from training set:
+Total Training Samples: 13
+Number of malicious samples: 0
+Number of benign samples: 13
+Total Validating Samples: 12
+Number of malicious samples: 0
+Number of benign samples: 12
+The contamination based on validating data is: 0.0
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 68
+Number of malicious samples: 0
+Number of benign samples: 68
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.001
+Epoch:00 (Loss=0.019537)
+Malicious Percentage:  tensor([0.])
+F1-Score baseline is:  tensor([0.])
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.91667
+Validation FPR: 0.08333
+Epoch:01 (Loss=0.006247)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.91667
+Validation FPR: 0.08333
+Epoch:02 (Loss=0.003502)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.91667
+Validation FPR: 0.08333
+Epoch:03 (Loss=0.003575)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.91667
+Validation FPR: 0.08333
+Epoch:04 (Loss=0.003197)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.91667
+Validation FPR: 0.08333
+Epoch:05 (Loss=0.002898)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.91667
+Validation FPR: 0.08333
+Final contamination is: 0.001
+Training time:  92.20145034790039 seconds.
+None
+Memory usage (ru_maxrss) :  25868.5390625  MB
+Memory usage (psutil) :  11248.2734375 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  22.1881103515625
+used virtual memory GB: 31.38237762451172  percent 5.0
+validating set CM:
+ [[ 0 12]
+ [ 0  0]]
+Validation time:  14.869973421096802 seconds.
+
+*****************************************
+Testing set CM:
+ [[ 0 68]
+ [ 0  0]]
+Detection time:  8.096547842025757 seconds.
+ Train accuracy: 0.000
+ Valid accuracy: 0.000
+ Test accuracy: 0.000
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/FILE_OBJECT_DIR_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.25.model
+****************************************
+
+*****************************************
+
+*******************************************
+TP: 10924, FP: 24187, FN: 0, TN: 268484
+Precision: 0.311, Recall: 1.0, Fscore: 0.475
+Computed related nodes in  48.53985571861267
+Final AUC is: 0.8658227855778227
+Folder Deleted
+Total detection time for this run is 0    57.770123
+Name: detection_time_run, dtype: float64
+Total training time for this run  0    1783.051739
+Name: train_time_run, dtype: float64
+
+************************************************************
+
+************************************************************
+Average performance across all runs:
+       accuracy  precision  recall  f_measure       tp        tn       fp  \
+count  1.000000   1.000000     1.0   1.000000      1.0       1.0      1.0   
+mean   0.920331   0.311128     1.0   0.474595  10924.0  268484.0  24187.0   
+std         NaN        NaN     NaN        NaN      NaN       NaN      NaN   
+min    0.920331   0.311128     1.0   0.474595  10924.0  268484.0  24187.0   
+25%    0.920331   0.311128     1.0   0.474595  10924.0  268484.0  24187.0   
+50%    0.920331   0.311128     1.0   0.474595  10924.0  268484.0  24187.0   
+75%    0.920331   0.311128     1.0   0.474595  10924.0  268484.0  24187.0   
+max    0.920331   0.311128     1.0   0.474595  10924.0  268484.0  24187.0   
+
+        fn  tpr       fpr  detection_time_run  train_time_run  memory_usage_mb  
+count  1.0  1.0  1.000000            1.000000        1.000000         1.000000  
+mean   0.0  1.0  0.082642           57.770123     1783.051739     25868.539062  
+std    NaN  NaN       NaN                 NaN             NaN              NaN  
+min    0.0  1.0  0.082642           57.770123     1783.051739     25868.539062  
+25%    0.0  1.0  0.082642           57.770123     1783.051739     25868.539062  
+50%    0.0  1.0  0.082642           57.770123     1783.051739     25868.539062  
+75%    0.0  1.0  0.082642           57.770123     1783.051739     25868.539062  
+max    0.0  1.0  0.082642           57.770123     1783.051739     25868.539062  
+Total time:  2170.746477365494 seconds.
+program IOPS (over total time):  8.708525015294583
+I/O counters pio(read_count=14543, write_count=4361, read_bytes=5111808, write_bytes=1135198208, read_chars=737358827, write_chars=1132947504)
+None
+Memory usage (ru_maxrss) :  25868.5390625  MB
+Memory usage (psutil) :  2228.49609375 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  21.0589599609375
+used virtual memory GB: 21.492034912109375  percent 3.4
+******************************************
+Run number: 0
+Seed:  360
+Namespace(dataset='tc3', host='cadets', exp_name='Full_Script_Test', root_path='../dataset/darpa_tc3/cadets/experiments/', load_model=None, save_model='OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.1.model', detector='OCRGCN', multiple_models=True, dynamic_contamination=True, runs=1, num_layers=3, input_layer=64, hidden_channels=32, adjust_hidden_channels=False, n_classes=2, dropout=0.0, beta=0.5, warmup=2, visualize_training=False, lr=0.005, epochs=100, contamination=0.001, batch_size=0, batch_size_percentage=None, flexable_rate=0.001, max_contamination=0.05, top_k=1000, random_features=False, save_emb=False, debug_one_subject=False, debug_subjects=-1, train_ratio=0.1)
+Folder Deleted
+Extracting ../dataset/darpa_tc3/cadets/experiments/Full_Script_Test.zip
+Loading necessary files...
+This might take a while.
+Processing graphs...
+Converting graphs into PyG objects...
+Saving...
+resource.struct_rusage(ru_utime=19.155694, ru_stime=9.399204, ru_maxrss=1091008, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=389308, ru_majflt=0, ru_nswap=0, ru_inblock=0, ru_oublock=1119304, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=43352, ru_nivcsw=171)
+dataset init time= 0:00:00.139087  sec.
+Number of relations 108
+Remove  0  malicious samples from training set
+Total Training Samples: 33917
+Number of malicious samples: 0
+Number of benign samples: 33917
+Total Validating Samples: 53579
+Number of malicious samples: 1928
+Number of benign samples: 51651
+The contamination based on validating data is: 0.036
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 303595
+Number of malicious samples: 10924
+Number of benign samples: 292671
+Size of input layers: 59
+****************************************
+Training a model for node type: FILE_OBJECT_FILE
+Remove  0  malicious samples from training set:
+Total Training Samples: 4489
+Number of malicious samples: 0
+Number of benign samples: 4489
+Total Validating Samples: 13407
+Number of malicious samples: 1921
+Number of benign samples: 11486
+The contamination based on validating data is: 0.143
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 75969
+Number of malicious samples: 10885
+Number of benign samples: 65084
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.05
+Epoch:00 (Loss=0.529700)
+Malicious Percentage:  tensor([0.1433])
+F1-Score baseline is:  tensor([0.2507])
+Validation AUC is: 0.07118717642182239
+Validation F1-score: 0.00147
+Validation TPR (sensitivity): 0.00208
+Validation TNR (selectivity): 0.6925
+Validation FPR: 0.3075
+Epoch:01 (Loss=0.226700)
+Validation AUC is: 0.07118685917165252
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15784
+Validation FPR: 0.84216
+Epoch:02 (Loss=0.111852)
+Validation AUC is: 0.08591664859096058
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15593
+Validation FPR: 0.84407
+Epoch:03 (Loss=0.076887)
+Validation AUC is: 0.10197879808050953
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15776
+Validation FPR: 0.84224
+Epoch:04 (Loss=0.061171)
+Validation AUC is: 0.1429653899099762
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15741
+Validation FPR: 0.84259
+Epoch:05 (Loss=0.052494)
+Validation AUC is: 0.15137909102025204
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15819
+Validation FPR: 0.84181
+Epoch:06 (Loss=0.047038)
+Validation AUC is: 0.15546182877682027
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15741
+Validation FPR: 0.84259
+Epoch:07 (Loss=0.043822)
+Validation AUC is: 0.15929928683068265
+Validation F1-score: 0.28419
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.1575
+Validation FPR: 0.8425
+Epoch:08 (Loss=0.040955)
+Validation AUC is: 0.1601671473308882
+Validation F1-score: 0.28419
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.1575
+Validation FPR: 0.8425
+Epoch:09 (Loss=0.039390)
+Validation AUC is: 0.1612335611159338
+Validation F1-score: 0.28386
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.1561
+Validation FPR: 0.8439
+Epoch:10 (Loss=0.039255)
+Validation AUC is: 0.1079457752384067
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15567
+Validation FPR: 0.84433
+Epoch:11 (Loss=0.031945)
+Validation AUC is: 0.10654964788403655
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15549
+Validation FPR: 0.84451
+Epoch:12 (Loss=0.026681)
+Validation AUC is: 0.09916197914433637
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15645
+Validation FPR: 0.84355
+Epoch:13 (Loss=0.023375)
+Validation AUC is: 0.07859863892425728
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15706
+Validation FPR: 0.84294
+Epoch:14 (Loss=0.021017)
+Validation AUC is: 0.07356102347805347
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.1568
+Validation FPR: 0.8432
+Epoch:15 (Loss=0.019056)
+Validation AUC is: 0.07625524788432665
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15567
+Validation FPR: 0.84433
+Epoch:16 (Loss=0.017636)
+Validation AUC is: 0.0750188333297227
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15602
+Validation FPR: 0.84398
+Epoch:17 (Loss=0.015913)
+Validation AUC is: 0.08426640385058311
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15732
+Validation FPR: 0.84268
+Epoch:18 (Loss=0.014436)
+Validation AUC is: 0.08981587978502763
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15558
+Validation FPR: 0.84442
+Epoch:19 (Loss=0.013146)
+Validation AUC is: 0.12807199004595862
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15549
+Validation FPR: 0.84451
+Epoch:20 (Loss=0.011980)
+Validation AUC is: 0.13512999053778707
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15558
+Validation FPR: 0.84442
+Epoch:21 (Loss=0.010942)
+Validation AUC is: 0.13675471930022232
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15541
+Validation FPR: 0.84459
+Epoch:22 (Loss=0.009927)
+Validation AUC is: 0.13848432190450174
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15671
+Validation FPR: 0.84329
+Epoch:23 (Loss=0.008921)
+Validation AUC is: 0.1398723820402685
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15584
+Validation FPR: 0.84416
+Epoch:24 (Loss=0.008133)
+Validation AUC is: 0.14117872759658612
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15515
+Validation FPR: 0.84485
+Epoch:25 (Loss=0.007418)
+Validation AUC is: 0.14350906605810226
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15445
+Validation FPR: 0.84555
+Epoch:26 (Loss=0.006821)
+Validation AUC is: 0.14830792809080753
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15375
+Validation FPR: 0.84625
+Epoch:27 (Loss=0.006427)
+Validation AUC is: 0.15275482372084956
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15314
+Validation FPR: 0.84686
+Epoch:28 (Loss=0.006112)
+Validation AUC is: 0.15519497606256824
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15393
+Validation FPR: 0.84607
+Epoch:29 (Loss=0.005935)
+Validation AUC is: 0.15501677211004813
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15401
+Validation FPR: 0.84599
+Epoch:30 (Loss=0.005801)
+Validation AUC is: 0.1553997383864457
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15445
+Validation FPR: 0.84555
+Epoch:31 (Loss=0.005639)
+Validation AUC is: 0.1552478661980186
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15445
+Validation FPR: 0.84555
+Epoch:32 (Loss=0.005526)
+Validation AUC is: 0.15533737606735423
+Validation F1-score: 0.00086
+Validation TPR (sensitivity): 0.0026
+Validation TNR (selectivity): 0.15375
+Validation FPR: 0.84625
+Epoch:33 (Loss=0.005418)
+Validation AUC is: 0.1571340997432721
+Validation F1-score: 0.28329
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.15375
+Validation FPR: 0.84625
+Epoch:34 (Loss=0.005311)
+Validation AUC is: 0.15680420488813623
+Validation F1-score: 0.28283
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.15184
+Validation FPR: 0.84816
+Epoch:35 (Loss=0.005207)
+Validation AUC is: 0.1554086213912
+Validation F1-score: 0.28271
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.15131
+Validation FPR: 0.84869
+Epoch:36 (Loss=0.005089)
+Validation AUC is: 0.15520304328117163
+Validation F1-score: 0.28267
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.15114
+Validation FPR: 0.84886
+Epoch:37 (Loss=0.004952)
+Validation AUC is: 0.15509585804523315
+Validation F1-score: 0.28256
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.15071
+Validation FPR: 0.84929
+Final contamination is: 0.05
+Training time:  571.5102512836456 seconds.
+None
+Memory usage (ru_maxrss) :  24129.31640625  MB
+Memory usage (psutil) :  11248.7890625 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  21.556396484375
+used virtual memory GB: 32.43975067138672  percent 5.2
+validating set CM:
+ [[1795 9691]
+ [1916    5]]
+Validation time:  14.508241176605225 seconds.
+
+*****************************************
+Testing set CM:
+ [[10080 55004]
+ [10872    13]]
+Detection time:  9.360363006591797 seconds.
+ Train accuracy: 0.958
+ Valid accuracy: 0.134
+ Test accuracy: 0.133
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/FILE_OBJECT_FILE_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.1.model
+****************************************
+Training a model for node type: NetFlowObject
+Remove  0  malicious samples from training set:
+Total Training Samples: 576
+Number of malicious samples: 0
+Number of benign samples: 576
+Total Validating Samples: 1062
+Number of malicious samples: 4
+Number of benign samples: 1058
+The contamination based on validating data is: 0.004
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 6014
+Number of malicious samples: 21
+Number of benign samples: 5993
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.004
+Epoch:00 (Loss=0.154817)
+Malicious Percentage:  tensor([0.0038])
+F1-Score baseline is:  tensor([0.0075])
+Validation AUC is: 0.9959829867674859
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99905
+Validation FPR: 0.00095
+Epoch:01 (Loss=0.052991)
+Validation AUC is: 0.9997637051039698
+Validation F1-score: 0.75
+Validation TPR (sensitivity): 0.75
+Validation TNR (selectivity): 0.99905
+Validation FPR: 0.00095
+Epoch:02 (Loss=0.028428)
+Validation AUC is: 1.0
+Validation F1-score: 0.88889
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.99905
+Validation FPR: 0.00095
+Epoch:03 (Loss=0.022376)
+Validation AUC is: 1.0
+Validation F1-score: 0.47059
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.99149
+Validation FPR: 0.00851
+Epoch:04 (Loss=0.019442)
+Validation AUC is: 1.0
+Validation F1-score: 0.47059
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.99149
+Validation FPR: 0.00851
+Epoch:05 (Loss=0.017168)
+Validation AUC is: 1.0
+Validation F1-score: 0.5
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.99244
+Validation FPR: 0.00756
+Epoch:06 (Loss=0.015171)
+Validation AUC is: 1.0
+Validation F1-score: 0.47059
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.99149
+Validation FPR: 0.00851
+Epoch:07 (Loss=0.013083)
+Validation AUC is: 0.9997637051039697
+Validation F1-score: 0.47059
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.99149
+Validation FPR: 0.00851
+Final contamination is: 0.004
+Training time:  115.57258129119873 seconds.
+None
+Memory usage (ru_maxrss) :  25868.75390625  MB
+Memory usage (psutil) :  11250.36328125 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  22.6470947265625
+used virtual memory GB: 31.448936462402344  percent 5.0
+validating set CM:
+ [[1057    1]
+ [   0    4]]
+Validation time:  12.956970930099487 seconds.
+
+*****************************************
+Testing set CM:
+ [[5986    7]
+ [   0   21]]
+Detection time:  7.742886066436768 seconds.
+ Train accuracy: 0.998
+ Valid accuracy: 0.999
+ Test accuracy: 0.999
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/NetFlowObject_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.1.model
+****************************************
+Training a model for node type: SUBJECT_PROCESS
+Remove  0  malicious samples from training set:
+Total Training Samples: 2830
+Number of malicious samples: 0
+Number of benign samples: 2830
+Total Validating Samples: 3945
+Number of malicious samples: 2
+Number of benign samples: 3943
+The contamination based on validating data is: 0.001
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 22352
+Number of malicious samples: 13
+Number of benign samples: 22339
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.001
+Epoch:00 (Loss=0.137103)
+Malicious Percentage:  tensor([0.0005])
+F1-Score baseline is:  tensor([0.0010])
+Validation AUC is: 0.3634288612731423
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99899
+Validation FPR: 0.00101
+Epoch:01 (Loss=0.051269)
+Validation AUC is: 0.13872685772254634
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:02 (Loss=0.023027)
+Validation AUC is: 0.17537408064925186
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:03 (Loss=0.016670)
+Validation AUC is: 0.17169667765660662
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99873
+Validation FPR: 0.00127
+Epoch:04 (Loss=0.017732)
+Validation AUC is: 0.5680953588638092
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99873
+Validation FPR: 0.00127
+Epoch:05 (Loss=0.017710)
+Validation AUC is: 0.6394876997210246
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99873
+Validation FPR: 0.00127
+Epoch:06 (Loss=0.014842)
+Validation AUC is: 0.5843266548313466
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99873
+Validation FPR: 0.00127
+Epoch:07 (Loss=0.011346)
+Validation AUC is: 0.5366472229267056
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:08 (Loss=0.007949)
+Validation AUC is: 0.4530814100938372
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:09 (Loss=0.005940)
+Validation AUC is: 0.34060360131879286
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:10 (Loss=0.004926)
+Validation AUC is: 0.413264012173472
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:11 (Loss=0.004486)
+Validation AUC is: 0.5741820948516358
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:12 (Loss=0.004159)
+Validation AUC is: 0.6605376616789247
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:13 (Loss=0.003870)
+Validation AUC is: 0.8389551103220898
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99848
+Validation FPR: 0.00152
+Epoch:14 (Loss=0.003617)
+Validation AUC is: 0.884352016231296
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99797
+Validation FPR: 0.00203
+Epoch:15 (Loss=0.003382)
+Validation AUC is: 0.8728125792543748
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.99797
+Validation FPR: 0.00203
+Epoch:16 (Loss=0.003161)
+Validation AUC is: 0.8714177022571645
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.98935
+Validation FPR: 0.01065
+Epoch:17 (Loss=0.002928)
+Validation AUC is: 0.8575957392848086
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.98909
+Validation FPR: 0.01091
+Epoch:18 (Loss=0.002748)
+Validation AUC is: 0.817651534364697
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.98909
+Validation FPR: 0.01091
+Epoch:19 (Loss=0.002736)
+Validation AUC is: 0.808141009383718
+Validation F1-score: 0.0
+Validation TPR (sensitivity): 0.0
+Validation TNR (selectivity): 0.98884
+Validation FPR: 0.01116
+Final contamination is: 0.001
+Training time:  298.3054392337799 seconds.
+None
+Memory usage (ru_maxrss) :  25868.75390625  MB
+Memory usage (psutil) :  11270.26171875 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  24.6990966796875
+used virtual memory GB: 37.633056640625  percent 6.0
+validating set CM:
+ [[3930   13]
+ [   2    0]]
+Validation time:  15.329490900039673 seconds.
+
+*****************************************
+Testing set CM:
+ [[22226   113]
+ [   10     3]]
+Detection time:  8.877966403961182 seconds.
+ Train accuracy: 0.999
+ Valid accuracy: 0.996
+ Test accuracy: 0.994
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/SUBJECT_PROCESS_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.1.model
+****************************************
+Training a model for node type: UnnamedPipeObject
+Remove  0  malicious samples from training set:
+Total Training Samples: 651
+Number of malicious samples: 0
+Number of benign samples: 651
+Total Validating Samples: 972
+Number of malicious samples: 1
+Number of benign samples: 971
+The contamination based on validating data is: 0.001
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 5504
+Number of malicious samples: 5
+Number of benign samples: 5499
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.001
+Epoch:00 (Loss=0.202455)
+Malicious Percentage:  tensor([0.0010])
+F1-Score baseline is:  tensor([0.0021])
+Validation AUC is: 0.9969104016477859
+Validation F1-score: 0.01695
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.88054
+Validation FPR: 0.11946
+Epoch:01 (Loss=0.065763)
+Validation AUC is: 0.9969104016477858
+Validation F1-score: 0.01111
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.81668
+Validation FPR: 0.18332
+Epoch:02 (Loss=0.030984)
+Validation AUC is: 0.9969104016477857
+Validation F1-score: 0.01081
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.81153
+Validation FPR: 0.18847
+Epoch:03 (Loss=0.022586)
+Validation AUC is: 0.9969104016477858
+Validation F1-score: 0.01124
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.81874
+Validation FPR: 0.18126
+Epoch:04 (Loss=0.017292)
+Validation AUC is: 0.9969104016477859
+Validation F1-score: 0.01449
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.85994
+Validation FPR: 0.14006
+Epoch:05 (Loss=0.013638)
+Validation AUC is: 0.9969104016477858
+Validation F1-score: 0.01754
+Validation TPR (sensitivity): 1.0
+Validation TNR (selectivity): 0.88465
+Validation FPR: 0.11535
+Final contamination is: 0.001
+Training time:  89.72829747200012 seconds.
+None
+Memory usage (ru_maxrss) :  25882.2421875  MB
+Memory usage (psutil) :  11246.8671875 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  23.8128662109375
+used virtual memory GB: 34.54841232299805  percent 5.5
+validating set CM:
+ [[872  99]
+ [  0   1]]
+Validation time:  14.915297985076904 seconds.
+
+*****************************************
+Testing set CM:
+ [[4871  628]
+ [   0    5]]
+Detection time:  8.17651915550232 seconds.
+ Train accuracy: 1.000
+ Valid accuracy: 0.898
+ Test accuracy: 0.886
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/UnnamedPipeObject_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.1.model
+****************************************
+Training a model for node type: FILE_OBJECT_UNIX_SOCKET
+Remove  0  malicious samples from training set:
+Total Training Samples: 25366
+Number of malicious samples: 0
+Number of benign samples: 25366
+Total Validating Samples: 34181
+Number of malicious samples: 0
+Number of benign samples: 34181
+The contamination based on validating data is: 0.0
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 193688
+Number of malicious samples: 0
+Number of benign samples: 193688
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.001
+Epoch:00 (Loss=0.033289)
+Malicious Percentage:  tensor([0.])
+F1-Score baseline is:  tensor([0.])
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.98885
+Validation FPR: 0.01115
+Epoch:01 (Loss=0.012937)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.97794
+Validation FPR: 0.02206
+Epoch:02 (Loss=0.006648)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.96577
+Validation FPR: 0.03423
+Epoch:03 (Loss=0.005091)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.96422
+Validation FPR: 0.03578
+Epoch:04 (Loss=0.004789)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.96396
+Validation FPR: 0.03604
+Epoch:05 (Loss=0.003090)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.96592
+Validation FPR: 0.03408
+Final contamination is: 0.001
+Training time:  103.0497670173645 seconds.
+None
+Memory usage (ru_maxrss) :  25882.2421875  MB
+Memory usage (psutil) :  11250.2109375 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  24.81689453125
+used virtual memory GB: 34.155033111572266  percent 5.4
+validating set CM:
+ [[33087  1094]
+ [    0     0]]
+Validation time:  13.750978231430054 seconds.
+
+*****************************************
+Testing set CM:
+ [[187454   6234]
+ [     0      0]]
+Detection time:  14.130737543106079 seconds.
+ Train accuracy: 1.000
+ Valid accuracy: 0.968
+ Test accuracy: 0.968
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/FILE_OBJECT_UNIX_SOCKET_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.1.model
+****************************************
+Training a model for node type: FILE_OBJECT_DIR
+Remove  0  malicious samples from training set:
+Total Training Samples: 5
+Number of malicious samples: 0
+Number of benign samples: 5
+Total Validating Samples: 12
+Number of malicious samples: 0
+Number of benign samples: 12
+The contamination based on validating data is: 0.0
+The contamination has set to be between 0.001  and 0.05
+Total Testing Samples: 68
+Number of malicious samples: 0
+Number of benign samples: 68
+Used Batch size is:  0
+Number of relations is: 108
+Used contamination is  0.001
+Epoch:00 (Loss=0.023577)
+Malicious Percentage:  tensor([0.])
+F1-Score baseline is:  tensor([0.])
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.91667
+Validation FPR: 0.08333
+Epoch:01 (Loss=0.012545)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.58333
+Validation FPR: 0.41667
+Epoch:02 (Loss=0.003064)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.66667
+Validation FPR: 0.33333
+Epoch:03 (Loss=0.004069)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.41667
+Validation FPR: 0.58333
+Epoch:04 (Loss=0.002654)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.66667
+Validation FPR: 0.33333
+Epoch:05 (Loss=0.002349)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.58333
+Validation FPR: 0.41667
+Epoch:06 (Loss=0.001666)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.58333
+Validation FPR: 0.41667
+Epoch:07 (Loss=0.001164)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.58333
+Validation FPR: 0.41667
+Epoch:08 (Loss=0.001151)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.58333
+Validation FPR: 0.41667
+Epoch:09 (Loss=0.001306)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.5
+Validation FPR: 0.5
+Epoch:10 (Loss=0.001360)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:11 (Loss=0.001269)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:12 (Loss=0.001183)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:13 (Loss=0.001227)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:14 (Loss=0.001152)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:15 (Loss=0.001112)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:16 (Loss=0.001040)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:17 (Loss=0.000963)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.5
+Validation FPR: 0.5
+Epoch:18 (Loss=0.000876)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.5
+Validation FPR: 0.5
+Epoch:19 (Loss=0.000781)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.5
+Validation FPR: 0.5
+Epoch:20 (Loss=0.000701)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:21 (Loss=0.000623)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:22 (Loss=0.000592)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:23 (Loss=0.000568)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:24 (Loss=0.000553)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.25
+Validation FPR: 0.75
+Epoch:25 (Loss=0.000502)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.58333
+Validation FPR: 0.41667
+Epoch:26 (Loss=0.000459)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.58333
+Validation FPR: 0.41667
+Epoch:27 (Loss=0.000420)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.25
+Validation FPR: 0.75
+Epoch:28 (Loss=0.000394)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.25
+Validation FPR: 0.75
+Epoch:29 (Loss=0.000407)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:30 (Loss=0.000392)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:31 (Loss=0.000363)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:32 (Loss=0.000333)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:33 (Loss=0.000312)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:34 (Loss=0.000331)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:35 (Loss=0.000351)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.25
+Validation FPR: 0.75
+Epoch:36 (Loss=0.000350)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.25
+Validation FPR: 0.75
+Epoch:37 (Loss=0.000383)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.25
+Validation FPR: 0.75
+Epoch:38 (Loss=0.000360)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.25
+Validation FPR: 0.75
+Epoch:39 (Loss=0.000353)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.25
+Validation FPR: 0.75
+Epoch:40 (Loss=0.000326)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:41 (Loss=0.000305)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:42 (Loss=0.000293)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:43 (Loss=0.000273)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:44 (Loss=0.000251)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:45 (Loss=0.000261)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:46 (Loss=0.000264)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:47 (Loss=0.000302)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:48 (Loss=0.000318)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:49 (Loss=0.000327)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:50 (Loss=0.000363)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:51 (Loss=0.000309)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:52 (Loss=0.000226)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:53 (Loss=0.000209)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:54 (Loss=0.000202)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:55 (Loss=0.000212)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:56 (Loss=0.000201)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:57 (Loss=0.000206)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:58 (Loss=0.000219)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:59 (Loss=0.000252)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:60 (Loss=0.000223)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:61 (Loss=0.000228)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:62 (Loss=0.000210)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:63 (Loss=0.000196)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.0
+Validation FPR: 1.0
+Epoch:64 (Loss=0.000230)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.0
+Validation FPR: 1.0
+Epoch:65 (Loss=0.000459)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.0
+Validation FPR: 1.0
+Epoch:66 (Loss=0.000418)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.0
+Validation FPR: 1.0
+Epoch:67 (Loss=0.000317)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:68 (Loss=0.000350)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:69 (Loss=0.000264)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:70 (Loss=0.000295)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:71 (Loss=0.000237)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:72 (Loss=0.000287)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:73 (Loss=0.000235)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:74 (Loss=0.000179)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:75 (Loss=0.000175)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:76 (Loss=0.000161)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:77 (Loss=0.000189)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.5
+Validation FPR: 0.5
+Epoch:78 (Loss=0.000179)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.58333
+Validation FPR: 0.41667
+Epoch:79 (Loss=0.000208)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.5
+Validation FPR: 0.5
+Epoch:80 (Loss=0.000178)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:81 (Loss=0.000229)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:82 (Loss=0.000173)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:83 (Loss=0.000261)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:84 (Loss=0.000195)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:85 (Loss=0.000192)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:86 (Loss=0.000233)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:87 (Loss=0.000312)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:88 (Loss=0.000251)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:89 (Loss=0.000263)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.0
+Validation FPR: 1.0
+Epoch:90 (Loss=0.000203)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:91 (Loss=0.000186)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.5
+Validation FPR: 0.5
+Epoch:92 (Loss=0.000141)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.58333
+Validation FPR: 0.41667
+Epoch:93 (Loss=0.000231)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.83333
+Validation FPR: 0.16667
+Epoch:94 (Loss=0.000199)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.5
+Validation FPR: 0.5
+Epoch:95 (Loss=0.000279)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:96 (Loss=0.000176)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:97 (Loss=0.000283)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Epoch:98 (Loss=0.000194)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.5
+Validation FPR: 0.5
+Epoch:99 (Loss=0.000315)
+Validation F1-score: 0.0
+Validation TNR (selectivity): 0.16667
+Validation FPR: 0.83333
+Final contamination is: 0.001
+Training time:  1581.002519607544 seconds.
+None
+Memory usage (ru_maxrss) :  25882.2421875  MB
+Memory usage (psutil) :  11253.35546875 MB
+The CPU usage is (per process):  0.0
+The CPU usage is :  32.9791259765625
+used virtual memory GB: 49.67264938354492  percent 7.9
+validating set CM:
+ [[ 0 12]
+ [ 0  0]]
+Validation time:  17.492892265319824 seconds.
+
+*****************************************
+Testing set CM:
+ [[ 0 68]
+ [ 0  0]]
+Detection time:  9.101045846939087 seconds.
+ Train accuracy: 0.000
+ Valid accuracy: 0.000
+ Test accuracy: 0.000
+Saving the model to ../dataset/darpa_tc3/cadets/experiments/models/Full_Script_Test/FILE_OBJECT_DIR_OCRGCN_Dr0_ly3_bs0_ep100_beta0.5_LR0.005_Hly32_dynConVal0.001To0.05_TrainRatio0.1.model
+****************************************
+
+*****************************************
+
+*******************************************
+TP: 10924, FP: 24768, FN: 0, TN: 267903
+Precision: 0.306, Recall: 1.0, Fscore: 0.469
+Computed related nodes in  49.58182883262634
+Final AUC is: 0.7444955794907874
+Folder Deleted
+Total detection time for this run is 0    57.389518
+Name: detection_time_run, dtype: float64
+Total training time for this run  0    2759.168856
+Name: train_time_run, dtype: float64
+
+************************************************************
+
+************************************************************
+Average performance across all runs:
+       accuracy  precision  recall  f_measure       tp        tn       fp  \
+count  1.000000   1.000000     1.0    1.00000      1.0       1.0      1.0   
+mean   0.918418   0.306063     1.0    0.46868  10924.0  267903.0  24768.0   
+std         NaN        NaN     NaN        NaN      NaN       NaN      NaN   
+min    0.918418   0.306063     1.0    0.46868  10924.0  267903.0  24768.0   
+25%    0.918418   0.306063     1.0    0.46868  10924.0  267903.0  24768.0   
+50%    0.918418   0.306063     1.0    0.46868  10924.0  267903.0  24768.0   
+75%    0.918418   0.306063     1.0    0.46868  10924.0  267903.0  24768.0   
+max    0.918418   0.306063     1.0    0.46868  10924.0  267903.0  24768.0   
+
+        fn  tpr       fpr  detection_time_run  train_time_run  memory_usage_mb  
+count  1.0  1.0  1.000000            1.000000        1.000000         1.000000  
+mean   0.0  1.0  0.084627           57.389518     2759.168856     25882.242188  
+std    NaN  NaN       NaN                 NaN             NaN              NaN  
+min    0.0  1.0  0.084627           57.389518     2759.168856     25882.242188  
+25%    0.0  1.0  0.084627           57.389518     2759.168856     25882.242188  
+50%    0.0  1.0  0.084627           57.389518     2759.168856     25882.242188  
+75%    0.0  1.0  0.084627           57.389518     2759.168856     25882.242188  
+max    0.0  1.0  0.084627           57.389518     2759.168856     25882.242188  
+Total time:  3142.2542600631714 seconds.
+program IOPS (over total time):  6.235332464663793
+I/O counters pio(read_count=14547, write_count=5046, read_bytes=0, write_bytes=1135136768, read_chars=737358628, write_chars=1132732625)
+None
+Memory usage (ru_maxrss) :  25882.2421875  MB
+Memory usage (psutil) :  1455.9921875 MB
+The CPU usage is (per process):  0.2
+The CPU usage is :  30.9222412109375
+used virtual memory GB: 37.871883392333984  percent 6.0

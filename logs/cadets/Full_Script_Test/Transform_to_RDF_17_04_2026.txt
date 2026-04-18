@@ -1,0 +1,63 @@
+Namespace(dataset='tc3', host='cadets', source_graph='cadets', root_path='../dataset/darpa_tc3/cadets/experiments/', min_node_representation=5, filter_node_type=False, rdfs=True, graph_nx=False, adjust_uuid=True)
+resource.struct_rusage(ru_utime=14.003307, ru_stime=7.888456, ru_maxrss=601964, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=117517, ru_majflt=0, ru_nswap=0, ru_inblock=0, ru_oublock=24, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=18109, ru_nivcsw=103)
+Removing node types: ['USER_SESSION']
+../dataset/darpa_tc3/cadets/experiments/cadets_test.txt
+Removing node types: ['USER_SESSION']
+Number of edges  4316489
+Number of nodes  357174
+Number of unique nodes  357174
+The graph time range from  2018-04-11 16:36:27-04:00 to 2018-04-12 22:24:07-04:00
+Number of node types:  6
+['SUBJECT_PROCESS', 'FILE_OBJECT_FILE', 'FILE_OBJECT_UNIX_SOCKET', 'NetFlowObject', 'UnnamedPipeObject', 'FILE_OBJECT_DIR']
+number of SUBJECT_PROCESS is: 26297
+number of FILE_OBJECT_FILE is: 89376
+number of FILE_OBJECT_UNIX_SOCKET is: 227869
+number of NetFlowObject is: 7076
+number of UnnamedPipeObject is: 6476
+number of FILE_OBJECT_DIR is: 80
+Number of edge types 28
+['EVENT_READ', 'EVENT_WRITE', 'EVENT_EXIT', 'EVENT_FORK', 'EVENT_CLOSE', 'EVENT_EXECUTE', 'EVENT_OPEN', 'EVENT_MMAP', 'EVENT_MODIFY_PROCESS', 'EVENT_LSEEK', 'EVENT_CHANGE_PRINCIPAL', 'EVENT_CREATE_OBJECT', 'EVENT_SENDTO', 'EVENT_RECVMSG', 'EVENT_TRUNCATE', 'EVENT_UNLINK', 'EVENT_CONNECT', 'EVENT_ACCEPT', 'EVENT_BIND', 'EVENT_SIGNAL', 'EVENT_RECVFROM', 'EVENT_MODIFY_FILE_ATTRIBUTES', 'EVENT_RENAME', 'EVENT_FLOWS_TO', 'EVENT_FCNTL', 'EVENT_SENDMSG', 'EVENT_LINK', 'EVENT_OTHER']
+Number of triples after converting 5745219
+Genrating RDF nt file
+../dataset/darpa_tc3/cadets/experiments/cadets_train.txt
+Removing node types: ['USER_SESSION']
+Number of edges  4347080
+Number of nodes  339199
+Number of unique nodes  339199
+The graph time range from  2018-04-04 03:54:34-04:00 to 2018-04-05 13:35:17-04:00
+Number of node types:  6
+['SUBJECT_PROCESS', 'FILE_OBJECT_UNIX_SOCKET', 'FILE_OBJECT_FILE', 'UnnamedPipeObject', 'NetFlowObject', 'FILE_OBJECT_DIR']
+number of SUBJECT_PROCESS is: 28305
+number of FILE_OBJECT_UNIX_SOCKET is: 253667
+number of FILE_OBJECT_FILE is: 44893
+number of UnnamedPipeObject is: 6518
+number of NetFlowObject is: 5761
+number of FILE_OBJECT_DIR is: 55
+Number of edge types 28
+['EVENT_CLOSE', 'EVENT_CREATE_OBJECT', 'EVENT_EXIT', 'EVENT_FORK', 'EVENT_OPEN', 'EVENT_EXECUTE', 'EVENT_READ', 'EVENT_MMAP', 'EVENT_WRITE', 'EVENT_MODIFY_PROCESS', 'EVENT_LSEEK', 'EVENT_CHANGE_PRINCIPAL', 'EVENT_CONNECT', 'EVENT_SENDTO', 'EVENT_RECVFROM', 'EVENT_UNLINK', 'EVENT_RENAME', 'EVENT_FCNTL', 'EVENT_ACCEPT', 'EVENT_MODIFY_FILE_ATTRIBUTES', 'EVENT_TRUNCATE', 'EVENT_LINK', 'EVENT_RECVMSG', 'EVENT_SENDMSG', 'EVENT_SIGNAL', 'EVENT_FLOWS_TO', 'EVENT_BIND', 'EVENT_OTHER']
+Number of triples after converting 5703910
+Genrating RDF nt file
+Number of training triples 5703910
+Number of testing triples 5745219
+Total number of triples 11449129
+Number of unique nodes  696373
+----------------------------------------------
+Analyzing the graph
+Number of edges types  28
+Number of nodes types  6
+Total number of nodes  696373
+Total number of edges  8663569
+The density of the graph is 1.7865435772779372e-05
+The density of the graph is 0.000018
+Number of self loops edges 326818
+Minimum degree: 1
+Maximum degree: 1776491
+Average degree: 24.881978
+----------------------------------------------
+Folder Deleted
+Saving the graph to tsv
+Folder Deleted
+Error Deleting : ../dataset/darpa_tc3/cadets/experiments/cadets_rdf.nt : No such file or directory
+Error Deleting : ../dataset/darpa_tc3/cadets/experiments/cadets_rdfs.ttl : No such file or directory
+Total processing time : 0:08:20.474347
+resource.struct_rusage(ru_utime=417.154123, ru_stime=40.212449, ru_maxrss=23256656, ru_ixrss=0, ru_idrss=0, ru_isrss=0, ru_minflt=21842882, ru_majflt=1, ru_nswap=0, ru_inblock=40, ru_oublock=16179792, ru_msgsnd=0, ru_msgrcv=0, ru_nsignals=0, ru_nvcsw=372557, ru_nivcsw=2381)
