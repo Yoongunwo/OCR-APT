@@ -5,6 +5,7 @@
 - python 3.9
 
 사전 작업 (노드에서):
+
 ```
 mkdir -p /home/s3lab/ygw/graphdb_ocr-apt/data/repositories
 
@@ -26,10 +27,13 @@ kubectl apply -f graphdb.yaml
 ```
 
 # My Process
+
 - Model Drift 확인을 위해 train_ratio argument 생성 및 그에 따른 모델 성능 평가
 
 ### Mode Train
-Example: 
+
+Example:
+
 ```
 bash ./orcapt-full-system-pipeline.sh
 
@@ -42,15 +46,22 @@ bash ./orcapt-full-system-pipeline.sh
 ```
 
 ### Model Evaluation
+
 Example:
+
 ```
-bash ./ocrapt-detection.sh 
+bash ./ocrapt-detection.sh
 
 # Enter train ratio of the model to evaluate (0.0~1.0, default=1.0): 0.25
 # Do you want to detect anomalous subgraphs using GNN? (y/N): y
 # Do you want to use the default trained GNN models? (Y/n): Y
 # → load_model = "OCRGCN_..._TrainRatio0.25.model"  ← 자동 선택
 ```
+
+### Evaluation Results
+
+Example:
+log/tc3/cadets/Full_Script_Test_OCRGCN_TrainRatio0.25.txt
 
 # OCR-APT
 

@@ -78,7 +78,7 @@ Detect_Anomolous_Nodes () {
   echo "Parameters are: ${parameters}"
   echo "load from: ${load_model}"
   mkdir -p ../logs/${host}/${exp_name}
-  python -B -u ../src/train_gnn_models.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --detector ${detector} ${parameters} --load-model ${load_model} --train-ratio ${train_ratio} >> ../logs/${host}/${exp_name}/${logs}
+  python -B -u ../src/train_gnn_models.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --detector ${detector} ${parameters} --load-model ${load_model} --train-ratio ${train_ratio} 2>&1 | tee -a ../logs/${host}/${exp_name}/${logs} >> ${results_file}
 }
 
 Detect_Anomolous_Subgraph () {
@@ -93,7 +93,7 @@ Detect_Anomolous_Subgraph () {
   investigation_parameters=" --min-nodes 3 --max-edges ${max_edges} --number-of-hops ${n_hop} --runs ${runs} --remove-duplicated-subgraph --get-node-attrs --expand-2-hop no --correlate-anomalous-once --top-k ${top_k} --abnormality-level ${abnormality}"
   logs_name="expand_${n_hop}_hop_MaxEdges${max_edges}_K${top_k}_ly${n_layers}"
   mkdir -p ../logs/${host}/${exp_name}
-  python -B -u ../src/detect_anomalous_subgraphs.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --model ${model_path}  --construct-from-anomaly-subgraph  ${investigation_parameters}  --inv-exp-name ${logs_name} ${more_param} >> ../logs/${host}/${exp_name}/DetectAnomalousSubgraphs_${logs_name}_${date}.txt
+  python -B -u ../src/detect_anomalous_subgraphs.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --model ${model_path}  --construct-from-anomaly-subgraph  ${investigation_parameters}  --inv-exp-name ${logs_name} ${more_param} 2>&1 | tee -a ../logs/${host}/${exp_name}/DetectAnomalousSubgraphs_${logs_name}_${date}.txt >> ${results_file}
 }
 
 generate_llm_investigator_reports () {
@@ -111,7 +111,7 @@ generate_llm_investigator_reports () {
     parameters+=" --load-index"
   fi
   mkdir -p ../logs/${host}/${exp_name}
-  python -B -u ../src/ocrapt_llm_investigator.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --GNN-model-name ${load_model} --inv-exp-name ${inv_logs_name} --llm-embedding-model ${embed_model} --abnormality-level ${abnormality} --anomalous ${anomalous} ${parameters} >> ../logs/${host}/${exp_name}/llm_investigator_${llm_exp_name}_${date}.txt
+  python -B -u ../src/ocrapt_llm_investigator.py --host ${host} --dataset ${dataset} --root-path ${root_path} --exp-name ${exp_name} --GNN-model-name ${load_model} --inv-exp-name ${inv_logs_name} --llm-embedding-model ${embed_model} --abnormality-level ${abnormality} --anomalous ${anomalous} ${parameters} 2>&1 | tee -a ../logs/${host}/${exp_name}/llm_investigator_${llm_exp_name}_${date}.txt >> ${results_file}
 }
 
 
@@ -143,6 +143,19 @@ abnormality="Moderate"
 execute_OCR_APT () {
   host=${1}
   root_path=../dataset/${SourceDataset}/${host}/experiments/
+
+  # results 파일 설정 (argument 기반 파일명)
+  results_dir=../log/${dataset}/${host}
+  mkdir -p ${results_dir}
+  results_file="${results_dir}/${exp_name}_${detector}_TrainRatio${train_ratio}.txt"
+
+  # 파일이 이미 존재하면 구분자 추가, 없으면 새로 생성
+  if [ -f "${results_file}" ]; then
+    printf "\n----\n\n" >> ${results_file}
+  fi
+  echo "=== $(date '+%Y-%m-%d %H:%M:%S') ===" >> ${results_file}
+  echo "host: ${host} | dataset: ${dataset} | train_ratio: ${train_ratio}" >> ${results_file}
+
   echo "Run OCR-APT on host: ${host} "
   if [[ "$detectSubgraphs" == "y" ]]
   then
